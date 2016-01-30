@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.ImageEffects;
 
 [ExecuteInEditMode]
 public class LevelData : MonoBehaviour {
@@ -13,9 +14,39 @@ public class LevelData : MonoBehaviour {
 	public float fogStartDistance;
 	public float fogEndDistance;
 	public bool constantUpdate = false;
+	public Camera postCam;
+	ImageEffectBase[] fx;
 
 	// Use this for initialization
 	void OnEnable () {
+		UpdateRenderSettings ();
+		UpdateCamera ();
+	}
+
+	void OnDisable(){
+		RemoveCamera ();
+	}
+
+	void UpdateCamera(){
+		if (!Application.isPlaying)
+			return;
+		if (postCam == null)
+			return;
+		fx = postCam.GetComponents<ImageEffectBase> ();
+		foreach (ImageEffectBase i in fx)
+			Utils.MoveComponent (i, Camera.main.gameObject);
+		Camera.main.gameObject.AddComponent<PostElevator> ();
+		postCam.enabled = false;
+	}
+
+	void RemoveCamera(){
+		fx = Camera.main.GetComponents<ImageEffectBase> ();
+		foreach (ImageEffectBase i in fx) {
+			Destroy (i);
+		}
+	}
+
+	void UpdateRenderSettings(){
 		RenderSettings.skybox = skybox;
 		RenderSettings.fogColor = fogColor;
 		RenderSettings.fogStartDistance = fogStartDistance;
@@ -30,10 +61,10 @@ public class LevelData : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(constantUpdate)OnEnable ();
+		if(constantUpdate)UpdateRenderSettings ();
 	}
 
 	void OnGUI(){
-		OnEnable ();
+		UpdateRenderSettings ();
 	}
 }
