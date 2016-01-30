@@ -1,0 +1,27 @@
+using UnityEngine;
+using System.Collections;
+[System.Serializable]
+public class CCReflectColor : CCReflector<Color>
+{
+
+	public override void SetValue (object value)
+	{
+		CheckVar ();
+		if (isMat) {
+			((Material)obj).SetColor(_varName,(Color)value);
+		} else {
+			base.SetValue (value);
+		}
+	}
+
+	public override object GetValue ()
+	{
+		if (isMat) {
+			return ((Material)obj).GetColor(_varName);
+		} else {
+			return base.GetValue ();
+		}
+	}
+
+}
+
