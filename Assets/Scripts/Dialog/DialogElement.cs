@@ -4,8 +4,15 @@ using System;
 public class DialogElement{
 	public enum Type{
 		Dialog,
-		Event
+		Event,
+		LookAt,
+		Sound
 	}
 	public Type type;
+
 	public string string1;
+	public float float1;
+	public AudioSource audio;
+
+	public Transform transform1;
 }
