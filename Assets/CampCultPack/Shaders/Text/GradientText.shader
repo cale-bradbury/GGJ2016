@@ -9,14 +9,14 @@ Properties {
 	}
 	Category{
 		SubShader {
-			Tags { "Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent" } 
-		   	Lighting Off Cull Off ZWrite Off Fog { Mode Off } 
+			Tags { "Queue"="Transparent" "RenderType"="Transparent" } 
+		   //	Lighting Off Cull Off ZWrite Off Fog { Mode Off } 
 		   	Blend SrcAlpha OneMinusSrcAlpha 
 			Pass{
 			
 				CGPROGRAM
 				// Upgrade NOTE: excluded shader from DX11 and Xbox360; has structs without semantics (struct v2f members uv_MainTex)
-				#pragma exclude_renderers d3d11 xbox360
+				//#pragma exclude_renderers d3d11 xbox360
 				#pragma vertex vert
 				#pragma fragment frag
 
@@ -35,8 +35,7 @@ Properties {
 				struct v2f {
 					float4 vertex : TEXCOORD;
 					float4 pos : POSITION;
-					float4 color : COLOR;
-					float2 uv_MainTex;
+					//float2 uv_MainTex;
 				};
 				v2f vert(appdata v) {
 					v2f o;
