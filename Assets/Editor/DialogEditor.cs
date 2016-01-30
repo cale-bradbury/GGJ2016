@@ -11,6 +11,7 @@ public class DialogEditor : Editor {
 
 	Color dialogColor= new Color (.75f, 1, .75f);
 	Color eventColor = new Color (.75f,.75f,1);
+	Color lookColor = new Color (1,.75f,.75f);
 
 	private void OnEnable(){
 		dialog = target as Dialog;
@@ -25,6 +26,8 @@ public class DialogEditor : Editor {
 			menu.AddItem(new GUIContent("Dialog"),false,OnMenuClick, CreateElement(DialogElement.Type.Dialog));
 
 			menu.AddItem(new GUIContent("Event"),false,OnMenuClick, CreateElement(DialogElement.Type.Event));
+
+			menu.AddItem(new GUIContent("Look At"),false,OnMenuClick, CreateElement(DialogElement.Type.LookAt));
 
 			menu.ShowAsContext();
 		};
@@ -46,6 +49,12 @@ public class DialogEditor : Editor {
 				rect.x+=60;
 				e.string1 = EditorGUI.TextField(new Rect(rect.x,rect.y,rect.width-60,EditorGUIUtility.singleLineHeight),
 					e.string1);
+			}else if(t == DialogElement.Type.LookAt){
+				ChangeColor(rect,lookColor);
+				EditorGUI.LabelField(new Rect(rect.x,rect.y,60,EditorGUIUtility.singleLineHeight),"look at");
+				rect.x+=60;
+				e.transform1 = EditorGUI.ObjectField(new Rect(rect.x,rect.y,rect.width-60,EditorGUIUtility.singleLineHeight),
+					e.transform1,typeof(Transform),true) as Transform;
 			}
 		};
 	}
