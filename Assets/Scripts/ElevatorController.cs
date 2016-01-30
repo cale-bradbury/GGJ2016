@@ -4,12 +4,16 @@ using System.Collections.Generic;
 
 public class ElevatorController : MonoBehaviour {
 
+    public GameObject leftDoor;
+    public GameObject rightDoor;
     public List<GameObject> levelPrefabs = new List<GameObject>();
     private List<GameObject> levels = new List<GameObject>();
     private GameObject activeLevel;
     private GameObject nextLevel;
     private Vector3 levelOrigin = new Vector3(0f, 0f, 0f);
 
+    bool openDoors = false;
+    bool doorsAnimating = false;
     bool isMoving = false;
     float maxElevatorRideDuration = 10f;
     float halfElevatorRideDuration;
@@ -17,6 +21,8 @@ public class ElevatorController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        Messenger.AddListener("elevator-doors-opened", OpeningDoorComplete);
+
         halfElevatorRideDuration = maxElevatorRideDuration / 2f;
 
         foreach (GameObject levelPrefab in levelPrefabs)
@@ -79,6 +85,23 @@ public class ElevatorController : MonoBehaviour {
     void StopMoving() {
         isMoving = false;
         timeLeftInMotion = 0f;        
+    }
+
+    public void OpenDoors() {
+        // get ref for each door
+        // animate doors apart
+        Debug.Log("open Doors");
+        if (!openDoors && !doorsAnimating)
+        {
+            openDoors = true;
+            doorsAnimating = true;
+            Messenger.Broadcast("open-elevator-doors");
+        }
+    }
+
+    void OpeningDoorComplete() {
+        doorsAnimating = false;
+        Debug.Log("Opening doors complete.");
     }
 }
 
