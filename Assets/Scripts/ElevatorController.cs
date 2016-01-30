@@ -4,8 +4,6 @@ using System.Collections.Generic;
 
 public class ElevatorController : MonoBehaviour {
 
-    public GameObject leftDoor;
-    public GameObject rightDoor;
     public List<GameObject> levelPrefabs = new List<GameObject>();
     private List<GameObject> levels = new List<GameObject>();
     private GameObject activeLevel;
@@ -15,7 +13,7 @@ public class ElevatorController : MonoBehaviour {
     bool openDoors = false;
     bool doorsAnimating = false;
     bool isMoving = false;
-    float maxElevatorRideDuration = 10f;
+    float maxElevatorRideDuration = 5f;
     float halfElevatorRideDuration;
     float timeLeftInMotion = 0f;
 
@@ -80,22 +78,36 @@ public class ElevatorController : MonoBehaviour {
     void StartMoving() {
         timeLeftInMotion = maxElevatorRideDuration;
         isMoving = true;
+        CloseDoors();
     }
 
     void StopMoving() {
         isMoving = false;
-        timeLeftInMotion = 0f;        
+        timeLeftInMotion = 0f;
+        OpenDoors();
+    }
+
+    public void ToggleDoors() {
+        if (!doorsAnimating)
+        {
+            Debug.Log("Toggle Doors");
+            openDoors = !openDoors;
+            doorsAnimating = true;
+            Messenger.Broadcast("open-elevator-doors");
+        }
+    }
+
+    public void CloseDoors() {
+        if (openDoors)
+        {
+            ToggleDoors();
+        }
     }
 
     public void OpenDoors() {
-        // get ref for each door
-        // animate doors apart
-        Debug.Log("open Doors");
-        if (!openDoors && !doorsAnimating)
+        if (!openDoors)
         {
-            openDoors = true;
-            doorsAnimating = true;
-            Messenger.Broadcast("open-elevator-doors");
+            ToggleDoors();
         }
     }
 
