@@ -21,6 +21,10 @@ public class Dialog : MonoBehaviour {
 		}
 	}
 
+	public void StartDialog(){
+
+	}
+
 	void NextInput(){
 		DialogElement d = dialogs [index];
 		if (d.type == DialogElement.Type.Dialog) {
