@@ -51,7 +51,7 @@ public class DialogEditor : Editor {
 	}
 
 	void ChangeColor(Rect rect, Color c){
-		EditorGUI.DrawRect (new Rect (rect.x + 1, rect.y - 1, rect.width - 2, rect.height - 4), c);
+		EditorGUI.DrawRect (new Rect (rect.x, rect.y - 1, rect.width, rect.height - 4), c);
 	}
 
 	private DialogElement CreateElement(DialogElement.Type t){
