@@ -123,6 +123,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 452282}
+  - 114: {fileID: 11480616}
   m_Layer: 0
   m_Name: level-erik
   m_TagString: Untagged
@@ -419,6 +420,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 15.15, y: 1.79, z: 8.34}
   m_Center: {x: 0, y: 2.24, z: 0}
+--- !u!114 &11480616
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35af7ca50613af041976bdf12539ea90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelName: test level 1
+  skybox: {fileID: 2100000, guid: f136435fdb319394f9003260d676a4c3, type: 2}
+  ambientSky: {r: 0.9632353, g: 0.9632353, b: 0.9632353, a: 0}
+  ambientEquator: {r: 0, g: 0, b: 0, a: 0}
+  ambientGround: {r: 0, g: 0, b: 0, a: 0}
+  fogColor: {r: 0, g: 0, b: 0, a: 0}
+  fogStartDistance: 200
+  fogEndDistance: 400
+  constantUpdate: 0
 --- !u!154 &15434582
 TerrainCollider:
   m_ObjectHideFlags: 1
@@ -466,7 +487,39 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: levelName
+      value: test level 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: fogStartDistance
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: fogEndDistance
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: skybox
+      value: 
+      objectReference: {fileID: 2100000, guid: f136435fdb319394f9003260d676a4c3, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ambientSky.r
+      value: 0.9632353
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ambientSky.g
+      value: 0.9632353
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ambientSky.b
+      value: 0.9632353
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 181740}

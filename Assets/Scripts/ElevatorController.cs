@@ -9,7 +9,9 @@ public class ElevatorController : MonoBehaviour {
     private GameObject activeLevel;
     private GameObject nextLevel;
     private Vector3 levelOrigin = new Vector3(0f, 0f, 0f);
+    private TextMesh floorTextMesh;
 
+    public bool isPlayerInside;
     bool openDoors = false;
     bool doorsAnimating = false;
     bool isMoving = false;
@@ -20,7 +22,7 @@ public class ElevatorController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         Messenger.AddListener("elevator-doors-opened", OpeningDoorComplete);
-
+        floorTextMesh = transform.FindChild("FloorText").gameObject.GetComponent<TextMesh>();
         halfElevatorRideDuration = maxElevatorRideDuration / 2f;
 
         foreach (GameObject levelPrefab in levelPrefabs)
@@ -64,6 +66,8 @@ public class ElevatorController : MonoBehaviour {
                 activeLevel = nextLevel;
                 nextLevel = null;
                 activeLevel.SetActive(true);
+                string levelName = activeLevel.GetComponent<LevelData>().levelName;
+                floorTextMesh.text = levelName;
                 Debug.Log("Half way there");            
             }
 
@@ -111,9 +115,33 @@ public class ElevatorController : MonoBehaviour {
         }
     }
 
+    public void OpenDoorsFromOutside() {
+        if (!isPlayerInside)
+        {
+            OpenDoors();
+        }
+    }
+
     void OpeningDoorComplete() {
         doorsAnimating = false;
         Debug.Log("Opening doors complete.");
+    }
+
+    void OnTriggerEnter(Collider other) {
+        if(other.tag == "Player")
+        {
+            Debug.Log("player enter ele");
+            isPlayerInside = true;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            Debug.Log("player exit ele");
+            isPlayerInside = false;
+        }
     }
 }
 
