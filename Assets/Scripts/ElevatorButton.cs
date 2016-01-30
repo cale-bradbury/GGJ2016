@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ElevatorButton : MonoBehaviour {
 
-    public string levelKey;
+    public int levelKey;
 
 	// Use this for initialization
 	void Start () {

@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        elevator = GameObject.Find("elevator");
+        elevator = GameObject.Find("Elevator");
         elevatorController = elevator.GetComponent<ElevatorController>();
     }
 	
@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour {
 
     void Interact() {
         Vector3 rayOrigin = new Vector3(0.5f, 0.5f, 0f);
-        float rayLength = 500f;
+        float rayLength = 2f;
         Ray ray = Camera.main.ViewportPointToRay(rayOrigin);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, rayLength))
@@ -32,12 +32,18 @@ public class PlayerController : MonoBehaviour {
     }
 
     void InteractWithCollision(RaycastHit hit) {
+        Debug.Log("Interact with collision: " + hit.transform.gameObject.tag);
         if (hit.transform.gameObject.tag == "button")
         {
-            string levelKey = hit.transform.GetComponent<ElevatorButton>().levelKey;
+            int levelKey = hit.transform.GetComponent<ElevatorButton>().levelKey;
             elevatorController.GoToLevel(levelKey);
             Debug.Log("button-click:" + levelKey);
-        } else {
+        }
+        else if(hit.transform.gameObject.tag == "elevator-door")
+        {
+            elevatorController.OpenDoors();
+        }
+        else {
             Dialog d = hit.transform.GetComponent<Dialog>();
             if (d != null)
             {

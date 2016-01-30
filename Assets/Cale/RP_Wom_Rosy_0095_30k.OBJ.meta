@@ -1,0 +1,98 @@
+fileFormatVersion: 2
+guid: e3dc39d5783d4e848bf1141241167536
+timeCreated: 1454137838
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: RP_Wom_Rosy_0095_30k
+    100002: //RootNode
+    100004: Studio_Setup_Renderpeople_C_Shape_Stage
+    100006: Studio_Setup_Renderpeople_C_Shape_Stage_Box2
+    100008: Studio_Setup_Renderpeople_Vray_Fill_Light_mesh_plane_Fill_Light_01
+    100010: Studio_Setup_Renderpeople_Vray_Main_Light_mesh_plane_Main_Light_01
+    400000: RP_Wom_Rosy_0095_30k
+    400002: //RootNode
+    400004: Studio_Setup_Renderpeople_C_Shape_Stage
+    400006: Studio_Setup_Renderpeople_C_Shape_Stage_Box2
+    400008: Studio_Setup_Renderpeople_Vray_Fill_Light_mesh_plane_Fill_Light_01
+    400010: Studio_Setup_Renderpeople_Vray_Main_Light_mesh_plane_Main_Light_01
+    2300000: RP_Wom_Rosy_0095_30k
+    2300002: Studio_Setup_Renderpeople_C_Shape_Stage
+    2300004: Studio_Setup_Renderpeople_C_Shape_Stage_Box2
+    2300006: Studio_Setup_Renderpeople_Vray_Fill_Light_mesh_plane_Fill_Light_01
+    2300008: Studio_Setup_Renderpeople_Vray_Main_Light_mesh_plane_Main_Light_01
+    3300000: RP_Wom_Rosy_0095_30k
+    3300002: Studio_Setup_Renderpeople_C_Shape_Stage
+    3300004: Studio_Setup_Renderpeople_C_Shape_Stage_Box2
+    3300006: Studio_Setup_Renderpeople_Vray_Fill_Light_mesh_plane_Fill_Light_01
+    3300008: Studio_Setup_Renderpeople_Vray_Main_Light_mesh_plane_Main_Light_01
+    4300000: RP_Wom_Rosy_0095_30k
+    4300002: Studio_Setup_Renderpeople_C_Shape_Stage
+    4300004: Studio_Setup_Renderpeople_C_Shape_Stage_Box2
+    4300006: Studio_Setup_Renderpeople_Vray_Fill_Light_mesh_plane_Fill_Light_01
+    4300008: Studio_Setup_Renderpeople_Vray_Main_Light_mesh_plane_Main_Light_01
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
