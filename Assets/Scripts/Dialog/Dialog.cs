@@ -12,6 +12,8 @@ public class Dialog : MonoBehaviour {
 	Camera cam;
 	Quaternion  lookTarget;
 	Quaternion  lookStart;
+	float lineHeight = 25;
+	string[] newLine = new string[]{"\n"};
 
 	void OnEnable(){
 		text = FindObjectOfType<Text> ();
@@ -58,6 +60,10 @@ public class Dialog : MonoBehaviour {
 		DialogElement d = dialogs [index];
 		if (d.type == DialogElement.Type.Dialog) {
 			text.text = d.string1;
+			Vector2 v = text.rectTransform.sizeDelta;
+			v.y = lineHeight * text.text.Split (newLine, System.StringSplitOptions.RemoveEmptyEntries).Length;
+			text.rectTransform.sizeDelta = v;
+			Debug.Log (v.y);
 		} else if (d.type == DialogElement.Type.Event) {
 			Messenger.Broadcast (d.string1);
 			fireNext = true;
