@@ -6,11 +6,13 @@ public class ElevatorController : MonoBehaviour {
 
     // TODO: this will be a list of level objects (will these have their own class?)
     // List<GameObject> levels = new List<GameObject>();
-    Dictionary<string, GameObject> levels = new Dictionary<string, GameObject>();
+    // Dictionary<string, GameObject> levels = new Dictionary<string, GameObject>();
+
+    //public List<GameObject> buttons = new List<GameObject>();
 
     // Use this for initialization
     void Start () {
-        
+
         // TODO: add each level > levels.Add ( new GameObject() );
     }
 
@@ -23,8 +25,9 @@ public class ElevatorController : MonoBehaviour {
        // GoToLevel();
     }
 
-    void GoToLevel (string levelKey) {
+    public void GoToLevel (string levelKey) {
         // close > levels[currentLevelKey];
         // open > levels[levelKey];
+        Debug.Log("Go to: " + levelKey);
     }
 }

@@ -3,10 +3,14 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
+    private GameObject elevator;
+    private ElevatorController elevatorController;
+
 	// Use this for initialization
 	void Start () {
-	
-	}
+        elevator = GameObject.Find("elevator");
+        elevatorController = elevator.GetComponent<ElevatorController>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -17,27 +21,28 @@ public class PlayerController : MonoBehaviour {
     }
 
     void Interact() {
-        Vector3 rayOrigin = new Vector3(0.5f, 0.5f, 0f); // center of the screen
+        Vector3 rayOrigin = new Vector3(0.5f, 0.5f, 0f);
         float rayLength = 500f;
-
-        // actual Ray
         Ray ray = Camera.main.ViewportPointToRay(rayOrigin);
-
-        // debug Ray
-        Debug.DrawRay(ray.origin, ray.direction * rayLength, Color.red);
-
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, rayLength))
         {
-            InteractElevatorButton(hit);
+            InteractWithCollision(hit);
         }
     }
 
-    void InteractElevatorButton(RaycastHit hit) {
-        if (hit.transform.name == "button")
+    void InteractWithCollision(RaycastHit hit) {
+        if (hit.transform.gameObject.tag == "button")
         {
-            Debug.Log("Press button");
-            // todo: broadcast button that has been pressed.
+            string levelKey = hit.transform.GetComponent<ElevatorButton>().levelKey;
+            elevatorController.GoToLevel(levelKey);
+            Debug.Log("button-click:" + levelKey);
+        } else {
+            Dialog d = hit.transform.GetComponent<Dialog>();
+            if (d != null)
+            {
+                d.StartDialog();
+            }
         }
     }
 }
