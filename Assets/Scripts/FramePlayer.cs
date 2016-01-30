@@ -6,7 +6,7 @@ public class FramePlayer : MonoBehaviour {
 	public CCReflectTexture output;
 	public List<Texture2D> frames;
 	int index = 0;
-	float frameDelay = .03;
+	float frameDelay = .03f;
 
 	public bool loop = true;
 	public string endLoopEvent;
