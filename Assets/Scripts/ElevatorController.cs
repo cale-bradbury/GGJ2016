@@ -13,7 +13,7 @@ public class ElevatorController : MonoBehaviour {
     bool openDoors = false;
     bool doorsAnimating = false;
     bool isMoving = false;
-    float maxElevatorRideDuration = 10f;
+    float maxElevatorRideDuration = 5f;
     float halfElevatorRideDuration;
     float timeLeftInMotion = 0f;
 
