@@ -17,9 +17,8 @@ GameObject:
   - 114: {fileID: 11400006}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
-  - 114: {fileID: 11491926}
-  - 114: {fileID: 11458802}
   - 114: {fileID: 11468822}
+  - 114: {fileID: 11488140}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -281,20 +280,6 @@ MonoBehaviour:
   airControl: 1
   antiBumpFactor: 0.75
   antiBunnyHopFactor: 1
---- !u!114 &11458802
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53f29ea97fe726244989b177106cd6fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shader: {fileID: 4800000, guid: 1767bfca97af75749a048d0cdcd7ab46, type: 3}
-  strength: 1.5
-  size: 0.15
 --- !u!114 &11468822
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -309,18 +294,18 @@ MonoBehaviour:
   shader: {fileID: 4800000, guid: 0089d8cedadeea24a93b374d85eac878, type: 3}
   strength: 3.21
   size: 0.09
---- !u!114 &11491926
+--- !u!114 &11488140
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1c54de97ed4a974bba27062025a9fed, type: 3}
+  m_Script: {fileID: 11500000, guid: 3680b66c68f91ff4cbdcf424f9d9c1f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  shader: {fileID: 4800000, guid: 24410298fb91ceb47878a61191d9c761, type: 3}
 --- !u!114 &11498762
 MonoBehaviour:
   m_ObjectHideFlags: 1
