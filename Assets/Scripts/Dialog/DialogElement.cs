@@ -2,12 +2,10 @@
 using System;
 [Serializable]
 public class DialogElement{
-	
-}
-
-public class TextElement:DialogElement{
-	public string dialog;
-}
-public class EventElement:DialogElement{
-	public string eventName;
+	public enum Type{
+		Dialog,
+		Event
+	}
+	public Type type;
+	public string string1;
 }
