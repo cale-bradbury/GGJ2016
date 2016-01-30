@@ -4,16 +4,19 @@ using System.Collections.Generic;
 
 public class ElevatorController : MonoBehaviour {
 
-    // TODO: this will be a list of level objects (will these have their own class?)
-    // List<GameObject> levels = new List<GameObject>();
-    // Dictionary<string, GameObject> levels = new Dictionary<string, GameObject>();
-
-    //public List<GameObject> buttons = new List<GameObject>();
+    public List<GameObject> levelPrefabs = new List<GameObject>();
+    private List<GameObject> levels = new List<GameObject>();
+    private GameObject activeLevel;
+    private Vector3 levelOrigin = new Vector3(0f, 0f, 0f);
 
     // Use this for initialization
     void Start () {
-
-        // TODO: add each level > levels.Add ( new GameObject() );
+        foreach(GameObject levelPrefab in levelPrefabs)
+        {
+            GameObject level = (GameObject)Instantiate(levelPrefab, levelOrigin, Quaternion.identity);
+            level.SetActive(false);
+            levels.Add(level);
+        }
     }
 
     // Update is called once per frame
@@ -21,13 +24,17 @@ public class ElevatorController : MonoBehaviour {
 
     }
 
-    void OnButtonClick() {
-       // GoToLevel();
-    }
-
-    public void GoToLevel (string levelKey) {
-        // close > levels[currentLevelKey];
-        // open > levels[levelKey];
+    public void GoToLevel (int levelKey) {
         Debug.Log("Go to: " + levelKey);
+        GameObject requestedLevel = levels[levelKey - 1];
+        if (activeLevel) {
+            if(activeLevel != requestedLevel) {
+                activeLevel.SetActive(false);
+            } else {
+                return;
+            }
+        }
+        activeLevel = requestedLevel;
+        activeLevel.SetActive(true);
     }
 }
