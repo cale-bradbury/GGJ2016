@@ -10,8 +10,8 @@ public class Dialog : MonoBehaviour {
 	bool dialogMode = false;
 	List<MonoBehaviour> scriptsToLock = new List<MonoBehaviour>();
 	Camera cam;
-	Transform lookTarget;
-	Transform lookStart;
+	Quaternion  lookTarget;
+	Quaternion  lookStart;
 
 	void OnEnable(){
 		text = FindObjectOfType<Text> ();
@@ -62,11 +62,15 @@ public class Dialog : MonoBehaviour {
 			Messenger.Broadcast (d.string1);
 			fireNext = true;
 		}else if (d.type == DialogElement.Type.LookAt) {
-			lookTarget = cam.transform;
-			lookTarget.LookAt(d.transform1);
-			lookStart = cam.transform;
+			lookStart = cam.transform.rotation;
+			cam.transform.LookAt(d.transform1);
+			lookTarget = cam.transform.rotation;
+			cam.transform.rotation = lookStart;
 			dialogMode = false;
-			Utils.AnimationCoroutine (AnimationCurve.EaseInOut(0,0,1,1), d.float1, LookAt, FinishLookAt);
+			StartCoroutine( Utils.AnimationCoroutine (AnimationCurve.EaseInOut(0,0,1,1), d.float1, LookAt, FinishLookAt));
+		}else if (d.type == DialogElement.Type.Sound) {
+			d.audio.Play ();
+			fireNext = true;
 		}
 		index++;
 		if (fireNext)
@@ -79,7 +83,7 @@ public class Dialog : MonoBehaviour {
 	}
 
 	void LookAt(float f){
-		cam.transform.rotation = Quaternion.Lerp (lookStart.rotation, lookTarget.rotation, f);
+		cam.transform.rotation = Quaternion.Lerp (lookStart, lookTarget, f);
 	}
 
 }

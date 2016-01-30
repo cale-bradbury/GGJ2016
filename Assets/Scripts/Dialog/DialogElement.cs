@@ -12,6 +12,7 @@ public class DialogElement{
 
 	public string string1;
 	public float float1;
+	public AudioSource audio;
 
 	public Transform transform1;
 }
