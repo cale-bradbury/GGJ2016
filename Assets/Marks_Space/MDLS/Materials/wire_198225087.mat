@@ -97,14 +97,28 @@ Material:
         second: 0.02
       data:
         first:
+<<<<<<< HEAD
           name: _ZWrite
         second: 1
       data:
         first:
+=======
+>>>>>>> master
           name: _Glossiness
         second: 0.5
       data:
         first:
+<<<<<<< HEAD
+=======
+          name: _Metallic
+        second: 0
+      data:
+        first:
+          name: _ZWrite
+        second: 1
+      data:
+        first:
+>>>>>>> master
           name: _BumpScale
         second: 1
       data:
@@ -123,10 +137,13 @@ Material:
         first:
           name: _Mode
         second: 0
+<<<<<<< HEAD
       data:
         first:
           name: _Metallic
         second: 0
+=======
+>>>>>>> master
     m_Colors:
       data:
         first:
