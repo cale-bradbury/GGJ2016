@@ -20,7 +20,6 @@ CGPROGRAM
 #include "UnityCG.cginc"
 
 uniform sampler2D _MainTex;	//the screen texture
-uniform sampler2D _Pure;	//the last frames texture
 
 float4 frag (v2f_img i) : COLOR{
 	return tex2D(_MainTex,i.uv);

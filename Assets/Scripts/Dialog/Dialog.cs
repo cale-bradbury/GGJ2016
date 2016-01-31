@@ -6,8 +6,11 @@ public class Dialog : MonoBehaviour {
 	public List<DialogElement> dialogs = new List<DialogElement>();
 
 	Text text;
+	Image bg;
 	int index = 0;
 	bool dialogMode = false;
+	Color bgOn = new Color (1, 1, 1, .4f);
+	Color bgOff = new Color (1, 1, 1, 0);
 	List<MonoBehaviour> scriptsToLock = new List<MonoBehaviour>();
 	Camera cam;
 	Quaternion  lookTarget;
@@ -19,6 +22,7 @@ public class Dialog : MonoBehaviour {
 	void OnEnable(){
 		text = FindObjectOfType<Text> ();
 		text.text = "";
+		bg = text.rectTransform.parent.GetComponent<Image> ();
 		cam = Camera.main;
 		MouseLook[] ml = FindObjectsOfType<MouseLook> ();
 		foreach(MouseLook m in ml)
@@ -29,11 +33,17 @@ public class Dialog : MonoBehaviour {
 		scriptsToLock.Add (FindObjectOfType<HeadBob> ());
 	}
 
-	void Update(){
-		if (dialogMode) {
+	void Update()
+    {
+        if (dialogMode) {
 			if (Input.GetMouseButtonDown (0)) {
 				NextInput ();
 			}
+		}
+		if (text.text.Length != 0) {
+			bg.color = Color.Lerp (bg.color, bgOn, .05f);
+		} else {
+			bg.color = Color.Lerp (bg.color, bgOff, .05f);
 		}
 	}
 
@@ -54,9 +64,11 @@ public class Dialog : MonoBehaviour {
 		text.text = "";
 	}
 
-	void NextInput(){
-		if (index == dialogs.Count) {
-			EndDialog ();
+	void NextInput()
+    {
+        if (index == dialogs.Count)
+        {
+            EndDialog ();
 			return;
 		}
 		bool fireNext = false;
@@ -66,7 +78,6 @@ public class Dialog : MonoBehaviour {
 			Vector2 v = text.rectTransform.sizeDelta;
 			v.y = lineHeight * text.text.Split (newLine, System.StringSplitOptions.RemoveEmptyEntries).Length;
 			text.rectTransform.sizeDelta = v;
-			Debug.Log (v.y);
 		} else if (d.type == DialogElement.Type.Event) {
 			Messenger.Broadcast (d.string1);
 			fireNext = true;
@@ -80,11 +91,11 @@ public class Dialog : MonoBehaviour {
 		}else if (d.type == DialogElement.Type.Sound) {
 			d.audio.Play ();
 			fireNext = true;
-		}
-		index++;
+        }
+        index++;
 		if (fireNext)
 			NextInput ();
-	}
+    }
 
 	void FinishLookAt()
     {
