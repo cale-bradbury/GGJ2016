@@ -50,6 +50,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &108876
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 446148}
+  m_Layer: 0
+  m_Name: Couch Teleport Location
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &111256
 GameObject:
   m_ObjectHideFlags: 1
@@ -169,6 +184,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &157650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 455268}
+  - 108: {fileID: 10806568}
+  m_Layer: 0
+  m_Name: Weak Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &160220
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,8 +214,6 @@ GameObject:
   - 114: {fileID: 11432436}
   - 114: {fileID: 11469248}
   - 114: {fileID: 11400216}
-  - 114: {fileID: 11401652}
-  - 114: {fileID: 11464780}
   m_Layer: 0
   m_Name: Pal
   m_TagString: Untagged
@@ -217,7 +246,7 @@ GameObject:
   - 4: {fileID: 427544}
   - 108: {fileID: 10845978}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: Big Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -366,11 +395,12 @@ Transform:
   m_Children:
   - {fileID: 439036}
   - {fileID: 483620}
-  - {fileID: 427544}
   - {fileID: 496248}
   - {fileID: 444324}
   - {fileID: 478364}
   - {fileID: 461558}
+  - {fileID: 427544}
+  - {fileID: 455268}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &427544
@@ -384,7 +414,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 423886}
-  m_RootOrder: 2
+  m_RootOrder: 6
 --- !u!4 &429774
 Transform:
   m_ObjectHideFlags: 1
@@ -424,6 +454,7 @@ Transform:
   - {fileID: 402992}
   - {fileID: 442948}
   - {fileID: 431962}
+  - {fileID: 446148}
   m_Father: {fileID: 423886}
   m_RootOrder: 0
 --- !u!4 &442948
@@ -452,6 +483,18 @@ Transform:
   - {fileID: 429774}
   - {fileID: 448198}
   m_Father: {fileID: 423886}
+  m_RootOrder: 3
+--- !u!4 &446148
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108876}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.61, y: 6.16, z: 1.02}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 439036}
   m_RootOrder: 4
 --- !u!4 &446570
 Transform:
@@ -491,6 +534,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 448198}
   m_RootOrder: 0
+--- !u!4 &455268
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 157650}
+  m_LocalRotation: {x: 0.7656844, y: 0.57797545, z: -0.26866516, w: 0.08654971}
+  m_LocalPosition: {x: -2.13, y: 4.34, z: 19.44}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 423886}
+  m_RootOrder: 7
 --- !u!4 &461558
 Transform:
   m_ObjectHideFlags: 1
@@ -502,7 +557,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 423886}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!4 &478364
 Transform:
   m_ObjectHideFlags: 1
@@ -514,7 +569,7 @@ Transform:
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 423886}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!4 &483620
 Transform:
   m_ObjectHideFlags: 1
@@ -538,7 +593,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 423886}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!20 &2093194
 Camera:
   m_ObjectHideFlags: 1
@@ -843,6 +898,39 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 15.15, y: 1.79, z: 8.34}
   m_Center: {x: 0, y: 2.24, z: 0}
+--- !u!108 &10806568
+Light:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 157650}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_Type: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.5
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: 0.069
+    m_NormalBias: 0.25
+    m_NearPlane: 1.96
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_BounceIntensity: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_AreaSize: {x: 1, y: 1}
 --- !u!108 &10845978
 Light:
   m_ObjectHideFlags: 1
@@ -853,7 +941,7 @@ Light:
   serializedVersion: 6
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.7
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -900,28 +988,6 @@ MonoBehaviour:
     transform1: {fileID: 0}
   - type: 0
     string1: We have grown so close...
-    float1: 0
-    audio: {fileID: 0}
-    transform1: {fileID: 0}
---- !u!114 &11401652
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 160220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f50d336acb2a416428dac4e2c0093135, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogs:
-  - type: 0
-    string1: Random 1
-    float1: 0
-    audio: {fileID: 0}
-    transform1: {fileID: 0}
-  - type: 0
-    string1: 'Also random moar because '
     float1: 0
     audio: {fileID: 0}
     transform1: {fileID: 0}
@@ -973,9 +1039,19 @@ MonoBehaviour:
     string1: 
     float1: 1
     audio: {fileID: 0}
-    transform1: {fileID: 439036}
+    transform1: {fileID: 446148}
+  - type: 1
+    string1: pal-to-couch
+    float1: 0
+    audio: {fileID: 0}
+    transform1: {fileID: 0}
   - type: 0
     string1: ' RGB and chill? lol.'
+    float1: 0
+    audio: {fileID: 0}
+    transform1: {fileID: 0}
+  - type: 1
+    string1: pal-enable-couch-talk
     float1: 0
     audio: {fileID: 0}
     transform1: {fileID: 0}
@@ -1014,12 +1090,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   teleportTarget: {fileID: 0}
+  couch: {fileID: 446148}
   particles: {fileID: 19818504}
   speed: 0.2
   minDistance: 2
   introTalk: {fileID: 11432436}
-  couchTalk: {fileID: 11464780}
-  randomTalk: {fileID: 11401652}
+  couchTalk: {fileID: 11400216}
+  randomTalk: {fileID: 11469248}
 --- !u!114 &11463372
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1033,36 +1110,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: 98d00c2b55117cf439b7a950f8289519, type: 3}
   intensity: 0.2
-  freq: 4.4
+  freq: 5
   phase: 0.36
   phasePerSecond: 0.1
---- !u!114 &11464780
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 160220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f50d336acb2a416428dac4e2c0093135, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogs:
-  - type: 0
-    string1: Talking about all the good old times.
-    float1: 0
-    audio: {fileID: 0}
-    transform1: {fileID: 0}
-  - type: 0
-    string1: Flirty jokez.
-    float1: 0
-    audio: {fileID: 0}
-    transform1: {fileID: 0}
-  - type: 0
-    string1: We have grown so close...
-    float1: 0
-    audio: {fileID: 0}
-    transform1: {fileID: 0}
 --- !u!114 &11469248
 MonoBehaviour:
   m_ObjectHideFlags: 1
