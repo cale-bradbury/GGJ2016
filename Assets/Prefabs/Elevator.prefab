@@ -28,6 +28,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 413532}
   - 82: {fileID: 8275092}
+  - 114: {fileID: 11492194}
   m_Layer: 0
   m_Name: Elevator Audio
   m_TagString: Untagged
@@ -307,7 +308,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 172096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.706, y: 3.886, z: 1.822}
+  m_LocalPosition: {x: -0.724, y: 3.886, z: 1.822}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 403832}
@@ -786,7 +787,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1ee840e647909544bab6ac6bf7f8886b, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.333
   m_Pitch: 0.9
   Loop: 0
@@ -859,7 +860,7 @@ TextMesh:
   m_GameObject: {fileID: 172096}
   m_Text: TIME TO GO!
   m_OffsetZ: 0
-  m_CharacterSize: 0.025
+  m_CharacterSize: 0.05
   m_LineSpacing: 1
   m_Anchor: 3
   m_Alignment: 0
@@ -997,6 +998,23 @@ MonoBehaviour:
   leftDoor: {fileID: 460904}
   rightDoor: {fileID: 490276}
   isPlayerInside: 0
+--- !u!114 &11492194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec7ac9056ec7094c965517142ade4d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elevatorClips:
+  - {fileID: 8300000, guid: 1ee840e647909544bab6ac6bf7f8886b, type: 3}
+  - {fileID: 8300000, guid: 33bbe08a674fda3469c170854aaaf5f0, type: 3}
+  - {fileID: 8300000, guid: 524b9499418661b42a2760e5992fe731, type: 3}
+  - {fileID: 8300000, guid: 4b197159f1ca75841a0c6190eb59a23a, type: 3}
+  - {fileID: 8300000, guid: f1bcaff71d8d11040b4a70d602afa5d7, type: 3}
 --- !u!114 &11495012
 MonoBehaviour:
   m_ObjectHideFlags: 1
