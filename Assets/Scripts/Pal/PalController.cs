@@ -15,21 +15,22 @@ public class PalController : MonoBehaviour {
     private bool canFollow = false;
     private bool isCloseWithDave = false;
     private bool isWorried = false;
+    private bool isPalVeryUpset = false;
 
     public Dialog introTalk;
     public Dialog couchTalk;
-    public Dialog leavingTalk;
     public Dialog worriedTalk;
+    public Dialog[] threatTalks;
 
     void Start()
     {
-        couchTalk.enabled = false;
-        leavingTalk.enabled = false;
-        worriedTalk.enabled = false;
+        DisableTalks();
+        introTalk.enabled = true;
         particles.playOnAwake = true;
         Messenger.AddListener("pal-to-couch", TeleportToCouch);
         Messenger.AddListener("pal-enable-couch-talk", EnableCouchTalk);
         Messenger.AddListener("isCloseWithDave", CloseWithDave);
+        Messenger.AddListener("enable-very-upset-pal", EnableVeryUpsetPal);
     }
 
     // Update is called once per frame
@@ -41,6 +42,15 @@ public class PalController : MonoBehaviour {
         }
         Worrying();
         Follow();
+        FlipOut();
+    }
+
+    void FlipOut() {
+        if (isPalVeryUpset && !teleportSound.isPlaying)
+        {
+            teleportSound.loop = true;
+            teleportSound.Play();
+        }
     }
 
     void Worrying() {
@@ -107,17 +117,13 @@ public class PalController : MonoBehaviour {
     }
 
     void EnableCouchTalk() {
-        introTalk.enabled = false;
-        leavingTalk.enabled = false;
-        worriedTalk.enabled = false;
+        DisableTalks();
         couchTalk.enabled = true;
     }
 
     void EnableWorriedTalk() {
-        introTalk.enabled = false;
-        leavingTalk.enabled = false;
+        DisableTalks();
         worriedTalk.enabled = true;
-        couchTalk.enabled = false;
         isWorried = true;
     }
 
@@ -128,11 +134,45 @@ public class PalController : MonoBehaviour {
 
     public void SetThreatLevel(int threatLevel)
     {
+        DisableTalks();
+        threatLevel--;
 
+        if(threatTalks[threatLevel] != null)
+        {
+            threatTalks[threatLevel].enabled = true;
+            threatTalks[threatLevel].StartDialog();
+            threatTalks[threatLevel] = null;
+        }        
     }
 
     public bool getIsWorried()
     {
         return isWorried;
+    }
+
+    void DisableTalks() {
+        introTalk.enabled = false;
+        couchTalk.enabled = false;
+        worriedTalk.enabled = false;
+
+        DisableThreatTalks();
+    }
+
+    void DisableThreatTalks()
+    {
+        for (int i = 0; i < threatTalks.Length; i++)
+        {
+            if (threatTalks[i] != null)
+            {
+                threatTalks[i].enabled = false;
+            }
+        }
+    }
+
+    void EnableVeryUpsetPal()
+    {
+        // not building this part of the level right now.
+        // But there should be audio that fades as the elevator "moves" away.
+        // isPalVeryUpset = true;
     }
 }

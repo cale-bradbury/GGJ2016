@@ -233,7 +233,6 @@ GameObject:
   - 114: {fileID: 11455660}
   - 114: {fileID: 11432436}
   - 114: {fileID: 11400216}
-  - 114: {fileID: 11469248}
   - 82: {fileID: 8251546}
   - 82: {fileID: 8205366}
   - 82: {fileID: 8286132}
@@ -242,6 +241,9 @@ GameObject:
   - 82: {fileID: 8220022}
   - 82: {fileID: 8299040}
   - 114: {fileID: 11465734}
+  - 114: {fileID: 11479686}
+  - 114: {fileID: 11491156}
+  - 114: {fileID: 11463460}
   m_Layer: 0
   m_Name: Pal
   m_TagString: Untagged
@@ -1228,12 +1230,12 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 68a6e81ade6d9d942827a7dab3187370, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.35
+  m_Volume: 0.37
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
-  Priority: 94
+  Priority: 24
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1659,7 +1661,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 160220}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f50d336acb2a416428dac4e2c0093135, type: 3}
   m_Name: 
@@ -1928,8 +1930,11 @@ MonoBehaviour:
   minDistance: 2
   introTalk: {fileID: 11432436}
   couchTalk: {fileID: 11400216}
-  leavingTalk: {fileID: 11469248}
   worriedTalk: {fileID: 11465734}
+  threatTalks:
+  - {fileID: 11463460}
+  - {fileID: 11491156}
+  - {fileID: 11479686}
 --- !u!114 &11457950
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1959,13 +1964,41 @@ MonoBehaviour:
   freq: 5
   phase: 0.36
   phasePerSecond: 0.1
+--- !u!114 &11463460
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160220}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f50d336acb2a416428dac4e2c0093135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogs:
+  - type: 2
+    string1: 
+    float1: 1
+    audio: {fileID: 0}
+    transform1: {fileID: 444324}
+  - type: 3
+    string1: 
+    float1: 0
+    audio: {fileID: 8205366}
+    transform1: {fileID: 0}
+  - type: 0
+    string1: Wait, Dave. You aren't leaving again are you? Can we just discuss this
+      as two rational beings?
+    float1: 0
+    audio: {fileID: 0}
+    transform1: {fileID: 0}
 --- !u!114 &11465734
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 160220}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f50d336acb2a416428dac4e2c0093135, type: 3}
   m_Name: 
@@ -1978,38 +2011,6 @@ MonoBehaviour:
     transform1: {fileID: 0}
   - type: 0
     string1: Hey, where are you going?
-    float1: 0
-    audio: {fileID: 0}
-    transform1: {fileID: 0}
---- !u!114 &11469248
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 160220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f50d336acb2a416428dac4e2c0093135, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogs:
-  - type: 0
-    string1: Hey, where are you going?
-    float1: 0
-    audio: {fileID: 0}
-    transform1: {fileID: 0}
-  - type: 0
-    string1: Wait, Dave, stop. Please, can we just discuss this as two rational beings?
-    float1: 0
-    audio: {fileID: 0}
-    transform1: {fileID: 0}
-  - type: 0
-    string1: You know I can't go near that horrible thing.
-    float1: 0
-    audio: {fileID: 0}
-    transform1: {fileID: 0}
-  - type: 0
-    string1: Dave, you can leave me here again! Dave!? DAVE. DAVE. DAVE. DAVE.
     float1: 0
     audio: {fileID: 0}
     transform1: {fileID: 0}
@@ -2073,6 +2074,70 @@ MonoBehaviour:
     isMat: 0
     isVector: 0
     index: 0
+--- !u!114 &11479686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160220}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f50d336acb2a416428dac4e2c0093135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogs:
+  - type: 2
+    string1: 
+    float1: 0.5
+    audio: {fileID: 0}
+    transform1: {fileID: 444324}
+  - type: 3
+    string1: 
+    float1: 0
+    audio: {fileID: 8220022}
+    transform1: {fileID: 0}
+  - type: 0
+    string1: Dave, you can leave me here again! Dave!? DAVE. DAVE. DAVE. DAVE.
+    float1: 0
+    audio: {fileID: 0}
+    transform1: {fileID: 0}
+  - type: 3
+    string1: 
+    float1: 0
+    audio: {fileID: 8251546}
+    transform1: {fileID: 0}
+  - type: 1
+    string1: enable-very-upset-pal
+    float1: 0
+    audio: {fileID: 0}
+    transform1: {fileID: 0}
+--- !u!114 &11491156
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160220}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f50d336acb2a416428dac4e2c0093135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogs:
+  - type: 2
+    string1: 
+    float1: 0.5
+    audio: {fileID: 0}
+    transform1: {fileID: 444324}
+  - type: 3
+    string1: 
+    float1: 0
+    audio: {fileID: 8286132}
+    transform1: {fileID: 0}
+  - type: 0
+    string1: You know I can't go near that horrible thing. Please, stop.
+    float1: 0
+    audio: {fileID: 0}
+    transform1: {fileID: 0}
 --- !u!135 &13517138
 SphereCollider:
   m_ObjectHideFlags: 1
