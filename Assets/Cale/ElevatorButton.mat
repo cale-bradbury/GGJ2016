@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Infinite Field 3
-  m_Shader: {fileID: 4800000, guid: d1dae8e38e886a343a2f19e784ca633f, type: 3}
+  m_Name: ElevatorButton
+  m_Shader: {fileID: 4800000, guid: 841cd0e6bd254594bbb61ec47e72b3de, type: 3}
   m_ShaderKeywords: hex
   m_LightmapFlags: 5
   m_CustomRenderQueue: 2000
@@ -19,7 +19,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 5fff3bb8cbfc7d9418be9bbad50a94d1, type: 3}
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -246,3 +246,7 @@ Material:
         first:
           name: _Tint
         second: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+      data:
+        first:
+          name: _Form
+        second: {r: 0, g: 0, b: 0, a: 0}

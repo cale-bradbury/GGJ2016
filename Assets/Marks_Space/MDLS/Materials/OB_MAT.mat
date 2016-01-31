@@ -104,12 +104,16 @@ Material:
         second: 0.02
       data:
         first:
-          name: _ZWrite
-        second: 1
-      data:
-        first:
           name: _Glossiness
         second: 0.75
+      data:
+        first:
+          name: _Metallic
+        second: 0.75
+      data:
+        first:
+          name: _ZWrite
+        second: 1
       data:
         first:
           name: _BumpScale
@@ -132,20 +136,16 @@ Material:
         second: 0
       data:
         first:
-          name: _Metallic
-        second: 0.75
+          name: _Freq
+        second: 2.5
       data:
         first:
           name: _Phase
-        second: 341.35382
-      data:
-        first:
-          name: _Freq
-        second: 3.99
+        second: 158.70837
       data:
         first:
           name: _Intensity
-        second: 0.33
+        second: 0.1
       data:
         first:
           name: _Angle
@@ -169,6 +169,10 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
+          name: _Shape
+        second: {r: 1.67, g: 1, b: 1, a: 1}
+      data:
+        first:
           name: _color1
         second: {r: 0.5808823, g: 1, b: 0.7918864, a: 1}
       data:
@@ -177,13 +181,9 @@ Material:
         second: {r: 0.26989618, g: 0.7058823, b: 0.27290297, a: 1}
       data:
         first:
-          name: _Position1
-        second: {r: 1, g: 0, b: 0, a: 0}
-      data:
-        first:
-          name: _Shape
-        second: {r: 1.67, g: 1, b: 1, a: 1}
-      data:
-        first:
           name: _x
         second: {r: 0.01, g: 0.01, b: 0, a: 0.5}
+      data:
+        first:
+          name: _Position1
+        second: {r: 1, g: 0, b: 0, a: 0}
