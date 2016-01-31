@@ -25,7 +25,7 @@ public class PalController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Vector3 pos = target.position;
-        if(pos.y < transform.position.y)
+        if(pos.y - 0.5f < transform.position.y)
         {
             transform.LookAt(pos);
         }
