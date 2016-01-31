@@ -8,7 +8,7 @@ Properties {
 Category{
 SubShader {
 	Pass {
-		ZTest Always Cull Off 
+		Cull Off 
 		Blend SrcAlpha OneMinusSrcAlpha
 		Tags {"Queue"="Transparent+1" "RenderType" = "Transparent+1"}
 		

@@ -11,6 +11,7 @@
 
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -119,7 +120,7 @@ public class PauseMenu : MonoBehaviour
 				{
 					print("Reset Level");
 					PauseGame();
-					Application.LoadLevel(Application.loadedLevel);
+					SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 				}
 				
 				// options button

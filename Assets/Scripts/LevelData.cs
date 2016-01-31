@@ -41,6 +41,8 @@ public class LevelData : MonoBehaviour {
 	}
 
 	void RemoveCamera(){
+		if (mainCam == null)
+			return;
 		fx = mainCam.GetComponents<ImageEffectBase> ();
 		foreach (ImageEffectBase i in fx) {
 			Destroy (i);
