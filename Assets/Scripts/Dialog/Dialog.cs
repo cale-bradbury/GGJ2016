@@ -106,5 +106,4 @@ public class Dialog : MonoBehaviour {
 	void LookAt(float f){
 		cam.transform.rotation = Quaternion.Lerp (lookStart, lookTarget, f);
 	}
-
 }

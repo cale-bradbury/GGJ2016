@@ -8,21 +8,29 @@ public class PalController : MonoBehaviour {
     public Transform couch;
     public ParticleSystem particles;
     public CouchController couchController;
+    public AudioSource[] sounds;
+    public AudioSource teleportSound;
     public float speed = 0.1f;
     public float minDistance = 2f;
     private bool canFollow = false;
+    private bool isCloseWithDave = false;
+    private bool isWorried = false;
+    private bool isPalVeryUpset = false;
 
     public Dialog introTalk;
     public Dialog couchTalk;
-    public Dialog leavingTalk;
+    public Dialog worriedTalk;
+    public Dialog[] threatTalks;
 
     void Start()
     {
-        couchTalk.enabled = false;
-        leavingTalk.enabled = false;
+        DisableTalks();
+        introTalk.enabled = true;
         particles.playOnAwake = true;
         Messenger.AddListener("pal-to-couch", TeleportToCouch);
         Messenger.AddListener("pal-enable-couch-talk", EnableCouchTalk);
+        Messenger.AddListener("isCloseWithDave", CloseWithDave);
+        Messenger.AddListener("enable-very-upset-pal", EnableVeryUpsetPal);
     }
 
     // Update is called once per frame
@@ -32,7 +40,31 @@ public class PalController : MonoBehaviour {
         {
             transform.LookAt(pos);
         }
+        Worrying();
         Follow();
+        FlipOut();
+    }
+
+    void FlipOut() {
+        if (isPalVeryUpset && !teleportSound.isPlaying)
+        {
+            teleportSound.loop = true;
+            teleportSound.Play();
+        }
+    }
+
+    void Worrying() {
+        if (couchController.isPalOnCouch && isCloseWithDave)
+        {
+            float distance = getDistance();
+
+            if(distance > 10f)
+            {
+                Debug.Log("PAL is starting to get worried.");
+                ResumeFollowing();
+                EnableWorriedTalk();
+            }
+        }
     }
 
     void Follow() {
@@ -47,6 +79,9 @@ public class PalController : MonoBehaviour {
     }
 
     public void ResumeFollowing() {
+        float randFloat = Random.Range(0f, (float) (sounds.Length - 1));
+        int randInt = (int) Mathf.Round(randFloat);
+        sounds[randInt].Play();
         canFollow = true;
         if (getDistance() > minDistance * 3f)
         {
@@ -72,6 +107,7 @@ public class PalController : MonoBehaviour {
     }
 
     void TeleportParticles() {
+        teleportSound.Play();
         particles.gameObject.SetActive(false);
         particles.gameObject.SetActive(true);
     }
@@ -81,8 +117,62 @@ public class PalController : MonoBehaviour {
     }
 
     void EnableCouchTalk() {
-        introTalk.enabled = false;
-        leavingTalk.enabled = false;
+        DisableTalks();
         couchTalk.enabled = true;
+    }
+
+    void EnableWorriedTalk() {
+        DisableTalks();
+        worriedTalk.enabled = true;
+        isWorried = true;
+    }
+
+    void CloseWithDave() {
+        isCloseWithDave = true;
+        //couchTalk.enabled = false;    // causes the dialog not to wrap up interaction correctly (text box remains visible)
+    }
+
+    public void SetThreatLevel(int threatLevel)
+    {
+        DisableTalks();
+        threatLevel--;
+
+        if(threatTalks[threatLevel] != null)
+        {
+            threatTalks[threatLevel].enabled = true;
+            threatTalks[threatLevel].StartDialog();
+            threatTalks[threatLevel] = null;
+        }        
+    }
+
+    public bool getIsWorried()
+    {
+        return isWorried;
+    }
+
+    void DisableTalks() {
+        introTalk.enabled = false;
+        couchTalk.enabled = false;
+        worriedTalk.enabled = false;
+
+        DisableThreatTalks();
+    }
+
+    void DisableThreatTalks()
+    {
+        for (int i = 0; i < threatTalks.Length; i++)
+        {
+            if (threatTalks[i] != null)
+            {
+                threatTalks[i].enabled = false;
+            }
+        }
+    }
+
+    void EnableVeryUpsetPal()
+    {
+        // not building this part of the level right now.
+        // But there should be audio that fades as the elevator "moves" away.
+        // isPalVeryUpset = true;
     }
 }
