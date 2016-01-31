@@ -169,7 +169,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 423886, guid: 5e8494396b4ff8c4abecbd8936108fd9, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11455660, guid: 5e8494396b4ff8c4abecbd8936108fd9, type: 2}
       propertyPath: target
@@ -186,22 +186,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e8494396b4ff8c4abecbd8936108fd9, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1144031571 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 128680, guid: 5e8494396b4ff8c4abecbd8936108fd9, type: 2}
-  m_PrefabInternal: {fileID: 542846306}
---- !u!114 &1144031575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1144031571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8da0da59839f5c049acb36687ed9cc69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPalOnCouch: 0
 --- !u!1001 &1295792384
 Prefab:
   m_ObjectHideFlags: 0
@@ -322,6 +306,18 @@ Prefab:
     - target: {fileID: 22414320, guid: f6ccb8c68e6e9ab41985a047b964e367, type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11468630, guid: f6ccb8c68e6e9ab41985a047b964e367, type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400278, guid: f6ccb8c68e6e9ab41985a047b964e367, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.0250001
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400278, guid: f6ccb8c68e6e9ab41985a047b964e367, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 2.9500003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f6ccb8c68e6e9ab41985a047b964e367, type: 2}

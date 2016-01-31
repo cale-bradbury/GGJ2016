@@ -17,6 +17,7 @@ public class CouchController : MonoBehaviour {
         if(isPlayerOnCouch && isPalOnCouch)
         {
             // trigger anim float for RGB rotate
+            Messenger.Broadcast("enjoy-rgb-with-pal");
         }
     }
 
