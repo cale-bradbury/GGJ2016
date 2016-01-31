@@ -53,6 +53,28 @@ public class LevelData : MonoBehaviour {
 						}
 						f.SetValue (c, cc);
 					}
+
+					if (f.FieldType == typeof(CCReflectColor)) {
+						CCReflectColor cc = f.GetValue (c) as CCReflectColor;
+						foreach (Component comp in added) {
+							if (comp.GetType() == cc.obj.GetType ()) {
+								cc.obj = comp;
+								break;
+							}
+						}
+						f.SetValue (c, cc);
+					}
+
+					if (f.FieldType == typeof(CCReflectTexture)) {
+						CCReflectTexture cc = f.GetValue (c) as CCReflectTexture;
+						foreach (Component comp in added) {
+							if (comp.GetType() == cc.obj.GetType ()) {
+								cc.obj = comp;
+								break;
+							}
+						}
+						f.SetValue (c, cc);
+					}
 				}
 			}
 		}
