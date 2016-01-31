@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 5
+  serializedVersion: 6
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -11,6 +11,7 @@ Material:
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
+  stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -80,10 +81,6 @@ Material:
     m_Floats:
       data:
         first:
-          name: _Cutoff
-        second: .5
-      data:
-        first:
           name: _SrcBlend
         second: 1
       data:
@@ -92,8 +89,12 @@ Material:
         second: 0
       data:
         first:
+          name: _Cutoff
+        second: 0.5
+      data:
+        first:
           name: _Parallax
-        second: .0199999996
+        second: 0.02
       data:
         first:
           name: _ZWrite
@@ -120,10 +121,6 @@ Material:
         second: 0
       data:
         first:
-          name: _EmissionScaleUI
-        second: 0
-      data:
-        first:
           name: _Mode
         second: 0
       data:
@@ -132,8 +129,12 @@ Material:
         second: 0
       data:
         first:
+          name: _EmissionScaleUI
+        second: 0
+      data:
+        first:
           name: _EdgeSize
-        second: .100000001
+        second: 0.1
       data:
         first:
           name: _FogEnd
@@ -170,7 +171,7 @@ Material:
       data:
         first:
           name: _x
-        second: {r: 4.26000023, g: 4.07999992, b: 1, a: 0}
+        second: {r: 4.26, g: 4.08, b: 1, a: 0}
       data:
         first:
           name: _phase
@@ -178,27 +179,27 @@ Material:
       data:
         first:
           name: _amp
-        second: {r: .239999995, g: .910000026, b: 1.38, a: 1}
+        second: {r: 0.24, g: 0.91, b: 1.38, a: 1}
       data:
         first:
           name: _freq
-        second: {r: 4.53000021, g: 3.56999993, b: 3.27999997, a: 1}
+        second: {r: 4.53, g: 3.57, b: 3.28, a: 1}
       data:
         first:
           name: _color1
-        second: {r: 1, g: .5, b: .5, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _color2
-        second: {r: .5, g: 1, b: 1, a: 1}
+        second: {r: 0.09429068, g: 0.08434258, b: 0.14705884, a: 1}
       data:
         first:
           name: _y
-        second: {r: .660000026, g: 0, b: 1, a: 0}
+        second: {r: 0.66, g: 0, b: 1, a: 0}
       data:
         first:
           name: _z
-        second: {r: .720000029, g: 0, b: 1, a: 0}
+        second: {r: 0.72, g: 0, b: 1, a: 0}
       data:
         first:
           name: _xStrength
@@ -222,8 +223,12 @@ Material:
       data:
         first:
           name: _color3
-        second: {r: .5, g: 1, b: .5, a: 1}
+        second: {r: 0.5, g: 1, b: 0.5, a: 1}
       data:
         first:
           name: _color4
-        second: {r: .272058845, g: .272058845, b: 1, a: 1}
+        second: {r: 0.27205884, g: 0.27205884, b: 1, a: 1}
+      data:
+        first:
+          name: _Shape
+        second: {r: 0, g: 1, b: 0, a: 0}
