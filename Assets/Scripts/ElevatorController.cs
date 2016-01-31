@@ -7,7 +7,6 @@ public class ElevatorController : MonoBehaviour {
 	int currentLevel = -1;
 	int nextLevel = 0;
 	public List<GameObject> levels = new List<GameObject>();
-	public List<GameObject> buttons = new List<GameObject> ();
 
 	public AnimationCurve doorAnimation;
 	public float doorTime = 1;
