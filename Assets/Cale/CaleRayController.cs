@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CaleRayController : MonoBehaviour {
 
-	public Material mat;
+	public Material[] mat;
 	public Transform player;
 	public Transform camera;
 	Vector4 v;
@@ -15,7 +15,7 @@ public class CaleRayController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		v = mat.GetVector ("_Camera");
+		v = mat[0].GetVector ("_Camera");
 		v.x = player.position.x;
 		v.y = -player.position.y;
 		v.z = player.position.z;
@@ -25,8 +25,11 @@ public class CaleRayController : MonoBehaviour {
 		v.x = Mathf.Cos (a) * d;
 		v.z = Mathf.Sin (a) * d;
 
-		mat.SetVector("_Camera",v);
-		v = mat.GetVector ("_CameraAngle");
+		foreach(Material m in mat){
+			m.SetVector("_Camera",v);
+		}
+
+		v = mat[0].GetVector ("_CameraAngle");
 		v.x = camera.position.x-player.position.x;
 		v.y = camera.position.y-player.position.y;
 		v.z = camera.position.z-player.position.z;
@@ -36,6 +39,8 @@ public class CaleRayController : MonoBehaviour {
 		v.x = Mathf.Cos (a) * d;
 		v.z = Mathf.Sin (a) * d;
 
-		mat.SetVector("_CameraAngle",v);
+		foreach(Material m in mat){
+			m.SetVector("_CameraAngle",v);
+		}
 	}
 }

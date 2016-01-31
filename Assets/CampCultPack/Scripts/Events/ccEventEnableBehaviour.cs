@@ -8,18 +8,22 @@ public class ccEventEnableBehaviour : MonoBehaviour {
 	public MonoBehaviour[] behaviours;
 
 	// Use this for initialization
-	void Start () {
-		Messenger.AddListener(enableEvent,On);
-		Messenger.AddListener(disableEvent,Off);
+	void OnEnable () {
+		Messenger.AddListener(enableEvent,OnEvent);
+		Messenger.AddListener(disableEvent,OffEvent);
+	}
+	void OnDisable () {
+		Messenger.RemoveListener(enableEvent,OnEvent);
+		Messenger.RemoveListener(disableEvent,OffEvent);
 	}
 	
 	// Update is called once per frame
-	void On () {
+	void OnEvent () {
 		foreach(MonoBehaviour m in behaviours){
 			m.enabled = true;
 		}
 	}
-	void Off () {
+	void OffEvent () {
 		foreach(MonoBehaviour m in behaviours){
 			m.enabled = false;
 		}

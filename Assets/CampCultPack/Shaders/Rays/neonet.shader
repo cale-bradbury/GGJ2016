@@ -18,7 +18,7 @@ Pass {
 CGPROGRAM
 #include "UnityCG.cginc"
 #include "ray.cginc"
-#pragma multi_compile cross2 cross1 sphere cube   hex tie tri
+#pragma multi_compile sphere cross2 cross1  cube   hex tie tri
 #pragma vertex vert_img
 #pragma fragment frag
 #define count 1.
@@ -74,7 +74,7 @@ float2 map( in float3 pos, float t )
  
 float2 castRay( in float3 ro, in float3 rd, float time )
 {
-    float tmin = 0.0001;
+    float tmin = .001;
     float tmax = _Fog;
    
 #if 0
@@ -120,9 +120,9 @@ float3 render( in float3 ro, in float3 rd, float time )
         float3 nor = calcNormal( pos, time);
  
         col = nor.yyy*.5+.5;
-        col.rgb *= min(1.0,pow(max(0.,1.0-t/_Fog),4.));
+        col.rgb *= min(1.0,pow(max(0.,1.0-(t/_Fog)),2.));
     }
-    col*=pow(1.0-res.x*.05,1.);
+    //col*=pow(1.0-res.x*.05,1.);
     return col;
 }
  
@@ -138,6 +138,8 @@ float3x3 setCamera( in float3 ro, in float3 ta, float cr )
 fixed4 frag (v2f_img i) : COLOR
 {
     float2 q = i.uv;
+    q.x*=2.;
+    q.x-=.5;
     float2 p = -1.0+2.0*q;
     float time = _Time.y;
  
