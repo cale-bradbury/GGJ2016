@@ -44,7 +44,8 @@ public class PlayerController : MonoBehaviour {
         }
         else if(hit.transform.gameObject.tag == "elevator-door")
         {
-            elevatorController.OpenDoorsFromOutside();
+			if(!elevatorController.isPlayerInside)
+				elevatorController.OpenDoor();
         }
         else if (hit.transform.gameObject.tag == "collectible")
         {

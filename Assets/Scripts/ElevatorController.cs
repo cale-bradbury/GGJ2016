@@ -4,133 +4,100 @@ using System.Collections.Generic;
 
 public class ElevatorController : MonoBehaviour {
 
-    public List<GameObject> levelPrefabs = new List<GameObject>();
-    private List<GameObject> levels = new List<GameObject>();
-    private GameObject activeLevel;
-    private GameObject nextLevel;
+	int currentLevel = -1;
+	int nextLevel = 0;
+	public List<GameObject> levels = new List<GameObject>();
+	public List<GameObject> buttons = new List<GameObject> ();
+
+	public AnimationCurve doorAnimation;
+	public float doorTime = 1;
+	public float elevatorTime = 2;
+
+	public Transform leftDoor;
+	public Transform rightDoor;
+	
+	private TextMesh floorText;
+	private bool openingDoor = false;
+	private bool animating = false;
+
     private Vector3 levelOrigin = new Vector3(0f, 0f, 0f);
-    private TextMesh floorTextMesh;
 
     public bool isPlayerInside;
     bool openDoors = false;
-    bool doorsAnimating = false;
-    bool isMoving = false;
-    float maxElevatorRideDuration = 5f;
-    float halfElevatorRideDuration;
-    float timeLeftInMotion = 0f;
 
     // Use this for initialization
     void Start () {
-        Messenger.AddListener("elevator-doors-opened", OpeningDoorComplete);
-        floorTextMesh = transform.FindChild("FloorText").gameObject.GetComponent<TextMesh>();
-        halfElevatorRideDuration = maxElevatorRideDuration / 2f;
-
-        foreach (GameObject levelPrefab in levelPrefabs)
-        {
-            GameObject level = (GameObject)Instantiate(levelPrefab, levelOrigin, Quaternion.identity);
-            level.SetActive(false);
-            levels.Add(level);
-        }
+		floorText = gameObject.GetComponentInChildren<TextMesh>();
+		GoToLevel (nextLevel);
     }
 
+	public void GoToLevel(int index) {
+		nextLevel = index;
+		if (nextLevel == currentLevel || animating)
+			return;
+		if (openDoors) {
+			CloseDoor ();
+			return;
+		}
+		EnableLevel ();
+	}
 
-    void Update() {
-        MoveElevator();
-    }
+	void EnableLevel(){
+		CancelInvoke ("OpenDoor");
+		if(currentLevel >= 0 && levels [currentLevel])
+			levels [currentLevel].SetActive (false);
+		levels [nextLevel].SetActive (true);
+		currentLevel = nextLevel;
+		Invoke ("OpenDoor", elevatorTime);
+	}
 
-    public void GoToLevel(int levelKey) {
-        if (!isMoving)
-        {
-            Debug.Log("Go to: " + levelKey);
-            GameObject requestedLevel = levels[levelKey - 1];
-            bool isNotSameFloor = activeLevel && activeLevel != requestedLevel;
-            if (!activeLevel || isNotSameFloor)
-            {
-                nextLevel = requestedLevel;
-                StartMoving();
-            }
-        }        
-    }
+	public void OpenDoor(){
+		if (animating||openDoors)
+			return;
+		openingDoor = animating = true;
+		StartCoroutine (Utils.AnimationCoroutine (doorAnimation, doorTime, AnimateDoor, OnDoorOpen));
+	}
 
-    void MoveElevator()
-    {
-        if (isMoving)
-        {
-            timeLeftInMotion -= Time.deltaTime;
+	void CloseDoor(){
+		openingDoor = openDoors = false;
+		animating = true;
+		StartCoroutine (Utils.AnimationCoroutine (doorAnimation, doorTime, AnimateDoor, OnDoorClose));
+	}
 
-            if (timeLeftInMotion <= halfElevatorRideDuration && nextLevel)
-            {
-                if (activeLevel){
-                    activeLevel.SetActive(false);                    
-                }
-                activeLevel = nextLevel;
-                nextLevel = null;
-                activeLevel.SetActive(true);
-                string levelName = activeLevel.GetComponent<LevelData>().levelName;
-                floorTextMesh.text = levelName;
-                Debug.Log("Half way there");            
-            }
+	void AnimateDoor(float f){
+		Vector3 r = rightDoor.transform.localPosition;
+		Vector3 l = leftDoor.transform.localPosition;
+		if (openingDoor) {
+			r.x = -f;
+			l.x = f;
+		} else {
+			r.x = f-1;
+			l.x = 1-f;
+		}
+		rightDoor.transform.localPosition = r;
+		leftDoor.transform.localPosition = l;
+	}
 
-            if (timeLeftInMotion <= 0f)
-            {
-                Debug.Log("Arrived");
-                StopMoving();
-            }
-        }
-    }
+	void OnDoorOpen(){
+		animating = false;
+		openDoors = true;
+		if (nextLevel != currentLevel)
+			CloseDoor ();
+	}
 
-    void StartMoving() {
-        timeLeftInMotion = maxElevatorRideDuration;
-        isMoving = true;
-        CloseDoors();
-    }
-
-    void StopMoving() {
-        isMoving = false;
-        timeLeftInMotion = 0f;
-        OpenDoors();
-    }
-
-    public void ToggleDoors() {
-        if (!doorsAnimating)
-        {
-            Debug.Log("Toggle Doors");
-            openDoors = !openDoors;
-            doorsAnimating = true;
-            Messenger.Broadcast("open-elevator-doors");
-        }
-    }
-
-    public void CloseDoors() {
-        if (openDoors)
-        {
-            ToggleDoors();
-        }
-    }
-
-    public void OpenDoors() {
-        if (!openDoors)
-        {
-            ToggleDoors();
-        }
-    }
-
-    public void OpenDoorsFromOutside() {
-        if (!isPlayerInside)
-        {
-            OpenDoors();
-        }
-    }
-
-    void OpeningDoorComplete() {
-        doorsAnimating = false;
-        Debug.Log("Opening doors complete.");
-    }
+	void OnDoorClose(){
+		animating = false;
+		if (isPlayerInside) {
+			EnableLevel ();
+		} else {
+			nextLevel = currentLevel;
+			OpenDoor ();
+		}
+	}
 
     void OnTriggerEnter(Collider other) {
         if(other.tag == "Player")
         {
-            Debug.Log("player enter ele");
             isPlayerInside = true;
         }
     }
@@ -139,7 +106,6 @@ public class ElevatorController : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            Debug.Log("player exit ele");
             isPlayerInside = false;
         }
     }
