@@ -8,6 +8,7 @@ public class PalController : MonoBehaviour {
     public Transform couch;
     public ParticleSystem particles;
     public CouchController couchController;
+    public AudioSource[] sounds;
     public float speed = 0.1f;
     public float minDistance = 2f;
     private bool canFollow = false;
@@ -47,6 +48,9 @@ public class PalController : MonoBehaviour {
     }
 
     public void ResumeFollowing() {
+        float randFloat = Random.Range(0f, (float) (sounds.Length - 1));
+        int randInt = (int) Mathf.Round(randFloat);
+        sounds[randInt].Play();
         canFollow = true;
         if (getDistance() > minDistance * 3f)
         {
