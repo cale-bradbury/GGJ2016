@@ -87,8 +87,10 @@ public class LevelData : MonoBehaviour {
 	void RemoveCamera(){
 		if (mainCam == null)
 			return;
-		foreach (MonoBehaviour i in added) {
-			Destroy (i);
+		if (added != null) {
+			foreach (Component i in added) {
+				Destroy (i);
+			}
 		}
 	}
 

@@ -9,6 +9,8 @@ public class Dialog : MonoBehaviour {
 	Image bg;
 	int index = 0;
 	bool dialogMode = false;
+	Color bgOn = new Color (1, 1, 1, .4f);
+	Color bgOff = new Color (1, 1, 1, 0);
 	List<MonoBehaviour> scriptsToLock = new List<MonoBehaviour>();
 	Camera cam;
 	Quaternion  lookTarget;
@@ -21,7 +23,6 @@ public class Dialog : MonoBehaviour {
 		text = FindObjectOfType<Text> ();
 		text.text = "";
 		bg = text.rectTransform.parent.GetComponent<Image> ();
-		bg.color = Color.red;
 		cam = Camera.main;
 		MouseLook[] ml = FindObjectsOfType<MouseLook> ();
 		foreach(MouseLook m in ml)
@@ -38,6 +39,11 @@ public class Dialog : MonoBehaviour {
 			if (Input.GetMouseButtonDown (0)) {
 				NextInput ();
 			}
+		}
+		if (text.text.Length != 0) {
+			bg.color = Color.Lerp (bg.color, bgOn, .05f);
+		} else {
+			bg.color = Color.Lerp (bg.color, bgOff, .05f);
 		}
 	}
 

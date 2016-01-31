@@ -213,27 +213,27 @@ Material:
       data:
         first:
           name: _Color1
-        second: {r: 0.11764707, g: 0.09411766, b: 0.2901961, a: 1}
+        second: {r: 0.08235294, g: 0.22352943, b: 0.18823531, a: 1}
       data:
         first:
           name: _Color2
-        second: {r: 0.5372549, g: 0.09411766, b: 0.4666667, a: 1}
+        second: {r: 0.09411766, g: 0.5372549, b: 0.1137255, a: 1}
       data:
         first:
           name: _Shape
-        second: {r: 0.49250057, g: 0, b: 3, a: 0.5}
+        second: {r: 0.99851793, g: 0, b: 3, a: 0.5}
       data:
         first:
           name: _Color3
-        second: {r: 1, g: 0.40000004, b: 0.41176474, a: 1}
+        second: {r: 0.86666673, g: 1, b: 0.40000004, a: 1}
       data:
         first:
           name: _Camera
-        second: {r: -0.000000002054449, g: -0.119474985, b: 0.047000315, a: 70}
+        second: {r: -0.0025146245, g: -0.119474985, b: -0.014235306, a: 70}
       data:
         first:
           name: _CameraAngle
-        second: {r: 3.1646676, g: 40.92307, b: 1.0392812, a: 0}
+        second: {r: 8.005787, g: -3.7995033, b: -38.76283, a: 0}
       data:
         first:
           name: _FaceColor
@@ -249,4 +249,4 @@ Material:
       data:
         first:
           name: _Form
-        second: {r: 1, g: 0, b: 0, a: 0}
+        second: {r: 0, g: 0, b: 0, a: 1}
