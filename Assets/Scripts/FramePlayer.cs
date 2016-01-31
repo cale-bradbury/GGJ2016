@@ -6,7 +6,7 @@ public class FramePlayer : MonoBehaviour {
 	public CCReflectTexture output;
 	public List<Texture2D> frames;
 	int index = 0;
-	float frameDelay = .03f;
+	public float frameDelay = .03f;
 
 	public bool loop = true;
 	public string endLoopEvent;
@@ -25,13 +25,17 @@ public class FramePlayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void NextFrame () {
+		Debug.Log (index);
 		output.SetValue (frames [index]);
 		index++;
 		if (index == frames.Count) {
 			Messenger.Broadcast (endLoopEvent);
 			if (loop) {
+				index = 0;
 				Invoke ("NextFrame", frameDelay);
 			}
+		} else {
+			Invoke ("NextFrame", frameDelay);
 		}
 	}
 }

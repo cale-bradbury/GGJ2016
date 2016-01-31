@@ -17,13 +17,25 @@ public class CaleRayController : MonoBehaviour {
 	void Update () {
 		v = mat.GetVector ("_Camera");
 		v.x = player.position.x;
-		v.y = player.position.y;
+		v.y = -player.position.y;
 		v.z = player.position.z;
-		mat.SetVector("_Camera",v*-1);
+
+		float a = -Mathf.Atan2 (v.z, v.x)+Mathf.PI;
+		float d = Vector2.Distance (Vector2.zero, new Vector2 (v.z, v.x));
+		v.x = Mathf.Cos (a) * d;
+		v.z = Mathf.Sin (a) * d;
+
+		mat.SetVector("_Camera",v);
 		v = mat.GetVector ("_CameraAngle");
 		v.x = camera.position.x-player.position.x;
 		v.y = camera.position.y-player.position.y;
 		v.z = camera.position.z-player.position.z;
-		mat.SetVector("_CameraAngle",v*-1);
+
+		a = -Mathf.Atan2 (v.z, v.x);
+		d = Vector2.Distance (Vector2.zero, new Vector2 (v.z, v.x));
+		v.x = Mathf.Cos (a) * d;
+		v.z = Mathf.Sin (a) * d;
+
+		mat.SetVector("_CameraAngle",v);
 	}
 }
