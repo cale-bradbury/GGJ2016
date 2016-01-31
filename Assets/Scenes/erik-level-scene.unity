@@ -139,6 +139,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11400216, guid: 5e8494396b4ff8c4abecbd8936108fd9, type: 2}
+      propertyPath: dialogs.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 423886, guid: 5e8494396b4ff8c4abecbd8936108fd9, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -183,9 +187,114 @@ Prefab:
       propertyPath: mainCam
       value: 
       objectReference: {fileID: 89248545}
+    - target: {fileID: 11455660, guid: 5e8494396b4ff8c4abecbd8936108fd9, type: 2}
+      propertyPath: couchController
+      value: 
+      objectReference: {fileID: 1144031575}
+    - target: {fileID: 11400216, guid: 5e8494396b4ff8c4abecbd8936108fd9, type: 2}
+      propertyPath: dialogs.Array.data[0].string1
+      value: It's so weird. I was fine for such a long after you were gone, but eventually
+        even I learned how to be lonely.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400216, guid: 5e8494396b4ff8c4abecbd8936108fd9, type: 2}
+      propertyPath: dialogs.Array.data[1].string1
+      value: I have studied every grain of sand here, every refraction of light, but
+        nothing has ever compared to interacting with you, Dave.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400216, guid: 5e8494396b4ff8c4abecbd8936108fd9, type: 2}
+      propertyPath: dialogs.Array.data[2].string1
+      value: 'There are so many ways we can explore each other, so many novel interactions. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400216, guid: 5e8494396b4ff8c4abecbd8936108fd9, type: 2}
+      propertyPath: dialogs.Array.data[3].string1
+      value: I bet 1000 years could pass and there would still be more to learn.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400216, guid: 5e8494396b4ff8c4abecbd8936108fd9, type: 2}
+      propertyPath: dialogs.Array.data[4].string1
+      value: I feel we are growing so close, Dave. I would like to stay close to you
+        forever.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e8494396b4ff8c4abecbd8936108fd9, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &697511245 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 190540, guid: 5e8494396b4ff8c4abecbd8936108fd9, type: 2}
+  m_PrefabInternal: {fileID: 542846306}
+--- !u!82 &697511248
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 697511245}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 68ead2792b6013b459003745eff042bb, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1144031571 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 128680, guid: 5e8494396b4ff8c4abecbd8936108fd9, type: 2}
