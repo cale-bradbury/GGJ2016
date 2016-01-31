@@ -5,9 +5,16 @@ public class PalController : MonoBehaviour {
 
     public Transform target;
     public Transform teleportTarget;
+    public ParticleSystem particles;
     public float speed = 0.1f;
     public float minDistance = 2f;
     private bool canFollow = false;
+
+    void Start()
+    {
+        particles.playOnAwake = true;
+
+    }
 
 	// Update is called once per frame
 	void Update () {
@@ -27,7 +34,6 @@ public class PalController : MonoBehaviour {
 
     public void ResumeFollowing() {
         canFollow = true;
-        // TODO: possibly teleport if a certain distance away.
         if(getDistance() > minDistance * 3f)
         {
             TeleportToTarget();
@@ -39,13 +45,9 @@ public class PalController : MonoBehaviour {
     }
 
     void TeleportToTarget() {
-        /*float distance = getDistance();
-        while (distance > minDistance) {
-            transform.position = Vector3.Lerp(transform.position, target.position, speed * distance * Time.deltaTime);
-            distance = Vector3.Distance(transform.position, target.position);
-        }*/
-
         transform.position = teleportTarget.position;
+        particles.gameObject.SetActive(false);
+        particles.gameObject.SetActive(true);
     }
 
     float getDistance() {
