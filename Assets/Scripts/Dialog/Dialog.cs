@@ -29,8 +29,9 @@ public class Dialog : MonoBehaviour {
 		scriptsToLock.Add (FindObjectOfType<HeadBob> ());
 	}
 
-	void Update(){
-		if (dialogMode) {
+	void Update()
+    {
+        if (dialogMode) {
 			if (Input.GetMouseButtonDown (0)) {
 				NextInput ();
 			}
@@ -54,9 +55,11 @@ public class Dialog : MonoBehaviour {
 		text.text = "";
 	}
 
-	void NextInput(){
-		if (index == dialogs.Count) {
-			EndDialog ();
+	void NextInput()
+    {
+        if (index == dialogs.Count)
+        {
+            EndDialog ();
 			return;
 		}
 		bool fireNext = false;
@@ -66,7 +69,6 @@ public class Dialog : MonoBehaviour {
 			Vector2 v = text.rectTransform.sizeDelta;
 			v.y = lineHeight * text.text.Split (newLine, System.StringSplitOptions.RemoveEmptyEntries).Length;
 			text.rectTransform.sizeDelta = v;
-			Debug.Log (v.y);
 		} else if (d.type == DialogElement.Type.Event) {
 			Messenger.Broadcast (d.string1);
 			fireNext = true;
@@ -80,11 +82,11 @@ public class Dialog : MonoBehaviour {
 		}else if (d.type == DialogElement.Type.Sound) {
 			d.audio.Play ();
 			fireNext = true;
-		}
-		index++;
+        }
+        index++;
 		if (fireNext)
 			NextInput ();
-	}
+    }
 
 	void FinishLookAt()
     {
