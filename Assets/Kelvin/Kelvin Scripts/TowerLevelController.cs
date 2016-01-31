@@ -22,5 +22,6 @@ public class TowerLevelController : MonoBehaviour {
 
     void RevealSweetNothing() {
         sweetNothing.SetActive(true);
+		Messenger.Broadcast ("TowersActive");
     }
 }
