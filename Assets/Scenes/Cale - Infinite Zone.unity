@@ -164,6 +164,7 @@ MonoBehaviour:
   fogEndDistance: 100
   constantUpdate: 0
   postCam: {fileID: 0}
+  mainCam: {fileID: 1280173581}
 --- !u!4 &338537175
 Transform:
   m_ObjectHideFlags: 0
@@ -820,6 +821,11 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 25e3ab2d6992a48f3ab7455baed062e0, type: 2}
   m_PrefabInternal: {fileID: 314427200}
+--- !u!20 &1280173581 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 2000000, guid: 25e3ab2d6992a48f3ab7455baed062e0,
+    type: 2}
+  m_PrefabInternal: {fileID: 314427200}
 --- !u!1 &1310039823
 GameObject:
   m_ObjectHideFlags: 0
@@ -1201,7 +1207,7 @@ MonoBehaviour:
   mat:
   - {fileID: 2100000, guid: 39bc071b0f2edae4089bdb2697c85457, type: 2}
   player: {fileID: 2039212874}
-  camera: {fileID: 1310039824}
+  cameraTransform: {fileID: 0}
 --- !u!1001 &1870348550
 Prefab:
   m_ObjectHideFlags: 0
