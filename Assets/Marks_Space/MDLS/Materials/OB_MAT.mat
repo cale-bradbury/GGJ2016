@@ -137,15 +137,15 @@ Material:
       data:
         first:
           name: _Phase
-        second: 341.35382
+        second: 535.1322
       data:
         first:
           name: _Freq
-        second: 3.99
+        second: 2.5
       data:
         first:
           name: _Intensity
-        second: 0.33
+        second: 0.1
       data:
         first:
           name: _Angle
