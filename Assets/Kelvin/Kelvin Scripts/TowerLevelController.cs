@@ -3,10 +3,12 @@ using System.Collections;
 
 public class TowerLevelController : MonoBehaviour {
 
+    public GameObject sweetNothing;
     private int inactiveTowerKeys = 3;
 	// Use this for initialization
 	void Start () {
-       Messenger.AddListener("tower-key-active", KeyActivated);
+        sweetNothing.SetActive(false);
+        Messenger.AddListener("tower-key-active", KeyActivated);
 	}
 	
 	void KeyActivated() {
@@ -19,6 +21,6 @@ public class TowerLevelController : MonoBehaviour {
     }
 
     void RevealSweetNothing() {
-
+        sweetNothing.SetActive(true);
     }
 }

@@ -205,6 +205,7 @@ GameObject:
   - 65: {fileID: 6514436}
   - 65: {fileID: 6574380}
   - 114: {fileID: 11444498}
+  - 65: {fileID: 6514054}
   m_Layer: 0
   m_Name: Elevator
   m_TagString: Untagged
@@ -681,6 +682,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.19, y: 0.09, z: 3.73}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &6514054
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190670}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: -4.32, y: 4.87, z: 3.75}
+  m_Center: {x: 0, y: 2.54, z: 0}
 --- !u!65 &6514436
 BoxCollider:
   m_ObjectHideFlags: 1
