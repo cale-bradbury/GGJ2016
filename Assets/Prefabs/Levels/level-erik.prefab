@@ -93,6 +93,7 @@ GameObject:
   - 65: {fileID: 6590056}
   - 65: {fileID: 6592806}
   - 65: {fileID: 6571482}
+  - 114: {fileID: 11437602}
   m_Layer: 0
   m_Name: Couch
   m_TagString: Untagged
@@ -127,6 +128,7 @@ GameObject:
   - 4: {fileID: 461558}
   - 20: {fileID: 2093194}
   - 114: {fileID: 11463372}
+  - 114: {fileID: 11446250}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -296,6 +298,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 423886}
   - 114: {fileID: 11441350}
+  - 82: {fileID: 8274156}
   m_Layer: 0
   m_Name: level-erik
   m_TagString: Untagged
@@ -911,6 +914,80 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 15.15, y: 1.79, z: 8.34}
   m_Center: {x: 0, y: 2.24, z: 0}
+--- !u!82 &8274156
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190540}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 68ead2792b6013b459003745eff042bb, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!108 &10806568
 Light:
   m_ObjectHideFlags: 1
@@ -990,16 +1067,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogs:
   - type: 0
-    string1: It's so weird. I was fine for such a long after you were gone, but eventually
-      even I learned how to be lonely. I have studied every grain of sand here, every
-      refraction of light, but nothing has ever compared to interacting with you,
-      Dave.
+    string1: It's so weird. I was fine for such a long time after you were gone, but
+      eventually even I learned how to be lonely.
     float1: 0
     audio: {fileID: 0}
     transform1: {fileID: 0}
   - type: 0
-    string1: There are so many ways we can explore each other, so many novel interactions.
-      I bet 1000 years could pass and there would still be more to learn.
+    string1: I have studied every grain of sand here, every possible refraction of
+      light, but nothing has ever compared to interacting with you, Dave.
+    float1: 0
+    audio: {fileID: 0}
+    transform1: {fileID: 0}
+  - type: 0
+    string1: 'There are so many ways we can explore each other, so many novel interactions. '
+    float1: 0
+    audio: {fileID: 0}
+    transform1: {fileID: 0}
+  - type: 0
+    string1: I bet 1000 years could pass and there would still be more to learn.
     float1: 0
     audio: {fileID: 0}
     transform1: {fileID: 0}
@@ -1079,6 +1164,18 @@ MonoBehaviour:
     float1: 0
     audio: {fileID: 0}
     transform1: {fileID: 0}
+--- !u!114 &11437602
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da0da59839f5c049acb36687ed9cc69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPalOnCouch: 0
 --- !u!114 &11441350
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1101,6 +1198,51 @@ MonoBehaviour:
   constantUpdate: 1
   postCam: {fileID: 2093194}
   mainCam: {fileID: 0}
+--- !u!114 &11446250
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9649c2bb71f98bd49a7baede39882a16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: enjoy-rgb-with-pal
+  field:
+    type: 0
+    types:
+    - System.Single
+    - UnityEngine.Vector2
+    - UnityEngine.Vector3
+    - UnityEngine.Vector4
+    obj: {fileID: 11463372}
+    varName: intensity
+    isMat: 0
+    isVector: 0
+    index: 0
+  animation:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  min: 0.2
+  max: 4
+  time: 500
+  toggle: 0
+  firePostAnimation: 
 --- !u!114 &11455660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1116,6 +1258,7 @@ MonoBehaviour:
   teleportTarget: {fileID: 0}
   couch: {fileID: 446148}
   particles: {fileID: 19818504}
+  couchController: {fileID: 11437602}
   speed: 0.2
   minDistance: 2
   introTalk: {fileID: 11432436}
