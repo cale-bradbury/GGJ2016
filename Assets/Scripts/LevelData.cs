@@ -15,6 +15,7 @@ public class LevelData : MonoBehaviour {
 	public float fogEndDistance;
 	public bool constantUpdate = false;
 	public Camera postCam;
+	public Camera mainCam;
 	ImageEffectBase[] fx;
 
 	// Use this for initialization
@@ -34,13 +35,13 @@ public class LevelData : MonoBehaviour {
 			return;
 		fx = postCam.GetComponents<ImageEffectBase> ();
 		foreach (ImageEffectBase i in fx)
-			Utils.MoveComponent (i, Camera.main.gameObject);
-		Camera.main.gameObject.AddComponent<PostElevator> ();
+			Utils.MoveComponent (i, mainCam.gameObject);
+		mainCam.gameObject.AddComponent<PostElevator> ();
 		postCam.enabled = false;
 	}
 
 	void RemoveCamera(){
-		fx = Camera.main.GetComponents<ImageEffectBase> ();
+		fx = mainCam.GetComponents<ImageEffectBase> ();
 		foreach (ImageEffectBase i in fx) {
 			Destroy (i);
 		}
