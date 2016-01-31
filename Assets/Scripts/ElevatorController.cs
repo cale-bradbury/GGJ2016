@@ -4,25 +4,25 @@ using System.Collections.Generic;
 
 public class ElevatorController : MonoBehaviour {
 
-    public GameObject leftDoor;
-    public GameObject rightDoor;
     public List<GameObject> levelPrefabs = new List<GameObject>();
     private List<GameObject> levels = new List<GameObject>();
     private GameObject activeLevel;
     private GameObject nextLevel;
     private Vector3 levelOrigin = new Vector3(0f, 0f, 0f);
+    private TextMesh floorTextMesh;
 
+    public bool isPlayerInside;
     bool openDoors = false;
     bool doorsAnimating = false;
     bool isMoving = false;
-    float maxElevatorRideDuration = 10f;
+    float maxElevatorRideDuration = 5f;
     float halfElevatorRideDuration;
     float timeLeftInMotion = 0f;
 
     // Use this for initialization
     void Start () {
         Messenger.AddListener("elevator-doors-opened", OpeningDoorComplete);
-
+        floorTextMesh = transform.FindChild("FloorText").gameObject.GetComponent<TextMesh>();
         halfElevatorRideDuration = maxElevatorRideDuration / 2f;
 
         foreach (GameObject levelPrefab in levelPrefabs)
@@ -66,6 +66,8 @@ public class ElevatorController : MonoBehaviour {
                 activeLevel = nextLevel;
                 nextLevel = null;
                 activeLevel.SetActive(true);
+                string levelName = activeLevel.GetComponent<LevelData>().levelName;
+                floorTextMesh.text = levelName;
                 Debug.Log("Half way there");            
             }
 
@@ -80,28 +82,66 @@ public class ElevatorController : MonoBehaviour {
     void StartMoving() {
         timeLeftInMotion = maxElevatorRideDuration;
         isMoving = true;
+        CloseDoors();
     }
 
     void StopMoving() {
         isMoving = false;
-        timeLeftInMotion = 0f;        
+        timeLeftInMotion = 0f;
+        OpenDoors();
+    }
+
+    public void ToggleDoors() {
+        if (!doorsAnimating)
+        {
+            Debug.Log("Toggle Doors");
+            openDoors = !openDoors;
+            doorsAnimating = true;
+            Messenger.Broadcast("open-elevator-doors");
+        }
+    }
+
+    public void CloseDoors() {
+        if (openDoors)
+        {
+            ToggleDoors();
+        }
     }
 
     public void OpenDoors() {
-        // get ref for each door
-        // animate doors apart
-        Debug.Log("open Doors");
-        if (!openDoors && !doorsAnimating)
+        if (!openDoors)
         {
-            openDoors = true;
-            doorsAnimating = true;
-            Messenger.Broadcast("open-elevator-doors");
+            ToggleDoors();
+        }
+    }
+
+    public void OpenDoorsFromOutside() {
+        if (!isPlayerInside)
+        {
+            OpenDoors();
         }
     }
 
     void OpeningDoorComplete() {
         doorsAnimating = false;
         Debug.Log("Opening doors complete.");
+    }
+
+    void OnTriggerEnter(Collider other) {
+        if(other.tag == "Player")
+        {
+            Debug.Log("player enter ele");
+            isPlayerInside = true;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            Debug.Log("player exit ele");
+            isPlayerInside = false;
+        }
     }
 }
 

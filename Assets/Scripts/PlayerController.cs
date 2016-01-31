@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour {
         }
         else if(hit.transform.gameObject.tag == "elevator-door")
         {
-            elevatorController.OpenDoors();
+            elevatorController.OpenDoorsFromOutside();
         }
         else {
             Dialog d = hit.transform.GetComponent<Dialog>();

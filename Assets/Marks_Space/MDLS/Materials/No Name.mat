@@ -98,18 +98,24 @@ Material:
       data:
         first:
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           name: _ZWrite
         second: 1
       data:
         first:
 =======
 >>>>>>> 1275f2ed03f429970e05a4c661186203aa13f358
+>>>>>>> 15c0626b79c9410bc8f55595d3c408be13c4d3cb
           name: _Glossiness
         second: 0.5
       data:
         first:
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 15c0626b79c9410bc8f55595d3c408be13c4d3cb
           name: _Metallic
         second: 0
       data:
@@ -118,7 +124,10 @@ Material:
         second: 1
       data:
         first:
+<<<<<<< HEAD
+=======
 >>>>>>> 1275f2ed03f429970e05a4c661186203aa13f358
+>>>>>>> 15c0626b79c9410bc8f55595d3c408be13c4d3cb
           name: _BumpScale
         second: 1
       data:
@@ -138,12 +147,15 @@ Material:
           name: _Mode
         second: 0
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       data:
         first:
           name: _Metallic
         second: 0
 =======
 >>>>>>> 1275f2ed03f429970e05a4c661186203aa13f358
+>>>>>>> 15c0626b79c9410bc8f55595d3c408be13c4d3cb
     m_Colors:
       data:
         first:
