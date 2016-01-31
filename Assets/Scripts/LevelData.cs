@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityStandardAssets.ImageEffects;
+using System.Reflection;
 
 [ExecuteInEditMode]
 public class LevelData : MonoBehaviour {
@@ -16,7 +18,8 @@ public class LevelData : MonoBehaviour {
 	public bool constantUpdate = false;
 	public Camera postCam;
 	public Camera mainCam;
-	ImageEffectBase[] fx;
+	List<Component> added;
+
 
 	// Use this for initialization
 	void OnEnable () {
@@ -33,18 +36,36 @@ public class LevelData : MonoBehaviour {
 			return;
 		if (postCam == null||mainCam==null)
 			return;
-		fx = postCam.GetComponents<ImageEffectBase> ();
-		foreach (ImageEffectBase i in fx)
-			Utils.MoveComponent (i, mainCam.gameObject);
-		mainCam.gameObject.AddComponent<PostElevator> ().shader = Shader.Find("Elevator/Post");
+		added = new List<Component> ();
+		MonoBehaviour[] fx = postCam.GetComponents<MonoBehaviour> ();
+		foreach (MonoBehaviour i in fx) {
+			if (i.GetType() != typeof(Camera) && i.GetType() != typeof(Transform)) {
+				Component c = Utils.MoveComponent (i, mainCam.gameObject);
+				added.Add(c);
+				foreach (FieldInfo f in c.GetType().GetFields()){
+					if (f.FieldType == typeof(CCReflectFloat)) {
+						CCReflectFloat cc = f.GetValue (c) as CCReflectFloat;
+						foreach (Component comp in added) {
+							if (comp.GetType() == cc.obj.GetType ()) {
+								cc.obj = comp;
+								break;
+							}
+						}
+						f.SetValue (c, cc);
+					}
+				}
+			}
+		}
+		PostElevator p = mainCam.gameObject.AddComponent<PostElevator> ();
+		p.shader = Shader.Find("Elevator/Post");
+		added.Add (p);
 		postCam.enabled = false;
 	}
 
 	void RemoveCamera(){
 		if (mainCam == null)
 			return;
-		fx = mainCam.GetComponents<ImageEffectBase> ();
-		foreach (ImageEffectBase i in fx) {
+		foreach (MonoBehaviour i in added) {
 			Destroy (i);
 		}
 	}

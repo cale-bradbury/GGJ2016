@@ -37,12 +37,12 @@ public class Utils {
 		return a;
 	}
 
-	static public void MoveComponent(Component c, GameObject moveTo){
+	static public Component MoveComponent(Component c, GameObject moveTo){
 		Component b = moveTo.AddComponent(c.GetType());
 		foreach (FieldInfo f in c.GetType().GetFields()){
 			f.SetValue(b, f.GetValue(c));
 		}
-		//DestroyImmediate (c);
+		return b;
 	}
 
 	public static void ZeroChildPosition (Transform transform){

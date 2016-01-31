@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class ElevatorController : MonoBehaviour {
 
 	int currentLevel = -1;
-	int nextLevel = 0;
+	int nextLevel = 1;
 	public List<GameObject> levels = new List<GameObject>();
 
 	public AnimationCurve doorAnimation;
@@ -18,8 +18,6 @@ public class ElevatorController : MonoBehaviour {
 	private TextMesh floorText;
 	private bool openingDoor = false;
 	private bool animating = false;
-
-    private Vector3 levelOrigin = new Vector3(0f, 0f, 0f);
 
     public bool isPlayerInside;
     bool openDoors = false;
@@ -47,6 +45,7 @@ public class ElevatorController : MonoBehaviour {
 			levels [currentLevel].SetActive (false);
 		levels [nextLevel].SetActive (true);
 		currentLevel = nextLevel;
+		floorText.text = levels [nextLevel].GetComponent<LevelData> ().levelName;
 		Invoke ("OpenDoor", elevatorTime);
 	}
 
