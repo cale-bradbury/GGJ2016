@@ -86,9 +86,10 @@ public class Dialog : MonoBehaviour {
 			NextInput ();
 	}
 
-	void FinishLookAt(){
-		NextInput ();
-		dialogMode = true;
+	void FinishLookAt()
+    {
+        dialogMode = true;
+        NextInput ();
 	}
 
 	void LookAt(float f){

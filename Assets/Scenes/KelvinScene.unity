@@ -630,6 +630,10 @@ Prefab:
       propertyPath: eventName
       value: tower-1key
       objectReference: {fileID: 0}
+    - target: {fileID: 11459008, guid: 4da4ce6c124f59b4eb5bff2cbbf2f30c, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4da4ce6c124f59b4eb5bff2cbbf2f30c, type: 2}
   m_IsPrefabParent: 0
@@ -3867,6 +3871,10 @@ Prefab:
       propertyPath: eventName
       value: tower-2key
       objectReference: {fileID: 0}
+    - target: {fileID: 11459008, guid: 4da4ce6c124f59b4eb5bff2cbbf2f30c, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4da4ce6c124f59b4eb5bff2cbbf2f30c, type: 2}
   m_IsPrefabParent: 0
@@ -4047,7 +4055,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 25e3ab2d6992a48f3ab7455baed062e0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 7.1
+      value: 204.4
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 25e3ab2d6992a48f3ab7455baed062e0, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4055,7 +4063,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 25e3ab2d6992a48f3ab7455baed062e0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.89
+      value: -0.16
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 25e3ab2d6992a48f3ab7455baed062e0, type: 2}
       propertyPath: m_LocalRotation.x
