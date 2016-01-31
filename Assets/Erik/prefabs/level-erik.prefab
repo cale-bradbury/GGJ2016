@@ -93,8 +93,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 461558}
   - 20: {fileID: 2093194}
-  - 124: {fileID: 12484678}
-  - 92: {fileID: 9218844}
   - 114: {fileID: 11463372}
   m_Layer: 0
   m_Name: Camera
@@ -114,6 +112,7 @@ GameObject:
   - 33: {fileID: 3321814}
   - 23: {fileID: 2383888}
   - 114: {fileID: 11467234}
+  - 114: {fileID: 11499368}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -169,6 +168,8 @@ GameObject:
   - 114: {fileID: 11432436}
   - 114: {fileID: 11469248}
   - 114: {fileID: 11400216}
+  - 114: {fileID: 11401652}
+  - 114: {fileID: 11464780}
   m_Layer: 0
   m_Name: Pal
   m_TagString: Untagged
@@ -752,13 +753,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 15.15, y: 1.79, z: 8.34}
   m_Center: {x: 0, y: 2.24, z: 0}
---- !u!92 &9218844
-Behaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 136624}
-  m_Enabled: 1
 --- !u!108 &10845978
 Light:
   m_ObjectHideFlags: 1
@@ -816,6 +810,28 @@ MonoBehaviour:
     transform1: {fileID: 0}
   - type: 0
     string1: We have grown so close...
+    float1: 0
+    audio: {fileID: 0}
+    transform1: {fileID: 0}
+--- !u!114 &11401652
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f50d336acb2a416428dac4e2c0093135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogs:
+  - type: 0
+    string1: Random 1
+    float1: 0
+    audio: {fileID: 0}
+    transform1: {fileID: 0}
+  - type: 0
+    string1: 'Also random moar because '
     float1: 0
     audio: {fileID: 0}
     transform1: {fileID: 0}
@@ -879,6 +895,7 @@ MonoBehaviour:
   fogEndDistance: 70
   constantUpdate: 1
   postCam: {fileID: 2093194}
+  mainCam: {fileID: 0}
 --- !u!114 &11455660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -896,8 +913,8 @@ MonoBehaviour:
   speed: 0.2
   minDistance: 2
   introTalk: {fileID: 11432436}
-  couchTalk: {fileID: 11400216}
-  randomTalk: {fileID: 11469248}
+  couchTalk: {fileID: 11464780}
+  randomTalk: {fileID: 11401652}
 --- !u!114 &11463372
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -914,6 +931,33 @@ MonoBehaviour:
   freq: 4.4
   phase: 0.36
   phasePerSecond: 0.1
+--- !u!114 &11464780
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f50d336acb2a416428dac4e2c0093135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogs:
+  - type: 0
+    string1: Talking about all the good old times.
+    float1: 0
+    audio: {fileID: 0}
+    transform1: {fileID: 0}
+  - type: 0
+    string1: Flirty jokez.
+    float1: 0
+    audio: {fileID: 0}
+    transform1: {fileID: 0}
+  - type: 0
+    string1: We have grown so close...
+    float1: 0
+    audio: {fileID: 0}
+    transform1: {fileID: 0}
 --- !u!114 &11467234
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -983,13 +1027,53 @@ MonoBehaviour:
     float1: 0
     audio: {fileID: 0}
     transform1: {fileID: 0}
---- !u!124 &12484678
-Behaviour:
+--- !u!114 &11499368
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 136624}
+  m_GameObject: {fileID: 137198}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00fd88692d04c9142b76512f8ef9f52e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 1
+    m_RotationOrder: 0
+  animationTime: 4
+  minValue: 0
+  maxValue: 0.1
+  field:
+    type: 0
+    types:
+    - System.Single
+    - UnityEngine.Vector2
+    - UnityEngine.Vector3
+    - UnityEngine.Vector4
+    obj: {fileID: 461078}
+    varName: localPosition-y
+    isMat: 0
+    isVector: 0
+    index: 0
 --- !u!135 &13517138
 SphereCollider:
   m_ObjectHideFlags: 1
