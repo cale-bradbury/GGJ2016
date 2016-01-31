@@ -6,6 +6,7 @@ public class Dialog : MonoBehaviour {
 	public List<DialogElement> dialogs = new List<DialogElement>();
 
 	Text text;
+	Image bg;
 	int index = 0;
 	bool dialogMode = false;
 	List<MonoBehaviour> scriptsToLock = new List<MonoBehaviour>();
@@ -19,6 +20,8 @@ public class Dialog : MonoBehaviour {
 	void OnEnable(){
 		text = FindObjectOfType<Text> ();
 		text.text = "";
+		bg = text.rectTransform.parent.GetComponent<Image> ();
+		bg.color = Color.red;
 		cam = Camera.main;
 		MouseLook[] ml = FindObjectsOfType<MouseLook> ();
 		foreach(MouseLook m in ml)
