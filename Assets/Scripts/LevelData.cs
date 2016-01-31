@@ -31,7 +31,7 @@ public class LevelData : MonoBehaviour {
 	void UpdateCamera(){
 		if (!Application.isPlaying)
 			return;
-		if (postCam == null)
+		if (postCam == null||mainCam==null)
 			return;
 		fx = postCam.GetComponents<ImageEffectBase> ();
 		foreach (ImageEffectBase i in fx)
