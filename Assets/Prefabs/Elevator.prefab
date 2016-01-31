@@ -1,5 +1,40 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &122834
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 473510}
+  - 33: {fileID: 3351234}
+  - 136: {fileID: 13632282}
+  - 23: {fileID: 2302952}
+  - 114: {fileID: 11495012}
+  m_Layer: 0
+  m_Name: ElevatorButton (1)
+  m_TagString: button
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &123732
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 413532}
+  - 82: {fileID: 8275092}
+  m_Layer: 0
+  m_Name: Elevator Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &133886
 GameObject:
   m_ObjectHideFlags: 1
@@ -11,7 +46,7 @@ GameObject:
   - 33: {fileID: 3301788}
   - 136: {fileID: 13682746}
   - 23: {fileID: 2325006}
-  - 114: {fileID: 11443014}
+  - 114: {fileID: 11418612}
   m_Layer: 0
   m_Name: ElevatorButton
   m_TagString: button
@@ -45,7 +80,6 @@ GameObject:
   - 33: {fileID: 3341512}
   - 23: {fileID: 2387280}
   - 65: {fileID: 6500880}
-  - 114: {fileID: 11456556}
   m_Layer: 0
   m_Name: ElevatorDoorLeft
   m_TagString: elevator-door
@@ -64,9 +98,9 @@ GameObject:
   - 33: {fileID: 3383462}
   - 136: {fileID: 13652044}
   - 23: {fileID: 2331558}
-  - 114: {fileID: 11416066}
+  - 114: {fileID: 11403956}
   m_Layer: 0
-  m_Name: ElevatorButton (1)
+  m_Name: ElevatorButton (2)
   m_TagString: button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,22 +115,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 461576}
   - 108: {fileID: 10831250}
-  m_Layer: 0
-  m_Name: ElevatorLights
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &161664
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 432996}
-  - 108: {fileID: 10897230}
   m_Layer: 0
   m_Name: ElevatorLights
   m_TagString: Untagged
@@ -148,7 +166,6 @@ GameObject:
   - 33: {fileID: 3361592}
   - 23: {fileID: 2381206}
   - 65: {fileID: 6552050}
-  - 114: {fileID: 11425254}
   m_Layer: 0
   m_Name: ElevatorDoorRight
   m_TagString: elevator-door
@@ -168,22 +185,6 @@ GameObject:
   - 23: {fileID: 2378508}
   m_Layer: 0
   m_Name: ElevatorInterior
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &186624
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 409634}
-  - 108: {fileID: 10865414}
-  m_Layer: 0
-  m_Name: ElevatorLights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -236,12 +237,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 190670}
-  m_LocalRotation: {x: 0, y: 0.9926163, z: 0, w: -0.12129725}
-  m_LocalPosition: {x: 7.51, y: -2.373, z: 24.14}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 409634}
-  - {fileID: 432996}
   - {fileID: 421030}
   - {fileID: 461576}
   - {fileID: 460904}
@@ -250,6 +249,7 @@ Transform:
   - {fileID: 420406}
   - {fileID: 426608}
   - {fileID: 483514}
+  - {fileID: 413532}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &407756
@@ -263,19 +263,19 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 403832}
-  m_RootOrder: 6
---- !u!4 &409634
+  m_RootOrder: 4
+--- !u!4 &413532
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 186624}
+  m_GameObject: {fileID: 123732}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.95, y: 1.9052734, z: -0.954}
+  m_LocalPosition: {x: 0, y: 3.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 403832}
-  m_RootOrder: 0
+  m_RootOrder: 8
 --- !u!4 &420406
 Transform:
   m_ObjectHideFlags: 1
@@ -287,7 +287,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 403832}
-  m_RootOrder: 7
+  m_RootOrder: 5
 --- !u!4 &421030
 Transform:
   m_ObjectHideFlags: 1
@@ -295,11 +295,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169630}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.941, y: 1.9052734, z: 0.962}
+  m_LocalPosition: {x: 0.941, y: 3.526, z: 0.962}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 403832}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!4 &426608
 Transform:
   m_ObjectHideFlags: 1
@@ -311,19 +311,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 403832}
-  m_RootOrder: 8
---- !u!4 &432996
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 161664}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.941, y: 1.9052734, z: -0.954}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 403832}
-  m_RootOrder: 1
+  m_RootOrder: 6
 --- !u!4 &447194
 Transform:
   m_ObjectHideFlags: 1
@@ -331,11 +319,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 158002}
   m_LocalRotation: {x: 0.70710725, y: 0.00000005960463, z: 0.000000022351738, w: -0.70710635}
-  m_LocalPosition: {x: 1.517001, y: 1.814, z: 1.8630005}
+  m_LocalPosition: {x: 1.517001, y: 2.126, z: 1.863}
   m_LocalScale: {x: 0.10000005, y: 0.1, z: 0.10000001}
   m_Children: []
   m_Father: {fileID: 483514}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!4 &460904
 Transform:
   m_ObjectHideFlags: 1
@@ -343,11 +331,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 151760}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0.5}
   m_Children: []
   m_Father: {fileID: 403832}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!4 &461576
 Transform:
   m_ObjectHideFlags: 1
@@ -355,11 +343,23 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 158970}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.95, y: 1.9052734, z: 0.962}
+  m_LocalPosition: {x: -0.95, y: 3.526, z: 0.962}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 403832}
-  m_RootOrder: 3
+  m_RootOrder: 1
+--- !u!4 &473510
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122834}
+  m_LocalRotation: {x: 0.70710725, y: 0.00000005960463, z: 0.000000022351738, w: -0.70710635}
+  m_LocalPosition: {x: 1.517001, y: 1.814, z: 1.8630005}
+  m_LocalScale: {x: 0.10000005, y: 0.1, z: 0.10000001}
+  m_Children: []
+  m_Father: {fileID: 483514}
+  m_RootOrder: 1
 --- !u!4 &483514
 Transform:
   m_ObjectHideFlags: 1
@@ -371,9 +371,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 490134}
+  - {fileID: 473510}
   - {fileID: 447194}
   m_Father: {fileID: 403832}
-  m_RootOrder: 9
+  m_RootOrder: 7
 --- !u!4 &490134
 Transform:
   m_ObjectHideFlags: 1
@@ -393,11 +394,37 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 180826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0.5}
   m_Children: []
   m_Father: {fileID: 403832}
-  m_RootOrder: 5
+  m_RootOrder: 3
+--- !u!23 &2302952
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122834}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!23 &2325006
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -601,6 +628,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183466}
   m_Mesh: {fileID: 4300006, guid: 79aec2cdf4120e2499f750fa98dafab5, type: 3}
+--- !u!33 &3351234
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122834}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &3361592
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -742,6 +776,80 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.24, y: 4.12, z: 0.7}
   m_Center: {x: 0, y: 2.46, z: -2.07}
+--- !u!82 &8275092
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123732}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1ee840e647909544bab6ac6bf7f8886b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.333
+  m_Pitch: 0.9
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 2.7480986
+  MaxDistance: 8.319287
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0.26907057
+      value: 1
+      inSlope: -3.7179832
+      outSlope: -3.7179832
+      tangentMode: 0
+    - time: 0.9724771
+      value: 0
+      inSlope: -0.26917756
+      outSlope: -0.26917756
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!102 &10243546
 TextMesh:
   serializedVersion: 3
@@ -829,73 +937,7 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
---- !u!108 &10865414
-Light:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 186624}
-  m_Enabled: 1
-  serializedVersion: 6
-  m_Type: 2
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 1
-    m_Resolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_BounceIntensity: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
-  m_AreaSize: {x: 1, y: 1}
---- !u!108 &10897230
-Light:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 161664}
-  m_Enabled: 1
-  serializedVersion: 6
-  m_Type: 2
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 1
-    m_Resolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_BounceIntensity: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
-  m_AreaSize: {x: 1, y: 1}
---- !u!114 &11416066
+--- !u!114 &11403956
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -907,52 +949,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelKey: 2
---- !u!114 &11425254
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 180826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9649c2bb71f98bd49a7baede39882a16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventName: open-elevator-doors
-  field:
-    type: 0
-    types:
-    - System.Single
-    - UnityEngine.Vector2
-    - UnityEngine.Vector3
-    - UnityEngine.Vector4
-    obj: {fileID: 490276}
-    varName: localPosition-x
-    isMat: 0
-    isVector: 1
-    index: 0
-  animation:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  min: -1.1
-  max: 0
-  time: 2
-  toggle: 1
-  firePostAnimation: 
---- !u!114 &11443014
+--- !u!114 &11418612
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -963,7 +960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6c42451c3e312b4f8bba030a6005444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelKey: 1
+  levelKey: 0
 --- !u!114 &11444498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -975,35 +972,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce79a31dce538d5489b1224383801693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelPrefabs:
-  - {fileID: 190540, guid: 5e8494396b4ff8c4abecbd8936108fd9, type: 2}
-  - {fileID: 141022, guid: 46cf8d392ec1c764f975ae18f8ce34db, type: 2}
-  isPlayerInside: 0
---- !u!114 &11456556
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 151760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9649c2bb71f98bd49a7baede39882a16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventName: open-elevator-doors
-  field:
-    type: 0
-    types:
-    - System.Single
-    - UnityEngine.Vector2
-    - UnityEngine.Vector3
-    - UnityEngine.Vector4
-    obj: {fileID: 460904}
-    varName: localPosition-x
-    isMat: 0
-    isVector: 1
-    index: 0
-  animation:
+  levels:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  doorAnimation:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -1019,11 +992,36 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
-  min: 1.1
-  max: 0
-  time: 2
-  toggle: 1
-  firePostAnimation: elevator-doors-opened
+  doorTime: 1
+  elevatorTime: 2
+  leftDoor: {fileID: 460904}
+  rightDoor: {fileID: 490276}
+  isPlayerInside: 0
+--- !u!114 &11495012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c42451c3e312b4f8bba030a6005444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelKey: 1
+--- !u!136 &13632282
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122834}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.87
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!136 &13652044
 CapsuleCollider:
   m_ObjectHideFlags: 1

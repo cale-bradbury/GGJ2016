@@ -44,7 +44,8 @@ public class PlayerController : MonoBehaviour {
         }
         else if(hit.transform.gameObject.tag == "elevator-door")
         {
-            elevatorController.OpenDoorsFromOutside();
+			if(!elevatorController.isPlayerInside)
+				elevatorController.OpenDoor();
         }
         else if (hit.transform.gameObject.tag == "collectible")
         {
@@ -53,10 +54,13 @@ public class PlayerController : MonoBehaviour {
             Debug.Log("Wow, you found a sweet nothing. Great job!");
         }
         else {
-            Dialog d = hit.transform.GetComponent<Dialog>();
-            if (d != null)
+            Dialog[] dia = hit.transform.GetComponents<Dialog>();
+            foreach (Dialog d in dia)
             {
-                d.StartDialog();
+                if (d != null && d.enabled)
+                {
+                    d.StartDialog();
+                }
             }
         }
     }
