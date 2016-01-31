@@ -6,7 +6,7 @@ public class CompactDrawer : PropertyDrawer {
 
   public override void OnGUI(Rect position, SerializedProperty prop, GUIContent label) {
 
-		EditorGUIUtility.LookLikeControls();
+		//EditorGUIUtility.LookLikeControls();
 		position.xMin += 4;
 		position.xMax -= 4;
 
