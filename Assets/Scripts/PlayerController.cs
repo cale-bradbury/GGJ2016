@@ -5,11 +5,14 @@ public class PlayerController : MonoBehaviour {
 
     private GameObject elevator;
     private ElevatorController elevatorController;
+	Camera mainCam;
+    private int collectiblesFound = 0;
 
 	// Use this for initialization
-	void Start () {
+	void OnEnable () {
         elevator = GameObject.Find("Elevator");
         elevatorController = elevator.GetComponent<ElevatorController>();
+		mainCam = GetComponentInChildren<Camera> ();
     }
 	
 	// Update is called once per frame
@@ -23,7 +26,7 @@ public class PlayerController : MonoBehaviour {
     void Interact() {
         Vector3 rayOrigin = new Vector3(0.5f, 0.5f, 0f);
         float rayLength = 2f;
-        Ray ray = Camera.main.ViewportPointToRay(rayOrigin);
+        Ray ray = mainCam.ViewportPointToRay(rayOrigin);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, rayLength))
         {
@@ -42,6 +45,12 @@ public class PlayerController : MonoBehaviour {
         else if(hit.transform.gameObject.tag == "elevator-door")
         {
             elevatorController.OpenDoorsFromOutside();
+        }
+        else if (hit.transform.gameObject.tag == "collectible")
+        {
+            Destroy(hit.transform.gameObject);
+            collectiblesFound++;
+            Debug.Log("Wow, you found a sweet nothing. Great job!");
         }
         else {
             Dialog d = hit.transform.GetComponent<Dialog>();

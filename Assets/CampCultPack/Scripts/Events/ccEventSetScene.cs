@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class ccEventSetScene : ccEventBase {
 
@@ -8,6 +9,6 @@ public class ccEventSetScene : ccEventBase {
 	protected override void OnEvent ()
 	{
 		base.OnEvent ();
-		Application.LoadLevel (sceneName);
+		SceneManager.LoadScene (sceneName);
 	}
 }

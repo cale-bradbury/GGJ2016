@@ -5,7 +5,7 @@ public class CaleRayController : MonoBehaviour {
 
 	public Material[] mat;
 	public Transform player;
-	public Transform camera;
+	public Transform cameraTransform;
 	Vector4 v;
 
 	// Use this for initialization
@@ -16,9 +16,11 @@ public class CaleRayController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		v = mat[0].GetVector ("_Camera");
-		v.x = player.position.x;
-		v.y = -player.position.y;
-		v.z = player.position.z;
+		Vector3 p = player.position*.1f;
+
+		v.x = p.x;
+		v.y = -p.y;
+		v.z = p.z;
 
 		float a = -Mathf.Atan2 (v.z, v.x)+Mathf.PI;
 		float d = Vector2.Distance (Vector2.zero, new Vector2 (v.z, v.x));
@@ -30,9 +32,9 @@ public class CaleRayController : MonoBehaviour {
 		}
 
 		v = mat[0].GetVector ("_CameraAngle");
-		v.x = camera.position.x-player.position.x;
-		v.y = camera.position.y-player.position.y;
-		v.z = camera.position.z-player.position.z;
+		v.x = cameraTransform.position.x-p.x;
+		v.y = cameraTransform.position.y-p.y;
+		v.z = cameraTransform.position.z-p.z;
 
 		a = -Mathf.Atan2 (v.z, v.x);
 		d = Vector2.Distance (Vector2.zero, new Vector2 (v.z, v.x));
