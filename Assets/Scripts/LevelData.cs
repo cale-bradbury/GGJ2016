@@ -36,7 +36,7 @@ public class LevelData : MonoBehaviour {
 		fx = postCam.GetComponents<ImageEffectBase> ();
 		foreach (ImageEffectBase i in fx)
 			Utils.MoveComponent (i, mainCam.gameObject);
-		mainCam.gameObject.AddComponent<PostElevator> ();
+		mainCam.gameObject.AddComponent<PostElevator> ().shader = Shader.Find("Elevator/Post");
 		postCam.enabled = false;
 	}
 
