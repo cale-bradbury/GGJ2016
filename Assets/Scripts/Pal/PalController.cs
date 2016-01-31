@@ -7,18 +7,19 @@ public class PalController : MonoBehaviour {
     public Transform teleportTarget;
     public Transform couch;
     public ParticleSystem particles;
+    public CouchController couchController;
     public float speed = 0.1f;
     public float minDistance = 2f;
     private bool canFollow = false;
 
     public Dialog introTalk;
     public Dialog couchTalk;
-    public Dialog randomTalk;
+    public Dialog leavingTalk;
 
     void Start()
     {
         couchTalk.enabled = false;
-        randomTalk.enabled = false;
+        leavingTalk.enabled = false;
         particles.playOnAwake = true;
         Messenger.AddListener("pal-to-couch", TeleportToCouch);
         Messenger.AddListener("pal-enable-couch-talk", EnableCouchTalk);
@@ -51,6 +52,7 @@ public class PalController : MonoBehaviour {
         {
             TeleportToTarget();
         }
+        couchController.isPalOnCouch = false;
     }
 
     public void StopFollowing() {
@@ -66,6 +68,7 @@ public class PalController : MonoBehaviour {
         StopFollowing();
         transform.position = couch.position;
         TeleportParticles();
+        couchController.isPalOnCouch = true;
     }
 
     void TeleportParticles() {
@@ -79,7 +82,7 @@ public class PalController : MonoBehaviour {
 
     void EnableCouchTalk() {
         introTalk.enabled = false;
-        randomTalk.enabled = false;
+        leavingTalk.enabled = false;
         couchTalk.enabled = true;
     }
 }

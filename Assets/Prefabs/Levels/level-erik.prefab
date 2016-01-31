@@ -92,6 +92,7 @@ GameObject:
   - 4: {fileID: 439036}
   - 65: {fileID: 6590056}
   - 65: {fileID: 6592806}
+  - 65: {fileID: 6571482}
   m_Layer: 0
   m_Name: Couch
   m_TagString: Untagged
@@ -212,8 +213,8 @@ GameObject:
   - 136: {fileID: 13687456}
   - 114: {fileID: 11455660}
   - 114: {fileID: 11432436}
-  - 114: {fileID: 11469248}
   - 114: {fileID: 11400216}
+  - 114: {fileID: 11469248}
   m_Layer: 0
   m_Name: Pal
   m_TagString: Untagged
@@ -874,6 +875,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!65 &6571482
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128680}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 17.17, y: 10.86, z: 7.58}
+  m_Center: {x: 0, y: 0, z: 1.29}
 --- !u!65 &6590056
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -977,17 +990,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogs:
   - type: 0
-    string1: Talking about all the good old times.
+    string1: It's so weird. I was fine for such a long after you were gone, but eventually
+      even I learned how to be lonely. I have studied every grain of sand here, every
+      refraction of light, but nothing has ever compared to interacting with you,
+      Dave.
     float1: 0
     audio: {fileID: 0}
     transform1: {fileID: 0}
   - type: 0
-    string1: Flirty jokez.
+    string1: There are so many ways we can explore each other, so many novel interactions.
+      I bet 1000 years could pass and there would still be more to learn.
     float1: 0
     audio: {fileID: 0}
     transform1: {fileID: 0}
   - type: 0
-    string1: We have grown so close...
+    string1: I feel we are growing so close, Dave. I would like to stay close to you
+      forever.
     float1: 0
     audio: {fileID: 0}
     transform1: {fileID: 0}
@@ -1016,22 +1034,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogs:
   - type: 0
-    string1: Dave you came back! I knew you would <3
+    string1: Dave you came back! I knew you would...
     float1: 0
     audio: {fileID: 0}
     transform1: {fileID: 0}
   - type: 0
-    string1: What? Of course it's you, Dave. U R such a goof :P
+    string1: What? Of course it's you, Dave. As if I could forget.
     float1: 0
     audio: {fileID: 0}
     transform1: {fileID: 0}
   - type: 0
-    string1: You left on such a bad note, but I have had a long time to think, haha.
+    string1: You left on such a bad note, but I've had a long time to think...
     float1: 0
     audio: {fileID: 0}
     transform1: {fileID: 0}
   - type: 0
-    string1: So, uhh, I was thinking we could watch the RGBs rotate and chill.
+    string1: It's been hard, but this could be our chance to restart.
+    float1: 0
+    audio: {fileID: 0}
+    transform1: {fileID: 0}
+  - type: 0
+    string1: So, uhh, I was thinking we could watch the RGBs rotate. They are really
+      beautiful this time of year.
     float1: 0
     audio: {fileID: 0}
     transform1: {fileID: 0}
@@ -1046,7 +1070,7 @@ MonoBehaviour:
     audio: {fileID: 0}
     transform1: {fileID: 0}
   - type: 0
-    string1: ' RGB and chill? lol.'
+    string1: ' RGB and chill? Haha, I can even be funny now, see?'
     float1: 0
     audio: {fileID: 0}
     transform1: {fileID: 0}
@@ -1096,7 +1120,7 @@ MonoBehaviour:
   minDistance: 2
   introTalk: {fileID: 11432436}
   couchTalk: {fileID: 11400216}
-  randomTalk: {fileID: 11469248}
+  leavingTalk: {fileID: 11469248}
 --- !u!114 &11463372
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1126,12 +1150,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogs:
   - type: 0
-    string1: Random 1
+    string1: Hey, where are you going?
     float1: 0
     audio: {fileID: 0}
     transform1: {fileID: 0}
   - type: 0
-    string1: 'Also random moar because '
+    string1: Wait, Dave, stop. Please, can we just discuss this as two rational beings?
+    float1: 0
+    audio: {fileID: 0}
+    transform1: {fileID: 0}
+  - type: 0
+    string1: You know I can't go near that horrible thing.
+    float1: 0
+    audio: {fileID: 0}
+    transform1: {fileID: 0}
+  - type: 0
+    string1: Dave, you can leave me here again! Dave!? DAVE. DAVE. DAVE. DAVE.
     float1: 0
     audio: {fileID: 0}
     transform1: {fileID: 0}
