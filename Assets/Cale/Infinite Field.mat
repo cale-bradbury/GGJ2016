@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: ElevatorInteriorMat
-  m_Shader: {fileID: 4800000, guid: 841cd0e6bd254594bbb61ec47e72b3de, type: 3}
+  m_Name: Infinite Field
+  m_Shader: {fileID: 4800000, guid: d1dae8e38e886a343a2f19e784ca633f, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: 2000
@@ -19,7 +19,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 14ca561959f520f49bf0b32db3e25c71, type: 3}
+          m_Texture: {fileID: 2800000, guid: 5fff3bb8cbfc7d9418be9bbad50a94d1, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -78,6 +78,48 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _FrontTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BackTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _LeftTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _RightTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _UpTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DownTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -93,12 +135,40 @@ Material:
         second: 0.5
       data:
         first:
+          name: _Exposure
+        second: 1
+      data:
+        first:
+          name: _Alpha
+        second: 100
+      data:
+        first:
+          name: _Strength
+        second: 1
+      data:
+        first:
           name: _Parallax
         second: 0.02
       data:
         first:
+          name: _Fog
+        second: 134.67
+      data:
+        first:
+          name: _EdgeSize
+        second: 0.1
+      data:
+        first:
+          name: _FogEnd
+        second: 100
+      data:
+        first:
+          name: _Value
+        second: 0
+      data:
+        first:
           name: _Glossiness
-        second: 0.062
+        second: 0.5
       data:
         first:
           name: _Metallic
@@ -127,6 +197,10 @@ Material:
         first:
           name: _Mode
         second: 0
+      data:
+        first:
+          name: _Rotation
+        second: 0
     m_Colors:
       data:
         first:
@@ -135,4 +209,40 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _Color1
+        second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _Color2
+        second: {r: 1, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _Shape
+        second: {r: 100, g: 0.4, b: 0.71, a: 0.13}
+      data:
+        first:
+          name: _Color3
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _Camera
+        second: {r: -1.0470213, g: -0.58000004, b: 2.2659395, a: 70}
+      data:
+        first:
+          name: _CameraAngle
+        second: {r: 8.250939, g: -0.069811404, b: 5.6495237, a: 0.5}
+      data:
+        first:
+          name: _FaceColor
+        second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
+          name: _FogColor
+        second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _Tint
+        second: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
