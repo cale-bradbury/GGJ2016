@@ -6,6 +6,7 @@ TagManager:
   tags:
   - elevator-door
   - button
+  - keykelvin
   layers:
   - Default
   - TransparentFX
