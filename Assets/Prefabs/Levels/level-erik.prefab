@@ -950,7 +950,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogs:
   - type: 0
-    string1: Dave! You came back! I always knew you would! <3 <3
+    string1: Dave you came back! I knew you would <3
+    float1: 0
+    audio: {fileID: 0}
+    transform1: {fileID: 0}
+  - type: 0
+    string1: What? Of course it's you, Dave. U R such a goof :P
+    float1: 0
+    audio: {fileID: 0}
+    transform1: {fileID: 0}
+  - type: 0
+    string1: You left on such a bad note, but I have had a long time to think, haha.
+    float1: 0
+    audio: {fileID: 0}
+    transform1: {fileID: 0}
+  - type: 0
+    string1: So, uhh, I was thinking we could watch the RGBs rotate and chill.
     float1: 0
     audio: {fileID: 0}
     transform1: {fileID: 0}
@@ -960,7 +975,7 @@ MonoBehaviour:
     audio: {fileID: 0}
     transform1: {fileID: 439036}
   - type: 0
-    string1: Chill?
+    string1: ' RGB and chill? lol.'
     float1: 0
     audio: {fileID: 0}
     transform1: {fileID: 0}
