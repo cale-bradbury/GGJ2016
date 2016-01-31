@@ -93,10 +93,6 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 123160, guid: 59d5bb2d334614d4bb6d491765c8119c, type: 2}
   m_PrefabInternal: {fileID: 525562390}
---- !u!1 &244979618 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100000, guid: 25e3ab2d6992a48f3ab7455baed062e0, type: 2}
-  m_PrefabInternal: {fileID: 992898668}
 --- !u!4 &244979619 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 25e3ab2d6992a48f3ab7455baed062e0, type: 2}
@@ -106,20 +102,6 @@ Camera:
   m_PrefabParentObject: {fileID: 2000000, guid: 25e3ab2d6992a48f3ab7455baed062e0,
     type: 2}
   m_PrefabInternal: {fileID: 992898668}
---- !u!114 &244979626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 244979618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53f29ea97fe726244989b177106cd6fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shader: {fileID: 4800000, guid: 1767bfca97af75749a048d0cdcd7ab46, type: 3}
-  strength: 10
-  size: 0.001
 --- !u!1001 &525562390
 Prefab:
   m_ObjectHideFlags: 0
@@ -240,6 +222,10 @@ Prefab:
     - target: {fileID: 426608, guid: 0ab4c05e563a93f42948ea0c76abe086, type: 2}
       propertyPath: m_LocalPosition.x
       value: -0.724
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275092, guid: 0ab4c05e563a93f42948ea0c76abe086, type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ab4c05e563a93f42948ea0c76abe086, type: 2}
@@ -419,7 +405,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22457818, guid: f6ccb8c68e6e9ab41985a047b964e367, type: 2}
       propertyPath: m_SizeDelta.x
-      value: -617
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22400278, guid: f6ccb8c68e6e9ab41985a047b964e367, type: 2}
       propertyPath: m_AnchorMax.x
@@ -427,31 +413,31 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400278, guid: f6ccb8c68e6e9ab41985a047b964e367, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22400278, guid: f6ccb8c68e6e9ab41985a047b964e367, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22400278, guid: f6ccb8c68e6e9ab41985a047b964e367, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 114
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22400278, guid: f6ccb8c68e6e9ab41985a047b964e367, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22400278, guid: f6ccb8c68e6e9ab41985a047b964e367, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 64
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22400278, guid: f6ccb8c68e6e9ab41985a047b964e367, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 16
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22457818, guid: f6ccb8c68e6e9ab41985a047b964e367, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 26
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f6ccb8c68e6e9ab41985a047b964e367, type: 2}
@@ -543,6 +529,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 2
+--- !u!1 &1402678463 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 123732, guid: 0ab4c05e563a93f42948ea0c76abe086, type: 2}
+  m_PrefabInternal: {fileID: 554696077}
+--- !u!114 &1402678466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1402678463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec7ac9056ec7094c965517142ade4d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elevatorClips:
+  - {fileID: 8300000, guid: 1ee840e647909544bab6ac6bf7f8886b, type: 3}
+  - {fileID: 8300000, guid: 33bbe08a674fda3469c170854aaaf5f0, type: 3}
+  - {fileID: 8300000, guid: 524b9499418661b42a2760e5992fe731, type: 3}
+  - {fileID: 8300000, guid: 4b197159f1ca75841a0c6190eb59a23a, type: 3}
+  - {fileID: 8300000, guid: f1bcaff71d8d11040b4a70d602afa5d7, type: 3}
 --- !u!1 &1598600806
 GameObject:
   m_ObjectHideFlags: 0
