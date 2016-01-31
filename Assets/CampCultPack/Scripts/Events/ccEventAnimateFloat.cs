@@ -12,7 +12,7 @@ public class ccEventAnimateFloat : ccEventBase {
 	public bool toggle = false;
 	bool fwd = true;
 	public string firePostAnimation;
-	bool fired = false;
+	bool fired = true;
 
 	protected override void OnEvent (){
 		fired = false;
