@@ -14,6 +14,7 @@ public class ElevatorController : MonoBehaviour {
 
 	public Transform leftDoor;
 	public Transform rightDoor;
+	public AudioSource rideSource;
 	
 	private TextMesh floorText;
 	private bool openingDoor = false;
@@ -21,6 +22,8 @@ public class ElevatorController : MonoBehaviour {
 
     public bool isPlayerInside;
     bool openDoors = false;
+	bool shake = false;
+	public Transform shakeMe;
 
     // Use this for initialization
     void Start () {
@@ -47,9 +50,19 @@ public class ElevatorController : MonoBehaviour {
 		currentLevel = nextLevel;
 		floorText.text = levels [nextLevel].GetComponent<LevelData> ().levelName;
 		Invoke ("OpenDoor", elevatorTime);
+		rideSource.Play ();
+		shake = true;
+	}
+
+	void Update(){
+		if (shake) {
+			shakeMe.localPosition = new Vector3 (Random.value - .5f, Random.value - .5f, Random.value - .5f)*.02f;
+		}
 	}
 
 	public void OpenDoor(){
+		shake = false;
+		shakeMe.localPosition = Vector3.zero;
 		if (animating||openDoors)
 			return;
 		openingDoor = animating = true;
