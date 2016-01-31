@@ -10,8 +10,14 @@ public class PalController : MonoBehaviour {
     public float minDistance = 2f;
     private bool canFollow = false;
 
+    public Dialog introTalk;
+    public Dialog couchTalk;
+    public Dialog randomTalk;
+
     void Start()
     {
+        couchTalk.enabled = false;
+        randomTalk.enabled = false;
         particles.playOnAwake = true;
 
     }

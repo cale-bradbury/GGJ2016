@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour {
 
     private GameObject elevator;
     private ElevatorController elevatorController;
+    private int collectiblesFound = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -42,6 +43,12 @@ public class PlayerController : MonoBehaviour {
         else if(hit.transform.gameObject.tag == "elevator-door")
         {
             elevatorController.OpenDoorsFromOutside();
+        }
+        else if (hit.transform.gameObject.tag == "collectible")
+        {
+            Destroy(hit.transform.gameObject);
+            collectiblesFound++;
+            Debug.Log("Wow, you found a sweet nothing. Great job!");
         }
         else {
             Dialog d = hit.transform.GetComponent<Dialog>();
