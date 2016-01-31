@@ -7,10 +7,10 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: KeyMat
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: 24142567825c4324996dde045f17400e, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2000
   stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
@@ -19,7 +19,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 02f8b2f7b41f1c845a3fdf59a65e4ee5, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -97,16 +97,12 @@ Material:
         second: 0.02
       data:
         first:
-          name: _Glossiness
-        second: 0.433
-      data:
-        first:
-          name: _Metallic
-        second: 0.428
-      data:
-        first:
           name: _ZWrite
         second: 1
+      data:
+        first:
+          name: _Glossiness
+        second: 0.433
       data:
         first:
           name: _BumpScale
@@ -127,6 +123,26 @@ Material:
         first:
           name: _Mode
         second: 0
+      data:
+        first:
+          name: _Metallic
+        second: 0.428
+      data:
+        first:
+          name: _Freq
+        second: 1
+      data:
+        first:
+          name: _Phase
+        second: 0
+      data:
+        first:
+          name: _Strength
+        second: 0
+      data:
+        first:
+          name: _Taps
+        second: 4.58
     m_Colors:
       data:
         first:
