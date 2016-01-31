@@ -152,7 +152,7 @@ Material:
       data:
         first:
           name: _Fog
-        second: 16.1
+        second: 20
       data:
         first:
           name: _EdgeSize
@@ -221,7 +221,7 @@ Material:
       data:
         first:
           name: _Shape
-        second: {r: 100, g: 0.4, b: 0.71, a: 0.13}
+        second: {r: 100, g: 0.4, b: 1.5, a: 0.31}
       data:
         first:
           name: _Color3
@@ -229,11 +229,11 @@ Material:
       data:
         first:
           name: _Camera
-        second: {r: -0, g: -0.58000004, b: -0, a: 70}
+        second: {r: 4.614104, g: 1.6, b: -6.388799, a: 70}
       data:
         first:
           name: _CameraAngle
-        second: {r: 0.84265566, g: 9.9619465, b: 0.22263956, a: 0}
+        second: {r: 2.5738647, g: 9.510566, b: 1.7100754, a: 0}
       data:
         first:
           name: _FaceColor
