@@ -14,8 +14,6 @@ GameObject:
   - 81: {fileID: 8100000}
   - 114: {fileID: 11400006}
   - 114: {fileID: 11400000}
-  - 114: {fileID: 11468822}
-  - 114: {fileID: 11488140}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -97,7 +95,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.13, y: -1.9197693, z: 9.87}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 443846}
@@ -325,20 +323,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bobbingAmount: 0.05
   midpoint: 0.6
---- !u!114 &11468822
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19d599ecc06f43e45b53dbf588ecd69c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shader: {fileID: 4800000, guid: 0089d8cedadeea24a93b374d85eac878, type: 3}
-  strength: 3.21
-  size: 0.09
 --- !u!114 &11470314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -350,18 +334,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18eea0e8a9c4e4e8fb38abb37b53d409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11488140
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3680b66c68f91ff4cbdcf424f9d9c1f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shader: {fileID: 4800000, guid: 24410298fb91ceb47878a61191d9c761, type: 3}
 --- !u!114 &11498762
 MonoBehaviour:
   m_ObjectHideFlags: 1

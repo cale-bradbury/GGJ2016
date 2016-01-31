@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 
+[ExecuteInEditMode]
 public class FramePlayer : MonoBehaviour {
 
 	public CCReflectTexture output;
@@ -12,7 +14,10 @@ public class FramePlayer : MonoBehaviour {
 	public string endLoopEvent;
 
 	void OnEnable(){
-		Play ();
+
+		frames = frames.OrderBy (x => x.name).ToList ();
+		if(Application.isPlaying)
+			Play ();
 	}
 	void Play () {
 		index = 0;
@@ -22,7 +27,7 @@ public class FramePlayer : MonoBehaviour {
 	void OnDisable () {
 		CancelInvoke ("NextFrame");
 	}
-	
+
 	// Update is called once per frame
 	void NextFrame () {
 		Debug.Log (index);

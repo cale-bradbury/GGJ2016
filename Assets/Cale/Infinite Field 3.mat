@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Infinite Field
+  m_Name: Infinite Field 3
   m_Shader: {fileID: 4800000, guid: d1dae8e38e886a343a2f19e784ca633f, type: 3}
   m_ShaderKeywords: hex
   m_LightmapFlags: 5
@@ -213,11 +213,11 @@ Material:
       data:
         first:
           name: _Color1
-        second: {r: 0.13333334, g: 0.08235294, b: 0.22352943, a: 1}
+        second: {r: 0.22352946, g: 0.114482775, b: 0.08235295, a: 1}
       data:
         first:
           name: _Color2
-        second: {r: 0.5372549, g: 0.09411766, b: 0.4666667, a: 1}
+        second: {r: 0.5372549, g: 0.39667344, b: 0.09411764, a: 1}
       data:
         first:
           name: _Shape
@@ -225,15 +225,15 @@ Material:
       data:
         first:
           name: _Color3
-        second: {r: 1, g: 0.40000004, b: 0.41176474, a: 1}
+        second: {r: 0.8675862, g: 1, b: 0.40000004, a: 1}
       data:
         first:
           name: _Camera
-        second: {r: -0, g: 2.92, b: -0, a: 70}
+        second: {r: -2.4255323, g: 2.92, b: 2.393619, a: 70}
       data:
         first:
           name: _CameraAngle
-        second: {r: -0.4232189, g: 24.904871, b: 2.13736, a: 0}
+        second: {r: -14.259841, g: 18.752773, b: -8.366033, a: 0}
       data:
         first:
           name: _FaceColor
