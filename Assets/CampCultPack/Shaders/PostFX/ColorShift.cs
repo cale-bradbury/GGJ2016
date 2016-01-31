@@ -7,6 +7,7 @@ using UnityStandardAssets.ImageEffects;
 public class ColorShift : ImageEffectBase {
 	
 	RenderTexture  accumTexture;
+	public float strength = .95f;
 	
 	// Called by camera to apply image effect
 	void OnRenderImage (RenderTexture source, RenderTexture destination) {
@@ -19,6 +20,7 @@ public class ColorShift : ImageEffectBase {
 		accumTexture.MarkRestoreExpected();
 		
 		material.SetTexture("iChannel0", accumTexture);
+		material.SetFloat ("_Strength", strength);
 		
 		Graphics.Blit (source, destination, material);
 		Graphics.Blit(destination,accumTexture);

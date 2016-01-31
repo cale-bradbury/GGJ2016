@@ -2,7 +2,7 @@ Shader "Camp Cult/Feedback/ColorShift" {
 Properties {
 	_MainTex ("Base (RGB)", 2D) = "white" {}
 	iChannel0 ("last frame", 2D) = "white" {}
-	_x("x-SampleDistance y-null z-null w-blending",Vector) = (.01,.01,0,.5)
+	_Strength("strength", float) = .9
 }
 
 SubShader {
@@ -21,6 +21,7 @@ CGPROGRAM
 uniform sampler2D _MainTex;	//the screen texture
 uniform sampler2D iChannel0;	//the last frames texture
 uniform float4 _x;			//x/y-max flow distance		z-angle when not radial		w-frame/last frame lerp
+uniform float _Strength;
 
 float4 frag (v2f_img i) : COLOR{
 	float2 uv = i.uv;
@@ -37,7 +38,7 @@ float4 frag (v2f_img i) : COLOR{
     old.gb = old.gb*.01-.005;
     uv.x = cos(a)*(d-old.g);
     uv.y = sin(a)*(d+old.b);
-    old = tex2D(iChannel0,uv+.5).rgb*.999;
+    old = tex2D(iChannel0,uv+.5).rgb*_Strength;
     fog = max(old,fog);
     fog = pow(fog,1.01);
     return float4(fog, 1.0);
