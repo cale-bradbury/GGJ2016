@@ -221,7 +221,7 @@ Material:
       data:
         first:
           name: _Shape
-        second: {r: 16.131935, g: 0, b: 3, a: 0.5}
+        second: {r: 1.3191015, g: 0, b: 3, a: 0.5}
       data:
         first:
           name: _Color3
@@ -229,11 +229,11 @@ Material:
       data:
         first:
           name: _Camera
-        second: {r: -0.025576318, g: -0.119474985, b: 0.016628455, a: 70}
+        second: {r: -0.034699332, g: -0.119474985, b: -0.021423152, a: 70}
       data:
         first:
           name: _CameraAngle
-        second: {r: -1.5138834, g: 19.11037, b: -35.81047, a: 0}
+        second: {r: 5.5695934, g: 5.534023, b: -39.208717, a: 0}
       data:
         first:
           name: _FaceColor

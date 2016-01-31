@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Audio;
 
 public class ElevatorController : MonoBehaviour {
 
@@ -24,6 +25,7 @@ public class ElevatorController : MonoBehaviour {
     bool openDoors = false;
 	bool shake = false;
 	public Transform shakeMe;
+	public AudioMixer levelMix;
 
     // Use this for initialization
     void Start () {
@@ -81,9 +83,11 @@ public class ElevatorController : MonoBehaviour {
 		if (openingDoor) {
 			r.x = -f;
 			l.x = f;
+			levelMix.SetFloat ("Volume", (1-f)*(-80));
 		} else {
 			r.x = f-1;
 			l.x = 1-f;
+			levelMix.SetFloat ("Volume", f*(-80));
 		}
 		rightDoor.transform.localPosition = r;
 		leftDoor.transform.localPosition = l;
