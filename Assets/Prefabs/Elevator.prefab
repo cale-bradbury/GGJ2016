@@ -963,8 +963,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelPrefabs:
-  - {fileID: 181740, guid: 5e8494396b4ff8c4abecbd8936108fd9, type: 2}
+  - {fileID: 190540, guid: 5e8494396b4ff8c4abecbd8936108fd9, type: 2}
   - {fileID: 141022, guid: 46cf8d392ec1c764f975ae18f8ce34db, type: 2}
+  isPlayerInside: 0
 --- !u!114 &11456556
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1047,6 +1048,10 @@ Prefab:
       propertyPath: levelPrefabs.Array.data[1]
       value: 
       objectReference: {fileID: 141022, guid: 46cf8d392ec1c764f975ae18f8ce34db, type: 2}
+    - target: {fileID: 0}
+      propertyPath: levelPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 190540, guid: 5e8494396b4ff8c4abecbd8936108fd9, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 190670}

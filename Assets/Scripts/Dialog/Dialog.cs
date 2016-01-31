@@ -12,6 +12,7 @@ public class Dialog : MonoBehaviour {
 	Camera cam;
 	Quaternion  lookTarget;
 	Quaternion  lookStart;
+	Quaternion  initialLook;
 	float lineHeight = 25;
 	string[] newLine = new string[]{"\n"};
 
@@ -38,6 +39,7 @@ public class Dialog : MonoBehaviour {
 
 	public void StartDialog(){
 		index = 0;
+		initialLook = cam.transform.rotation;
 		dialogMode = true;
 		foreach (MonoBehaviour m in scriptsToLock)
 			m.enabled = false;
@@ -46,6 +48,7 @@ public class Dialog : MonoBehaviour {
 
 	public void EndDialog(){
 		dialogMode = false;
+		cam.transform.rotation = initialLook;
 		foreach (MonoBehaviour m in scriptsToLock)
 			m.enabled = true;
 		text.text = "";
