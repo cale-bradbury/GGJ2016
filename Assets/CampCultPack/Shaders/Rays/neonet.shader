@@ -18,7 +18,7 @@ Pass {
 CGPROGRAM
 #include "UnityCG.cginc"
 #include "ray.cginc"
-#pragma multi_compile sphere cube cross1 cross2 hex tie tri
+#pragma multi_compile cross2 cross1 sphere cube   hex tie tri
 #pragma vertex vert_img
 #pragma fragment frag
 #define count 1.
@@ -86,7 +86,7 @@ float2 castRay( in float3 ro, in float3 rd, float time )
     float precis = 0.00001;
     float t = tmin;
     float m = -1.0;
-    for( int i=0; i<20; i++ )
+    for( int i=0; i<200; i++ )
     {
         float2 res = map( ro+rd*t, time );
         if(t>tmax ) break;
@@ -119,7 +119,7 @@ float3 render( in float3 ro, in float3 rd, float time )
         float3 pos = ro + t*rd;
         float3 nor = calcNormal( pos, time);
  
-        col = nor.xyz;
+        col = nor.yyy*.5+.5;
         col.rgb *= min(1.0,pow(max(0.,1.0-t/_Fog),4.));
     }
     col*=pow(1.0-res.x*.05,1.);
