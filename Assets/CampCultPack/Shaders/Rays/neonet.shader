@@ -9,6 +9,7 @@ Properties {
     _Camera ("Camera Position",Vector) = (0,0,0,0)
     _CameraAngle ("Camera Angle",Vector) = (0,0,1,0)
     _Shape ("Shape",Vector) = (0,0,1,0)
+    _Form ("Form",Vector) = (0,0,0,0)
  }
 Category {
 Blend SrcAlpha OneMinusSrcAlpha
@@ -34,6 +35,7 @@ uniform float _Fog;
 uniform float4 _Camera;
 uniform float4 _CameraAngle;
 uniform float4 _Shape;
+uniform float4 _Form;
 uniform float _Alpha;
  
 float2 map( in float3 pos, float t )
@@ -42,31 +44,28 @@ float2 map( in float3 pos, float t )
     //pos.xy = opKale(pos.xy,pi/6.,_Shape.x*pi,0.);
     pos+=_Shape.z;
     pos = abs(fmod(abs(pos),_Shape.z)-_Shape.z*.5);
+    float d = length(pos.xz);
+    pos.y*=(sin(d*20.-_Shape.x)*_Shape.y*d+1.);
     //pos+=tex2Dlod(_OffsetTex,float4(pos.zx,1.,1.))*_Shape.y;
     //float s = sdCross(pos,_Shape.w,_Shape.y);
     float s = 100.0;
-    #ifdef sphere
-    s = sdSphere(pos,_Shape.w);
-    #endif
-    #ifdef cube
-    s = sdBox(pos,float(_Shape.w).rrr);
-    #endif
-    #ifdef cross1
-    s = sdCross(pos,_Shape.w,_Shape.w*.5);
-    #endif
-    #ifdef cross2
-    s = sdCross(pos,_Shape.w*.1,_Shape.w);
-    #endif
-    #ifdef hex
-    s = sdHexPrism(pos.zyx,float2(_Shape.w,.03));
-    #endif
-    #ifdef tri
-    s = sdCone(pos,float3(_Shape.www));
-    #endif
-    #ifdef tie
-    s = sdCone(pos.zxy,float3(_Shape.www));
-    #endif
-    //pos.yz = opSpin(pos.yz,pos.y*_Shape.y+_Shape.x);
+    pos.yz = opSpin(pos.yz,_Shape.x*.3);
+    pos.zx = opSpin(pos.zx,_Shape.x*.35);
+   // #ifdef sphere
+    s = opU(sdTorus(pos,float2(_Shape.w,.1)),sdTorus(pos.xzy,float2(_Shape.w,.1)));
+    //#endif
+    //#ifdef cube
+    s = lerp(s,sdBox(pos,float(_Shape.w).rrr),_Form.x);
+   // #endif
+   // #ifdef cross1
+    s =  lerp(s,sdCross(pos,_Shape.w,_Shape.w*.5),_Form.y);
+    //#endif
+   // #ifdef cross2
+    s =  lerp(s,sdCross(pos,_Shape.w*.1,_Shape.w),_Form.z);
+   // #endif
+   // #ifdef hex
+    s =  lerp(s,sdHexPrism(pos.zyx,float2(_Shape.w,.1)),_Form.w);
+    //#endif
     //s = sdTorus(pos,float2(_Shape.w,_Shape.w*.5));
     res = opU( res, float2( s, 1. ) );
     return res;
@@ -153,7 +152,7 @@ fixed4 frag (v2f_img i) : COLOR
     float velocity = _CameraAngle.w;
    
     float fov = _Camera.w;
-    float mu = _Shape.x;
+    float mu = 100.;
     float rayZ = tan ((90.0 - 0.5 * fov) * 0.01745329252);
     float3 rd = mul( normalize( float3(p.xy,-rayZ)*mu ),ca);
     rd = float3(rd.xy,rsqrt (1.0 - velocity * velocity) * (rd.z + velocity));

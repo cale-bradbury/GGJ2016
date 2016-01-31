@@ -16,6 +16,7 @@ public class CCReflectColor : CCReflector<Color>
 
 	public override object GetValue ()
 	{
+		CheckVar ();
 		if (isMat) {
 			return ((Material)obj).GetColor(_varName);
 		} else {
