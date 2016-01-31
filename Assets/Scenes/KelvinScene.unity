@@ -624,7 +624,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 050a9f6be2a77c3479030d1eee8445c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 050a9f6be2a77c3479030d1eee8445c0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -632,7 +632,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 050a9f6be2a77c3479030d1eee8445c0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 050a9f6be2a77c3479030d1eee8445c0, type: 3}
       propertyPath: m_LocalRotation.x
@@ -962,15 +962,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 403832, guid: 0ab4c05e563a93f42948ea0c76abe086, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.12918557
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 403832, guid: 0ab4c05e563a93f42948ea0c76abe086, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 45.84
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 403832, guid: 0ab4c05e563a93f42948ea0c76abe086, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.2538922
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 403832, guid: 0ab4c05e563a93f42948ea0c76abe086, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4063,11 +4063,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 25e3ab2d6992a48f3ab7455baed062e0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 48.7
+      value: 1.836
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 25e3ab2d6992a48f3ab7455baed062e0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1.94
+      value: -0.89
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 25e3ab2d6992a48f3ab7455baed062e0, type: 2}
       propertyPath: m_LocalRotation.x
@@ -5068,6 +5068,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1348809837}
   - 114: {fileID: 1348809836}
+  - 114: {fileID: 1348809838}
   m_Layer: 0
   m_Name: TowersLevel
   m_TagString: Untagged
@@ -5104,7 +5105,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1348809835}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.0893555, y: 3.1768188, z: -0.033203125}
+  m_LocalPosition: {x: -2.0893555, y: -42.65, z: -0.033203125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1620295664}
@@ -5165,6 +5166,17 @@ Transform:
   - {fileID: 866923045}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1348809838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1348809835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb0b2bd90a4a079418b9be26e228f948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1376288738 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 885de64e64ce35d41bc8b862a9c300bc, type: 3}
@@ -6487,6 +6499,51 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &2097580692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2097580687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9649c2bb71f98bd49a7baede39882a16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: tower-1key
+  field:
+    type: 0
+    types:
+    - System.Single
+    - UnityEngine.Vector2
+    - UnityEngine.Vector3
+    - UnityEngine.Vector4
+    obj: {fileID: 2097580688}
+    varName: position-y
+    isMat: 0
+    isVector: 0
+    index: 0
+  animation:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 10
+    - time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  min: 1.25
+  max: -0.25
+  time: 2.5
+  toggle: 0
+  firePostAnimation: tower-key-active
 --- !u!4 &2103107091 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: e0592445d8e7a8d44905f2c93e57ea09, type: 3}
