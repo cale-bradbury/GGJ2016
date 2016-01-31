@@ -3,9 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - elevator-door
-  - button
+  tags: []
   layers:
   - Default
   - TransparentFX

@@ -22,7 +22,6 @@ public class FieldMultiCompile : MonoBehaviour {
 		foreach(string s in mat.shaderKeywords)
 			mat.DisableKeyword (s);
 		mat.EnableKeyword (style.ToString ().ToLower());
-		Debug.Log (style.ToString ().ToLower());
 	}
 	
 	// Update is called once per frame

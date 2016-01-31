@@ -1,6 +1,11 @@
 fileFormatVersion: 2
-guid: 8fb26caddeedb41c9ae5c09a23c52942
+<<<<<<< HEAD
+guid: f67c543816428f449bed8fdfb5e847c7
+=======
+guid: 19d9fd21409d84244bdf3cae43f5bf2e
+>>>>>>> remotes/origin/erik
 folderAsset: yes
 DefaultImporter:
   userData: 
   assetBundleName: 
+  assetBundleVariant: 
