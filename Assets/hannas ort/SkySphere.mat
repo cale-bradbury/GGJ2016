@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Cylinder002Mat
-  m_Shader: {fileID: 4800000, guid: 98d00c2b55117cf439b7a950f8289519, type: 3}
+  m_Name: SkySphere
+  m_Shader: {fileID: 4800000, guid: 10f89ab4dde78b149a5f1ccc7e6f98d0, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: 2000
@@ -19,7 +19,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 90aab665c86121d4abaad2cfe13abf39, type: 3}
+          m_Texture: {fileID: 2800000, guid: 371fa5d370f67534696194100d17bfad, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -102,7 +102,7 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: 0.553
+        second: 0.5
       data:
         first:
           name: _BumpScale
@@ -126,19 +126,35 @@ Material:
       data:
         first:
           name: _Metallic
-        second: 0.549
+        second: 0
+      data:
+        first:
+          name: _Strength
+        second: -4
       data:
         first:
           name: _Phase
-        second: 341.35382
+        second: 132.6
+      data:
+        first:
+          name: _Taps
+        second: -3.3
       data:
         first:
           name: _Freq
-        second: 5.31
+        second: 83.5
       data:
         first:
-          name: _Intensity
-        second: 0.57
+          name: _Angle
+        second: 1
+      data:
+        first:
+          name: _BaseAngle
+        second: 1.7
+      data:
+        first:
+          name: _SpinAngle
+        second: 6.77
     m_Colors:
       data:
         first:

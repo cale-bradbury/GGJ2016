@@ -97,15 +97,11 @@ Material:
       data:
         first:
           name: _Cutoff
-        second: 17.678932
+        second: 42.669228
       data:
         first:
           name: _Shininess
         second: 0.193
-      data:
-        first:
-          name: _Phase
-        second: 44.53451
       data:
         first:
           name: _Parallax
@@ -144,12 +140,16 @@ Material:
         second: 0.258
       data:
         first:
-          name: _Intensity
-        second: 1
+          name: _Phase
+        second: 44.53451
       data:
         first:
           name: _Freq
         second: 5
+      data:
+        first:
+          name: _Intensity
+        second: 1
     m_Colors:
       data:
         first:

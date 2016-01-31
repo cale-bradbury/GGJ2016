@@ -20,10 +20,13 @@ CGPROGRAM
 #include "UnityCG.cginc"
 
 uniform sampler2D _MainTex;	//the screen texture
-uniform sampler2D _Pure;	//the last frames texture
 
 float4 frag (v2f_img i) : COLOR{
-	return tex2D(_MainTex,i.uv);
+	float2 uv = i.uv;
+	#if UNITY_UV_STARTS_AT_TOP
+		//uv.y = 1.0-uv.y;
+	#endif
+	return tex2D(_MainTex,uv);
 }
 ENDCG
 
