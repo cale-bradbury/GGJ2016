@@ -586,6 +586,62 @@ Prefab:
       propertyPath: postCam
       value: 
       objectReference: {fileID: 300110280}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 13596432, guid: 5e8494396b4ff8c4abecbd8936108fd9, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5e8494396b4ff8c4abecbd8936108fd9, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2140662187 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 137198, guid: 5e8494396b4ff8c4abecbd8936108fd9, type: 2}
+  m_PrefabInternal: {fileID: 1953927943}
+--- !u!4 &2140662188 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 461078, guid: 5e8494396b4ff8c4abecbd8936108fd9, type: 2}
+  m_PrefabInternal: {fileID: 1953927943}
+--- !u!114 &2140662190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2140662187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00fd88692d04c9142b76512f8ef9f52e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 1
+    m_RotationOrder: 0
+  animationTime: 4
+  minValue: 0
+  maxValue: 0.1
+  field:
+    type: 0
+    types:
+    - System.Single
+    - UnityEngine.Vector2
+    - UnityEngine.Vector3
+    - UnityEngine.Vector4
+    obj: {fileID: 2140662188}
+    varName: localPosition-y
+    isMat: 0
+    isVector: 0
+    index: 0

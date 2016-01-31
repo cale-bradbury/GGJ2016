@@ -32,6 +32,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &108488
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 478364}
+  - 33: {fileID: 3314324}
+  - 135: {fileID: 13517138}
+  - 23: {fileID: 2311020}
+  m_Layer: 0
+  m_Name: Sweet Nothings
+  m_TagString: collectible
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &111256
 GameObject:
   m_ObjectHideFlags: 1
@@ -66,6 +84,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &136624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 461558}
+  - 20: {fileID: 2093194}
+  - 124: {fileID: 12484678}
+  - 92: {fileID: 9218844}
+  - 114: {fileID: 11463372}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &137198
 GameObject:
   m_ObjectHideFlags: 1
@@ -75,8 +112,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 461078}
   - 33: {fileID: 3321814}
-  - 135: {fileID: 13596432}
   - 23: {fileID: 2383888}
+  - 114: {fileID: 11467234}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -130,6 +167,8 @@ GameObject:
   - 136: {fileID: 13687456}
   - 114: {fileID: 11455660}
   - 114: {fileID: 11432436}
+  - 114: {fileID: 11469248}
+  - 114: {fileID: 11400216}
   m_Layer: 0
   m_Name: Pal
   m_TagString: Untagged
@@ -286,6 +325,8 @@ Transform:
   - {fileID: 427544}
   - {fileID: 496248}
   - {fileID: 444324}
+  - {fileID: 478364}
+  - {fileID: 461558}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &427544
@@ -392,6 +433,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 444324}
   m_RootOrder: 0
+--- !u!4 &461558
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136624}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 423886}
+  m_RootOrder: 6
+--- !u!4 &478364
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108488}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.17, y: 3.642, z: 24.29}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_Children: []
+  m_Father: {fileID: 423886}
+  m_RootOrder: 5
 --- !u!4 &483620
 Transform:
   m_ObjectHideFlags: 1
@@ -416,6 +481,40 @@ Transform:
   m_Children: []
   m_Father: {fileID: 423886}
   m_RootOrder: 3
+--- !u!20 &2093194
+Camera:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136624}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
 --- !u!23 &2308232
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -434,6 +533,32 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!23 &2311020
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108488}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 5d81d02f3a3a38b4abfb408b3cc14b81, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
@@ -553,6 +678,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138422}
   m_Mesh: {fileID: 4300000, guid: e730154b319949c4d883ab085d610573, type: 3}
+--- !u!33 &3314324
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108488}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &3317608
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -620,6 +752,13 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 15.15, y: 1.79, z: 8.34}
   m_Center: {x: 0, y: 2.24, z: 0}
+--- !u!92 &9218844
+Behaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136624}
+  m_Enabled: 1
 --- !u!108 &10845978
 Light:
   m_ObjectHideFlags: 1
@@ -653,6 +792,33 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &11400216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f50d336acb2a416428dac4e2c0093135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogs:
+  - type: 0
+    string1: Talking about all the good old times.
+    float1: 0
+    audio: {fileID: 0}
+    transform1: {fileID: 0}
+  - type: 0
+    string1: Flirty jokez.
+    float1: 0
+    audio: {fileID: 0}
+    transform1: {fileID: 0}
+  - type: 0
+    string1: We have grown so close...
+    float1: 0
+    audio: {fileID: 0}
+    transform1: {fileID: 0}
 --- !u!114 &11417850
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -682,6 +848,16 @@ MonoBehaviour:
     float1: 0
     audio: {fileID: 0}
     transform1: {fileID: 0}
+  - type: 2
+    string1: 
+    float1: 1
+    audio: {fileID: 0}
+    transform1: {fileID: 439036}
+  - type: 0
+    string1: Chill?
+    float1: 0
+    audio: {fileID: 0}
+    transform1: {fileID: 0}
 --- !u!114 &11441350
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -702,7 +878,7 @@ MonoBehaviour:
   fogStartDistance: 1
   fogEndDistance: 70
   constantUpdate: 1
-  postCam: {fileID: 0}
+  postCam: {fileID: 2093194}
 --- !u!114 &11455660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -719,12 +895,107 @@ MonoBehaviour:
   particles: {fileID: 19818504}
   speed: 0.2
   minDistance: 2
---- !u!135 &13596432
-SphereCollider:
+  introTalk: {fileID: 11432436}
+  couchTalk: {fileID: 11400216}
+  randomTalk: {fileID: 11469248}
+--- !u!114 &11463372
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9acf697fc842d44c84ba4d7f7a70c21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: 98d00c2b55117cf439b7a950f8289519, type: 3}
+  intensity: 0.2
+  freq: 4.4
+  phase: 0.36
+  phasePerSecond: 0.1
+--- !u!114 &11467234
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00fd88692d04c9142b76512f8ef9f52e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 1
+    m_RotationOrder: 0
+  animationTime: 4
+  minValue: 0
+  maxValue: 0.1
+  field:
+    type: 0
+    types:
+    - System.Single
+    - UnityEngine.Vector2
+    - UnityEngine.Vector3
+    - UnityEngine.Vector4
+    obj: {fileID: 461078}
+    varName: localPosition-y
+    isMat: 0
+    isVector: 0
+    index: 0
+--- !u!114 &11469248
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f50d336acb2a416428dac4e2c0093135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogs:
+  - type: 0
+    string1: Random 1
+    float1: 0
+    audio: {fileID: 0}
+    transform1: {fileID: 0}
+  - type: 0
+    string1: 'Also random moar because '
+    float1: 0
+    audio: {fileID: 0}
+    transform1: {fileID: 0}
+--- !u!124 &12484678
+Behaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136624}
+  m_Enabled: 1
+--- !u!135 &13517138
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108488}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
