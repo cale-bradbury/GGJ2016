@@ -15,14 +15,14 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 6
   m_Fog: 1
-  m_FogColor: {r: 0.35544428, g: 0.33910033, b: 0.41176468, a: 0}
+  m_FogColor: {r: 0.78676474, g: 0.671064, b: 1, a: 0}
   m_FogMode: 1
   m_FogDensity: 0.01
   m_LinearFogStart: 0
-  m_LinearFogEnd: 150
-  m_AmbientSkyColor: {r: 0.35686275, g: 0.3372549, b: 0.41176474, a: 0}
-  m_AmbientEquatorColor: {r: 0.6102941, g: 0.6102941, b: 0.6102941, a: 0}
-  m_AmbientGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_LinearFogEnd: 250
+  m_AmbientSkyColor: {r: 0.78823537, g: 0.759, b: 1, a: 0}
+  m_AmbientEquatorColor: {r: 1, g: 1, b: 1, a: 0}
+  m_AmbientGroundColor: {r: 0.44852942, g: 0.44852942, b: 0.44852942, a: 0}
   m_AmbientIntensity: 1
   m_AmbientMode: 1
   m_SkyboxMaterial: {fileID: 0}
@@ -752,7 +752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: 362c15c3a0cbecc4eb0462e707d7176d, type: 3}
-  dist: {x: 0.1, y: 0.05, z: 0}
+  dist: {x: 0.01, y: 0.02, z: 0}
   center: {x: 0, y: 0}
   intensity: -2.63
 --- !u!20 &1463568514
@@ -764,7 +764,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.30363324, g: 0.36648184, b: 0.39705884, a: 0.019607844}
+  m_BackGroundColor: {r: 0.7561635, g: 0.796535, b: 0.8161765, a: 0.019607844}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -929,6 +929,147 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 67b8632df60fa224d9816fe2f1c93d89, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &1826328930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1826328935}
+  - 33: {fileID: 1826328934}
+  - 64: {fileID: 1826328933}
+  - 23: {fileID: 1826328932}
+  - 114: {fileID: 1826328931}
+  m_Layer: 0
+  m_Name: Quad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1826328931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1826328930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76291d62435c2964586c96c8228bc0d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  output:
+    type: {fileID: 0}
+    types:
+    - UnityEngine.Texture
+    - UnityEngine.Texture2D
+    - CCTexture
+    - UnityEngine.RenderTexture
+    obj: {fileID: 2100000, guid: e85cabd5200f19f4bb944fb4a5c13903, type: 2}
+    varName: _MainTex
+    isMat: 1
+  frames:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  frameDelay: 0.1
+  loop: 1
+  endLoopEvent: 
+--- !u!23 &1826328932
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1826328930}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: e85cabd5200f19f4bb944fb4a5c13903, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &1826328933
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1826328930}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &1826328934
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1826328930}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1826328935
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1826328930}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.93072224, y: -22.659, z: -1.9998856}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
 --- !u!1 &1834232547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,12 +1371,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: default level
   skybox: {fileID: 0}
-  ambientSky: {r: 0.35686275, g: 0.3372549, b: 0.41176474, a: 0}
-  ambientEquator: {r: 0.6102941, g: 0.6102941, b: 0.6102941, a: 0}
-  ambientGround: {r: 0, g: 0, b: 0, a: 0}
-  fogColor: {r: 0.35544428, g: 0.33910033, b: 0.41176468, a: 0}
+  ambientSky: {r: 0.78823537, g: 0.759, b: 1, a: 0}
+  ambientEquator: {r: 1, g: 1, b: 1, a: 0}
+  ambientGround: {r: 0.44852942, g: 0.44852942, b: 0.44852942, a: 0}
+  fogColor: {r: 0.78676474, g: 0.671064, b: 1, a: 0}
   fogStartDistance: 0
-  fogEndDistance: 150
+  fogEndDistance: 250
   constantUpdate: 0
   postCam: {fileID: 1463568514}
 --- !u!4 &2033591540
