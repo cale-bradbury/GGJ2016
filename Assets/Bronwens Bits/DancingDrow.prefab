@@ -1,0 +1,163 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &123626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 484534}
+  - 33: {fileID: 3399538}
+  - 64: {fileID: 6443618}
+  - 23: {fileID: 2358998}
+  - 114: {fileID: 11470840}
+  - 114: {fileID: 11433468}
+  - 114: {fileID: 11444894}
+  m_Layer: 0
+  m_Name: DancingDrow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &484534
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123626}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 64, y: 0.352, z: 71.655}
+  m_LocalScale: {x: 2, y: 2.5, z: 2}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!23 &2358998
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123626}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: c36c2ecea6236474a9612f37c413fdf4, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &3399538
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123626}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &6443618
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123626}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &11433468
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82fbae3a8b5a5b4c9e80e9a911adf57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11444894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f50d336acb2a416428dac4e2c0093135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogs: []
+--- !u!114 &11470840
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76291d62435c2964586c96c8228bc0d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  output:
+    type: {fileID: 0}
+    types:
+    - UnityEngine.Texture
+    - UnityEngine.Texture2D
+    - CCTexture
+    - UnityEngine.RenderTexture
+    obj: {fileID: 2100000, guid: c36c2ecea6236474a9612f37c413fdf4, type: 2}
+    varName: _MainTex
+    isMat: 1
+  frames:
+  - {fileID: 2800000, guid: 2158f622009388242b2e6f8843b1325a, type: 3}
+  - {fileID: 2800000, guid: 491401134ecc6cd45b0ec6588b702f6e, type: 3}
+  - {fileID: 2800000, guid: e57f94ccdf51ef744b620e771d53f5a6, type: 3}
+  - {fileID: 2800000, guid: 5b42b9659011f764d96495d00930ad6c, type: 3}
+  - {fileID: 2800000, guid: 3db25aa718962c54d953e7ff637b3b3d, type: 3}
+  - {fileID: 2800000, guid: 08305d45ae15049429dd3592bff25637, type: 3}
+  - {fileID: 2800000, guid: b25d9dc16bf3bed49b31dfb6dc3d92b3, type: 3}
+  - {fileID: 2800000, guid: 99e8a9b33b2850c43877f22fe3f2d84a, type: 3}
+  - {fileID: 2800000, guid: 3f41b90673a44444693fe67ecb17047d, type: 3}
+  - {fileID: 2800000, guid: 2508f58681aed4d448ccfffcab40e7ea, type: 3}
+  - {fileID: 2800000, guid: 49ad16375d5847d4f9e804bda4a12797, type: 3}
+  - {fileID: 2800000, guid: b983f741d813e2c4c877fd578a5ff1f6, type: 3}
+  - {fileID: 2800000, guid: 3834d852602a6ef489765de023e8097b, type: 3}
+  - {fileID: 2800000, guid: 9d580501bc219044884c937d125b469b, type: 3}
+  - {fileID: 2800000, guid: 3794fd81777854541b6fe24bb4503b41, type: 3}
+  - {fileID: 2800000, guid: 27da386e6f3d190478d480ddb6c3c46b, type: 3}
+  - {fileID: 2800000, guid: 42c44e750bc120447bd157e059f4bdd6, type: 3}
+  - {fileID: 2800000, guid: ec2101f9364235544b62b3f69057cdee, type: 3}
+  - {fileID: 2800000, guid: a129d577819037e42ab7d929fb52616d, type: 3}
+  - {fileID: 2800000, guid: 1c6563caaa308f447a27a98f46705442, type: 3}
+  - {fileID: 2800000, guid: 7067eee878d0b0f4c9df3fcdd090a95d, type: 3}
+  - {fileID: 2800000, guid: 87379a1f597909a498d158f1a8c87cfb, type: 3}
+  - {fileID: 2800000, guid: b38a0b08a62fa994286e67fb90b3b6d7, type: 3}
+  - {fileID: 2800000, guid: 856b5f36212b49b4285d82d362906307, type: 3}
+  frameDelay: 0.05
+  loop: 1
+  endLoopEvent: 
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 123626}
+  m_IsPrefabParent: 1

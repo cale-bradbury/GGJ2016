@@ -85,7 +85,7 @@ float2 castRay( in float3 ro, in float3 rd, float time )
     float precis = 0.00001;
     float t = tmin;
     float m = -1.0;
-    for( int i=0; i<200; i++ )
+    for( int i=0; i<50; i++ )
     {
         float2 res = map( ro+rd*t, time );
         if(t>tmax ) break;
