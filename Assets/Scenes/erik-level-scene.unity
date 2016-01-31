@@ -90,7 +90,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1480147915}
     m_Modifications:
     - target: {fileID: 493792, guid: 91f6dd7991be3cf4c816e959d39f13b2, type: 2}
       propertyPath: m_LocalPosition.x
@@ -122,7 +122,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 493792, guid: 91f6dd7991be3cf4c816e959d39f13b2, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 91f6dd7991be3cf4c816e959d39f13b2, type: 2}
@@ -243,7 +243,6 @@ GameObject:
   - 20: {fileID: 300110280}
   - 124: {fileID: 300110279}
   - 92: {fileID: 300110278}
-  - 81: {fileID: 300110277}
   - 114: {fileID: 300110276}
   m_Layer: 0
   m_Name: Camera
@@ -260,21 +259,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 300110275}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af3a0ce6083540f4c9a4203e2ae57998, type: 3}
+  m_Script: {fileID: 11500000, guid: a9acf697fc842d44c84ba4d7f7a70c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shader: {fileID: 4800000, guid: ff36ffb628445a84484f7928c8a919ef, type: 3}
-  sampleDistance: 0.008
-  sampleFreq: 0.1
-  fade: 0.2
-  angle: 0.17
---- !u!81 &300110277
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 300110275}
-  m_Enabled: 1
+  shader: {fileID: 4800000, guid: 98d00c2b55117cf439b7a950f8289519, type: 3}
+  intensity: 0.2
+  freq: 4.4
+  phase: 0.36
+  phasePerSecond: 0.1
 --- !u!92 &300110278
 Behaviour:
   m_ObjectHideFlags: 0
@@ -333,8 +325,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1480147915}
+  m_RootOrder: 6
 --- !u!1 &840454182 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 190670, guid: 0ab4c05e563a93f42948ea0c76abe086, type: 2}
@@ -393,6 +385,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ab4c05e563a93f42948ea0c76abe086, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1480147915 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 423886, guid: 5e8494396b4ff8c4abecbd8936108fd9, type: 2}
+  m_PrefabInternal: {fileID: 1953927943}
 --- !u!1001 &1625197212
 Prefab:
   m_ObjectHideFlags: 0
