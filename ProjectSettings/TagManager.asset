@@ -6,7 +6,11 @@ TagManager:
   tags:
   - elevator-door
   - button
+<<<<<<< HEAD
   - keykelvin
+=======
+  - collectible
+>>>>>>> remotes/origin/erik
   layers:
   - Default
   - TransparentFX
