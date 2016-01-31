@@ -5,12 +5,9 @@ public class PlayerController : MonoBehaviour {
 
     private GameObject elevator;
     private ElevatorController elevatorController;
-<<<<<<< HEAD
 	Camera mainCam;
-=======
     private int collectiblesFound = 0;
 
->>>>>>> remotes/origin/erik
 	// Use this for initialization
 	void OnEnable () {
         elevator = GameObject.Find("Elevator");
