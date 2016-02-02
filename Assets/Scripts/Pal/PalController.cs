@@ -61,6 +61,7 @@ public class PalController : MonoBehaviour {
             if(distance > 10f)
             {
                 Debug.Log("PAL is starting to get worried.");
+                couchController.isPalOnCouch = false;
                 ResumeFollowing();
                 EnableWorriedTalk();
             }
@@ -79,15 +80,18 @@ public class PalController : MonoBehaviour {
     }
 
     public void ResumeFollowing() {
-        float randFloat = Random.Range(0f, (float) (sounds.Length - 1));
-        int randInt = (int) Mathf.Round(randFloat);
-        sounds[randInt].Play();
-        canFollow = true;
-        if (getDistance() > minDistance * 3f)
+        if (!couchController.isPalOnCouch)
         {
-            TeleportToTarget();
-        }
-        couchController.isPalOnCouch = false;
+            float randFloat = Random.Range(0f, (float)(sounds.Length - 1));
+            int randInt = (int)Mathf.Round(randFloat);
+            sounds[randInt].Play();
+            canFollow = true;
+            if (getDistance() > minDistance * 3f)
+            {
+                TeleportToTarget();
+            }
+            couchController.isPalOnCouch = false;
+        }        
     }
 
     public void StopFollowing() {
