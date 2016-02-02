@@ -45,6 +45,13 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _Last
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _OcclusionMap
         second:
           m_Texture: {fileID: 0}
@@ -78,13 +85,6 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Last
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -100,8 +100,32 @@ Material:
         second: 0.5
       data:
         first:
+          name: _Intensity
+        second: 0.1
+      data:
+        first:
+          name: _Phase
+        second: 1107.5283
+      data:
+        first:
+          name: _Angle
+        second: 1.07
+      data:
+        first:
           name: _Parallax
         second: 0.02
+      data:
+        first:
+          name: _Freq
+        second: 2.5
+      data:
+        first:
+          name: _BaseAngle
+        second: 1.68
+      data:
+        first:
+          name: _SpinAngle
+        second: 1.1
       data:
         first:
           name: _Glossiness
@@ -134,30 +158,6 @@ Material:
         first:
           name: _Mode
         second: 0
-      data:
-        first:
-          name: _Freq
-        second: 2.5
-      data:
-        first:
-          name: _Phase
-        second: 90.39761
-      data:
-        first:
-          name: _Intensity
-        second: 0.1
-      data:
-        first:
-          name: _Angle
-        second: 1.07
-      data:
-        first:
-          name: _BaseAngle
-        second: 1.68
-      data:
-        first:
-          name: _SpinAngle
-        second: 1.1
     m_Colors:
       data:
         first:
@@ -169,16 +169,16 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _Shape
-        second: {r: 1.67, g: 1, b: 1, a: 1}
-      data:
-        first:
           name: _color1
         second: {r: 0.5808823, g: 1, b: 0.7918864, a: 1}
       data:
         first:
           name: _color2
         second: {r: 0.26989618, g: 0.7058823, b: 0.27290297, a: 1}
+      data:
+        first:
+          name: _Shape
+        second: {r: 1.67, g: 1, b: 1, a: 1}
       data:
         first:
           name: _x

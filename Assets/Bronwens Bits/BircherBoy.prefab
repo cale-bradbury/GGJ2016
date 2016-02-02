@@ -44,6 +44,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 481550}
+  - 136: {fileID: 13629148}
   m_Layer: 0
   m_Name: BircherBoy
   m_TagString: Untagged
@@ -141,9 +142,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137350}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 54, y: 10.38, z: -18.6}
-  m_LocalScale: {x: 6.8077245, y: 9.708201, z: 6.8077188}
+  m_LocalRotation: {x: 0, y: 0.4299831, z: 0, w: 0.902837}
+  m_LocalPosition: {x: 5.33, y: -1.332, z: 17.48}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 463338}
   - {fileID: 440672}
@@ -331,6 +332,19 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!136 &13629148
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137350}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.05
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: -0.14, y: -0.74, z: 0.03}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

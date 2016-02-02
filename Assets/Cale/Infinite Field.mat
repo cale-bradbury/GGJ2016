@@ -155,6 +155,14 @@ Material:
         second: 50
       data:
         first:
+          name: _Glossiness
+        second: 0.5
+      data:
+        first:
+          name: _Metallic
+        second: 0
+      data:
+        first:
           name: _EdgeSize
         second: 0.1
       data:
@@ -164,14 +172,6 @@ Material:
       data:
         first:
           name: _Value
-        second: 0
-      data:
-        first:
-          name: _Glossiness
-        second: 0.5
-      data:
-        first:
-          name: _Metallic
         second: 0
       data:
         first:
@@ -213,27 +213,27 @@ Material:
       data:
         first:
           name: _Color1
-        second: {r: 0.11764707, g: 0.09411766, b: 0.2901961, a: 1}
+        second: {r: 0.08235294, g: 0.22352943, b: 0.18823531, a: 1}
       data:
         first:
           name: _Color2
-        second: {r: 0.5372549, g: 0.09411766, b: 0.4666667, a: 1}
+        second: {r: 0.09411766, g: 0.5372549, b: 0.1137255, a: 1}
       data:
         first:
           name: _Shape
-        second: {r: 1.0103838, g: 0, b: 3, a: 0.5}
+        second: {r: 114.695496, g: 0, b: 3, a: 0.5}
       data:
         first:
           name: _Color3
-        second: {r: 1, g: 0.40000004, b: 0.41176474, a: 1}
+        second: {r: 0.9686275, g: 1, b: 0.40000004, a: 1}
       data:
         first:
           name: _Camera
-        second: {r: -0.06395381, g: -0.119474985, b: 0.031702604, a: 70}
+        second: {r: -0.08968386, g: -0.119474985, b: -0.059629437, a: 70}
       data:
         first:
           name: _CameraAngle
-        second: {r: -7.930186, g: -4.491646, b: -38.972023, a: 0}
+        second: {r: -11.267508, g: 23.327103, b: -30.432018, a: 0}
       data:
         first:
           name: _FaceColor
@@ -244,9 +244,9 @@ Material:
         second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
-          name: _Tint
-        second: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+          name: _Form
+        second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
-          name: _Form
-        second: {r: 1, g: 0, b: 0, a: 0}
+          name: _Tint
+        second: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
