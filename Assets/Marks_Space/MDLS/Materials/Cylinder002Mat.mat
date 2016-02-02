@@ -129,12 +129,12 @@ Material:
         second: 0
       data:
         first:
-          name: _Freq
-        second: 5.31
+          name: _Phase
+        second: 1500.3701
       data:
         first:
-          name: _Phase
-        second: 90.39761
+          name: _Freq
+        second: 5.31
       data:
         first:
           name: _Intensity

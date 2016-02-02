@@ -130,12 +130,12 @@ Material:
         second: 2
       data:
         first:
-          name: _Freq
-        second: 1.47
-      data:
-        first:
           name: _Phase
         second: -0.81
+      data:
+        first:
+          name: _Freq
+        second: 1.47
       data:
         first:
           name: _Intensity
@@ -144,7 +144,7 @@ Material:
       data:
         first:
           name: _EmissionColor
-        second: {r: 0.65598476, g: 0.4618093, b: 0.67673624, a: 1}
+        second: {r: 0.7699014, g: 0.41056135, b: 0.808304, a: 1}
       data:
         first:
           name: _Color

@@ -136,12 +136,12 @@ Material:
         second: 0
       data:
         first:
-          name: _Freq
-        second: 2.5
+          name: _Phase
+        second: 1500.3701
       data:
         first:
-          name: _Phase
-        second: 90.39761
+          name: _Freq
+        second: 2.5
       data:
         first:
           name: _Intensity
@@ -169,16 +169,16 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _Shape
-        second: {r: 1.67, g: 1, b: 1, a: 1}
-      data:
-        first:
           name: _color1
         second: {r: 0.5808823, g: 1, b: 0.7918864, a: 1}
       data:
         first:
           name: _color2
         second: {r: 0.26989618, g: 0.7058823, b: 0.27290297, a: 1}
+      data:
+        first:
+          name: _Shape
+        second: {r: 1.67, g: 1, b: 1, a: 1}
       data:
         first:
           name: _x

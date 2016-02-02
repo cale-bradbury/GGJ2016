@@ -139,32 +139,8 @@ Material:
         second: 1
       data:
         first:
-          name: _Alpha
-        second: 100
-      data:
-        first:
-          name: _Strength
-        second: 1
-      data:
-        first:
           name: _Parallax
         second: 0.02
-      data:
-        first:
-          name: _Fog
-        second: 50
-      data:
-        first:
-          name: _EdgeSize
-        second: 0.1
-      data:
-        first:
-          name: _FogEnd
-        second: 100
-      data:
-        first:
-          name: _Value
-        second: 0
       data:
         first:
           name: _Glossiness
@@ -199,6 +175,30 @@ Material:
         second: 0
       data:
         first:
+          name: _Alpha
+        second: 100
+      data:
+        first:
+          name: _Strength
+        second: 1
+      data:
+        first:
+          name: _Fog
+        second: 50
+      data:
+        first:
+          name: _EdgeSize
+        second: 0.1
+      data:
+        first:
+          name: _FogEnd
+        second: 100
+      data:
+        first:
+          name: _Value
+        second: 0
+      data:
+        first:
           name: _Rotation
         second: 0
     m_Colors:
@@ -212,6 +212,10 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
+          name: _Shape
+        second: {r: 1.1360326, g: 0, b: 3, a: 0.5}
+      data:
+        first:
           name: _Color1
         second: {r: 0.11764707, g: 0.09411766, b: 0.2901961, a: 1}
       data:
@@ -220,20 +224,16 @@ Material:
         second: {r: 0.5372549, g: 0.09411766, b: 0.4666667, a: 1}
       data:
         first:
-          name: _Shape
-        second: {r: 1.0103838, g: 0, b: 3, a: 0.5}
-      data:
-        first:
           name: _Color3
         second: {r: 1, g: 0.40000004, b: 0.41176474, a: 1}
       data:
         first:
           name: _Camera
-        second: {r: -0.06395381, g: -0.119474985, b: 0.031702604, a: 70}
+        second: {r: -0.08841505, g: -0.112500004, b: 0.047419924, a: 70}
       data:
         first:
           name: _CameraAngle
-        second: {r: -7.930186, g: -4.491646, b: -38.972023, a: 0}
+        second: {r: -11.822534, g: 2.4084837, b: -38.358692, a: 0}
       data:
         first:
           name: _FaceColor
