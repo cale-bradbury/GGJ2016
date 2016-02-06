@@ -102,7 +102,7 @@ Material:
       data:
         first:
           name: _Phase
-        second: 0.42714074
+        second: 1.6668326
       data:
         first:
           name: _Taps
@@ -117,12 +117,12 @@ Material:
         second: 5
       data:
         first:
-          name: _Glossiness
-        second: 0.5
-      data:
-        first:
           name: _Metallic
         second: 0
+      data:
+        first:
+          name: _Glossiness
+        second: 0.5
       data:
         first:
           name: _ZWrite

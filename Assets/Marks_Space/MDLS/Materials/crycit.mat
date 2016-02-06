@@ -94,16 +94,28 @@ Material:
         second: 0.5
       data:
         first:
+          name: _Intensity
+        second: 1.08
+      data:
+        first:
+          name: _Phase
+        second: -0.81
+      data:
+        first:
           name: _Parallax
         second: 0.08
       data:
         first:
-          name: _Glossiness
-        second: 0.414
+          name: _Freq
+        second: 1.47
       data:
         first:
           name: _Metallic
         second: 0.607
+      data:
+        first:
+          name: _Glossiness
+        second: 0.414
       data:
         first:
           name: _ZWrite
@@ -128,23 +140,11 @@ Material:
         first:
           name: _Mode
         second: 2
-      data:
-        first:
-          name: _Freq
-        second: 1.47
-      data:
-        first:
-          name: _Phase
-        second: -0.81
-      data:
-        first:
-          name: _Intensity
-        second: 1.08
     m_Colors:
       data:
         first:
           name: _EmissionColor
-        second: {r: 0.65598476, g: 0.4618093, b: 0.67673624, a: 1}
+        second: {r: 0.7627226, g: 0.4137909, b: 0.8000128, a: 1}
       data:
         first:
           name: _Color
