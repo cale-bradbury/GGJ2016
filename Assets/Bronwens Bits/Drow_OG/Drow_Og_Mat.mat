@@ -98,12 +98,12 @@ Material:
         second: 0.02
       data:
         first:
-          name: _Glossiness
-        second: 0.48
-      data:
-        first:
           name: _Metallic
         second: 0
+      data:
+        first:
+          name: _Glossiness
+        second: 0.48
       data:
         first:
           name: _ZWrite
