@@ -23,7 +23,8 @@ public class Dialog : MonoBehaviour {
 		text = FindObjectOfType<Text> ();
 		text.text = "";
 		bg = text.rectTransform.parent.GetComponent<Image> ();
-		cam = Camera.main;
+        bg.color = bgOff;
+        cam = Camera.main;
 		MouseLook[] ml = FindObjectsOfType<MouseLook> ();
 		foreach(MouseLook m in ml)
 			scriptsToLock.Add (m);

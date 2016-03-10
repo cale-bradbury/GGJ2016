@@ -30,7 +30,6 @@ public class FramePlayer : MonoBehaviour {
 
 	// Update is called once per frame
 	void NextFrame () {
-		Debug.Log (index);
 		output.SetValue (frames [index]);
 		index++;
 		if (index == frames.Count) {

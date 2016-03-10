@@ -36,6 +36,7 @@ Properties {
 					o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
 					o.uv.xy = v.tex.xy;
 					o.uv.z = v.vertex.y*_range.y+_range.x;
+					o.uv.w = 1.;
 					return o;
 				};
 				

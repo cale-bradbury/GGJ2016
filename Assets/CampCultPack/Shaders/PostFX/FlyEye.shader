@@ -37,7 +37,7 @@ fixed4 frag (v2f_img j) : COLOR
 	float4 c = float(0.).xxxx;
 	#endif
 	float k = 0.;
-	for(float i = 0.; i<TAU;i+=_Taps){
+	for(float i = 0.0; i<TAU;i+=max(_Taps,.1)){
 		k++;
 		#ifdef FLYEYE_MIN
 		c = min(c,tex2D(_MainTex,j.uv+float2(cos(i+_Phase),sin(i+_Phase))*_Strength));

@@ -7,12 +7,18 @@ public class PlayerController : MonoBehaviour {
     private ElevatorController elevatorController;
 	Camera mainCam;
     private int collectiblesFound = 0;
+    ElevatorButton[] buttons;
 
 	// Use this for initialization
 	void OnEnable () {
         elevator = GameObject.Find("Elevator");
         elevatorController = elevator.GetComponent<ElevatorController>();
 		mainCam = GetComponentInChildren<Camera> ();
+    }
+
+    void Start()
+    {
+        buttons = FindObjectsOfType<ElevatorButton>();
     }
 	
 	// Update is called once per frame
@@ -25,7 +31,7 @@ public class PlayerController : MonoBehaviour {
 
     void Interact() {
         Vector3 rayOrigin = new Vector3(0.5f, 0.5f, 0f);
-        float rayLength = 2f;
+        float rayLength = 3f;
         Ray ray = mainCam.ViewportPointToRay(rayOrigin);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, rayLength))
@@ -38,7 +44,12 @@ public class PlayerController : MonoBehaviour {
         Debug.Log("Interact with collision: " + hit.transform.gameObject.tag);
         if (hit.transform.gameObject.tag == "button")
         {
-            int levelKey = hit.transform.GetComponent<ElevatorButton>().levelKey;
+            ElevatorButton e = hit.transform.GetComponent<ElevatorButton>();
+            int levelKey = e.levelKey;
+            e.Press();
+            foreach (ElevatorButton b in buttons)
+                if (b != e)
+                    b.Revert();
             elevatorController.GoToLevel(levelKey);
             Debug.Log("button-click:" + levelKey);
         }

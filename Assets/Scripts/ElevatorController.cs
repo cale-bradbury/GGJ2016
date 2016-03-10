@@ -30,7 +30,6 @@ public class ElevatorController : MonoBehaviour {
     // Use this for initialization
     void Start () {
 		floorText = gameObject.GetComponentInChildren<TextMesh>();
-		GoToLevel (nextLevel);
     }
 
 	public void GoToLevel(int index) {

@@ -15,17 +15,17 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 6
   m_Fog: 1
-  m_FogColor: {r: 0.6102941, g: 0.6102941, b: 0.6102941, a: 0}
+  m_FogColor: {r: 1, g: 1, b: 1, a: 0}
   m_FogMode: 1
   m_FogDensity: 0.01
-  m_LinearFogStart: 1
-  m_LinearFogEnd: 150
-  m_AmbientSkyColor: {r: 0.8479044, g: 0.74264705, b: 1, a: 0}
-  m_AmbientEquatorColor: {r: 1, g: 0.77423936, b: 0.6911765, a: 0}
-  m_AmbientGroundColor: {r: 1, g: 0.8088235, b: 1, a: 0}
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 100
+  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 0}
+  m_AmbientEquatorColor: {r: 1, g: 1, b: 1, a: 0}
+  m_AmbientGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_AmbientIntensity: 1
   m_AmbientMode: 1
-  m_SkyboxMaterial: {fileID: 2100000, guid: 7a994a59bc80ce148a102c71162eb9f4, type: 2}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -265,81 +265,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11457198, guid: 59d5bb2d334614d4bb6d491765c8119c, type: 2}
-      propertyPath: mainCam
-      value: 
-      objectReference: {fileID: 244979625}
-    - target: {fileID: 11449248, guid: 59d5bb2d334614d4bb6d491765c8119c, type: 2}
-      propertyPath: bind
-      value: 
-      objectReference: {fileID: 1195301407}
     - target: {fileID: 11425192, guid: 59d5bb2d334614d4bb6d491765c8119c, type: 2}
       propertyPath: bind
       value: 
       objectReference: {fileID: 244979619}
+    - target: {fileID: 11449248, guid: 59d5bb2d334614d4bb6d491765c8119c, type: 2}
+      propertyPath: bind
+      value: 
+      objectReference: {fileID: 1195301407}
+    - target: {fileID: 11457198, guid: 59d5bb2d334614d4bb6d491765c8119c, type: 2}
+      propertyPath: mainCam
+      value: 
+      objectReference: {fileID: 244979625}
     - target: {fileID: 123160, guid: 59d5bb2d334614d4bb6d491765c8119c, type: 2}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11457198, guid: 59d5bb2d334614d4bb6d491765c8119c, type: 2}
-      propertyPath: levelName
-      value: Infini Fld
-      objectReference: {fileID: 0}
-    - target: {fileID: 8255708, guid: 59d5bb2d334614d4bb6d491765c8119c, type: 2}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24300001, guid: b94f6b57a95f9cf4b9c56e7ed3b5ec89,
-        type: 2}
-    - target: {fileID: 8297712, guid: 59d5bb2d334614d4bb6d491765c8119c, type: 2}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24300001, guid: b94f6b57a95f9cf4b9c56e7ed3b5ec89,
-        type: 2}
-    - target: {fileID: 8218572, guid: 59d5bb2d334614d4bb6d491765c8119c, type: 2}
-      propertyPath: spreadCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8218572, guid: 59d5bb2d334614d4bb6d491765c8119c, type: 2}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24300001, guid: b94f6b57a95f9cf4b9c56e7ed3b5ec89,
-        type: 2}
-    - target: {fileID: 8210078, guid: 59d5bb2d334614d4bb6d491765c8119c, type: 2}
-      propertyPath: spreadCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8210078, guid: 59d5bb2d334614d4bb6d491765c8119c, type: 2}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24300001, guid: b94f6b57a95f9cf4b9c56e7ed3b5ec89,
-        type: 2}
-    - target: {fileID: 8244002, guid: 59d5bb2d334614d4bb6d491765c8119c, type: 2}
-      propertyPath: spreadCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8244002, guid: 59d5bb2d334614d4bb6d491765c8119c, type: 2}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24300001, guid: b94f6b57a95f9cf4b9c56e7ed3b5ec89,
-        type: 2}
-    - target: {fileID: 8254806, guid: 59d5bb2d334614d4bb6d491765c8119c, type: 2}
-      propertyPath: spreadCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8254806, guid: 59d5bb2d334614d4bb6d491765c8119c, type: 2}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24300001, guid: b94f6b57a95f9cf4b9c56e7ed3b5ec89,
-        type: 2}
-    - target: {fileID: 8257640, guid: 59d5bb2d334614d4bb6d491765c8119c, type: 2}
-      propertyPath: spreadCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257640, guid: 59d5bb2d334614d4bb6d491765c8119c, type: 2}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24300001, guid: b94f6b57a95f9cf4b9c56e7ed3b5ec89,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 59d5bb2d334614d4bb6d491765c8119c, type: 2}
   m_IsPrefabParent: 0
@@ -564,7 +505,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22457818, guid: f6ccb8c68e6e9ab41985a047b964e367, type: 2}
       propertyPath: m_SizeDelta.x
-      value: -939
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22400278, guid: f6ccb8c68e6e9ab41985a047b964e367, type: 2}
       propertyPath: m_AnchorMax.x
@@ -572,31 +513,31 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400278, guid: f6ccb8c68e6e9ab41985a047b964e367, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22400278, guid: f6ccb8c68e6e9ab41985a047b964e367, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22400278, guid: f6ccb8c68e6e9ab41985a047b964e367, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 114
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22400278, guid: f6ccb8c68e6e9ab41985a047b964e367, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22400278, guid: f6ccb8c68e6e9ab41985a047b964e367, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 64
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22400278, guid: f6ccb8c68e6e9ab41985a047b964e367, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 16
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22457818, guid: f6ccb8c68e6e9ab41985a047b964e367, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 26
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f6ccb8c68e6e9ab41985a047b964e367, type: 2}

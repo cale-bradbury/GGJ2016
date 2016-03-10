@@ -93,28 +93,12 @@ Material:
         second: 0.5
       data:
         first:
-          name: _Intensity
-        second: 1
-      data:
-        first:
           name: _Strength
-        second: 0.05
-      data:
-        first:
-          name: _Phase
-        second: 1.3373798
-      data:
-        first:
-          name: _Taps
-        second: 3
+        second: 0.07
       data:
         first:
           name: _Parallax
         second: 0.02
-      data:
-        first:
-          name: _Freq
-        second: 5
       data:
         first:
           name: _Glossiness
@@ -147,6 +131,22 @@ Material:
         first:
           name: _Mode
         second: 0
+      data:
+        first:
+          name: _Phase
+        second: 0.7567735
+      data:
+        first:
+          name: _Freq
+        second: 5
+      data:
+        first:
+          name: _Intensity
+        second: 1
+      data:
+        first:
+          name: _Taps
+        second: 3
     m_Colors:
       data:
         first:
