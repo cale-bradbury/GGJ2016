@@ -44,10 +44,6 @@ public class PlayerController : MonoBehaviour {
         Debug.Log("Interact with collision: " + hit.transform.gameObject.tag);
         if (hit.transform.gameObject.tag == "button")
         {
-            Vector3 v = transform.position;
-            v.y += .5f;
-            transform.position = v;
-
             ElevatorButton e = hit.transform.GetComponent<ElevatorButton>();
             int levelKey = e.levelKey;
             e.Press();
