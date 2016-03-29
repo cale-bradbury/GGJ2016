@@ -10,8 +10,9 @@ public class CheckIfBelowLevel : MonoBehaviour
 {
 	public float resetBelowThisY = -100f;
 	public bool fadeInOnReset = true;
-	
-	private Vector3 startingPosition;
+    public KeyCode resetKey = KeyCode.Escape;
+
+    private Vector3 startingPosition;
 	
 	void Awake()
 	{
@@ -20,7 +21,7 @@ public class CheckIfBelowLevel : MonoBehaviour
 	
 	void Update ()
 	{
-		if( transform.position.y < resetBelowThisY )
+		if( transform.position.y < resetBelowThisY || Input.GetKey(resetKey))
 		{
 			OnBelowLevel();
 		}

@@ -97,16 +97,12 @@ Material:
         second: 0.02
       data:
         first:
-          name: _Glossiness
-        second: 0.553
-      data:
-        first:
-          name: _Metallic
-        second: 0.549
-      data:
-        first:
           name: _ZWrite
         second: 1
+      data:
+        first:
+          name: _Glossiness
+        second: 0.553
       data:
         first:
           name: _BumpScale
@@ -129,16 +125,20 @@ Material:
         second: 0
       data:
         first:
-          name: _Phase
-        second: 65.2
-      data:
-        first:
-          name: _Freq
-        second: 5.31
+          name: _Metallic
+        second: 0.549
       data:
         first:
           name: _Intensity
         second: 0.57
+      data:
+        first:
+          name: _Phase
+        second: 264.42062
+      data:
+        first:
+          name: _Freq
+        second: 5.31
     m_Colors:
       data:
         first:
