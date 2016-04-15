@@ -5,8 +5,8 @@ using UnityEngine.Audio;
 
 public class ElevatorController : MonoBehaviour {
 
-	int currentLevel = -1;
-	int nextLevel = 1;
+	int currentLevel = 0;
+	int nextLevel = 0;
 	public List<GameObject> levels = new List<GameObject>();
 
 	public AnimationCurve doorAnimation;
@@ -30,6 +30,7 @@ public class ElevatorController : MonoBehaviour {
     // Use this for initialization
     void Start () {
 		floorText = gameObject.GetComponentInChildren<TextMesh>();
+        OpenDoor();
     }
 
 	public void GoToLevel(int index) {

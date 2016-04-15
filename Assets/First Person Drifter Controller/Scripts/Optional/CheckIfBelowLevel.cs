@@ -12,11 +12,11 @@ public class CheckIfBelowLevel : MonoBehaviour
 	public bool fadeInOnReset = true;
     public KeyCode resetKey = KeyCode.Escape;
 
-    private Vector3 startingPosition;
+    public Vector3 startingPosition;
 	
 	void Awake()
 	{
-		startingPosition = transform.position;
+		//startingPosition = transform.position;
 	}
 	
 	void Update ()

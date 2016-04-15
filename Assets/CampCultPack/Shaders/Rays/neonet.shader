@@ -85,7 +85,7 @@ float2 castRay( in float3 ro, in float3 rd, float time )
     float precis = 0.00001;
     float t = tmin;
     float m = -1.0;
-    for( int i=0; i<40; i++ )
+    for( int i=0; i<20; i++ )
     {
         float2 res = map( ro+rd*t, time );
         //if(t>tmax ) break;
@@ -93,7 +93,7 @@ float2 castRay( in float3 ro, in float3 rd, float time )
         m = res.y;
     }
  
-    if( t>tmax ) m=m;
+    //if( t>tmax ) m=m;
     return float2( t, m );
 }
  
@@ -113,15 +113,16 @@ float3 render( in float3 ro, in float3 rd, float time )
     float2 res = castRay(ro,rd, time);
     float t = res.x;
     float m = res.y;
-    if( m>-0.5 )
-    {
+    ///if( m>-0.5 )
+    //{
         float3 pos = ro + t*rd;
+		pos.y = -abs(pos.y);
         float3 nor = calcNormal( pos, time);
  
         col = nor.yyy*.5+.5;
         col.rgb *= min(1.0,pow(max(0.,1.0-(t/_Fog)),2.));
-    }
-    //col*=pow(1.0-res.x*.05,1.);
+   // }
+   // col*=pow(1.0-res.x*.05,1.);
     return col;
 }
  
@@ -133,8 +134,12 @@ float3x3 setCamera( in float3 ro, in float3 ta, float cr )
     float3 cv = normalize( cross(cu,cw) );
     return float3x3( cu, cv, cw );
 }
+
+float3 threeGradient(float3 low, float3 med, float3 high, float m) {
+	return lerp(low, lerp(high, med, min(m*2., 1.)), min((1. - m)*2., 1.));
+}
  
-fixed4 frag (v2f_img i) : COLOR
+float4 frag (v2f_img i) : COLOR
 {
     float2 q = i.uv;
     q.x*=2.;
@@ -163,11 +168,11 @@ fixed4 frag (v2f_img i) : COLOR
     col = pow( col, float(.8).rrr );
    
     float f = clamp(col.r,0.0,1.0);
-    if(f<.5)
+    /*if(f<.5)
         col = lerp(_Color1,_Color2,f*2.);
     else
-        col = lerp(_Color2,_Color3,(f-.5)*2.);
- 
+        col = lerp(_Color2,_Color3,(f-.5)*2.);*/
+	col = threeGradient(_Color3, _Color2, _Color1, f);
     return float4( col, _Alpha-(length(p)) );
 }
 ENDCG

@@ -139,44 +139,16 @@ Material:
         second: 1
       data:
         first:
-          name: _Alpha
-        second: 100
-      data:
-        first:
-          name: _Strength
-        second: 1
-      data:
-        first:
           name: _Parallax
         second: 0.02
       data:
         first:
-          name: _Fog
-        second: 50
-      data:
-        first:
-          name: _EdgeSize
-        second: 0.1
-      data:
-        first:
-          name: _FogEnd
-        second: 100
-      data:
-        first:
-          name: _Value
-        second: 0
+          name: _ZWrite
+        second: 1
       data:
         first:
           name: _Glossiness
         second: 0.5
-      data:
-        first:
-          name: _Metallic
-        second: 0
-      data:
-        first:
-          name: _ZWrite
-        second: 1
       data:
         first:
           name: _BumpScale
@@ -199,7 +171,35 @@ Material:
         second: 0
       data:
         first:
+          name: _Metallic
+        second: 0
+      data:
+        first:
+          name: _Strength
+        second: 1
+      data:
+        first:
           name: _Rotation
+        second: 0
+      data:
+        first:
+          name: _Alpha
+        second: 100
+      data:
+        first:
+          name: _Fog
+        second: 25
+      data:
+        first:
+          name: _EdgeSize
+        second: 0.1
+      data:
+        first:
+          name: _FogEnd
+        second: 100
+      data:
+        first:
+          name: _Value
         second: 0
     m_Colors:
       data:
@@ -212,28 +212,32 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
+          name: _Tint
+        second: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+      data:
+        first:
           name: _Color1
-        second: {r: 0.11764707, g: 0.09411766, b: 0.2901961, a: 1}
+        second: {r: 0.08088237, g: 0.08088237, b: 0.08088237, a: 1}
       data:
         first:
           name: _Color2
-        second: {r: 0.5372549, g: 0.09411766, b: 0.4666667, a: 1}
+        second: {r: 0.45588237, g: 0.45588237, b: 0.45588237, a: 1}
       data:
         first:
           name: _Shape
-        second: {r: 0.5817388, g: 0, b: 3, a: 0.5}
+        second: {r: 8.038139, g: 0, b: 3, a: 0.5}
       data:
         first:
           name: _Color3
-        second: {r: 1, g: 0.40000004, b: 0.41176474, a: 1}
+        second: {r: 0.9191176, g: 0.9191176, b: 0.9191176, a: 1}
       data:
         first:
           name: _Camera
-        second: {r: -0.026480904, g: -0.115018606, b: 0.04601154, a: 70}
+        second: {r: 0.21022779, g: -0.47927997, b: 1.3893656, a: 70}
       data:
         first:
           name: _CameraAngle
-        second: {r: 10.736054, g: -7.690567, b: -38.012764, a: 0}
+        second: {r: -6.0713196, g: -9.629359, b: 24.753325, a: 0}
       data:
         first:
           name: _FaceColor
@@ -242,10 +246,6 @@ Material:
         first:
           name: _FogColor
         second: {r: 0, g: 0, b: 0, a: 1}
-      data:
-        first:
-          name: _Tint
-        second: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
       data:
         first:
           name: _Form

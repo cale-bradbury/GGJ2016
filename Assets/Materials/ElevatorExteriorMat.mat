@@ -26,7 +26,7 @@ Material:
         first:
           name: _BumpMap
         second:
-          m_Texture: {fileID: 2800000, guid: 7c9ac750b85db7a4b9820cf84d18f39a, type: 3}
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -40,7 +40,7 @@ Material:
         first:
           name: _ParallaxMap
         second:
-          m_Texture: {fileID: 2800000, guid: 7c9ac750b85db7a4b9820cf84d18f39a, type: 3}
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -140,16 +140,16 @@ Material:
         second: 0.258
       data:
         first:
+          name: _Intensity
+        second: 1
+      data:
+        first:
           name: _Phase
         second: 44.53451
       data:
         first:
           name: _Freq
         second: 5
-      data:
-        first:
-          name: _Intensity
-        second: 1
     m_Colors:
       data:
         first:
