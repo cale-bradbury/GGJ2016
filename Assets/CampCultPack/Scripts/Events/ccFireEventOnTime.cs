@@ -6,7 +6,8 @@ public class ccFireEventOnTime : MonoBehaviour {
 	public string eventName;
 	public float time;
 	// Use this for initialization
-	void Start () {
+	void OnEnable () {
+        CancelInvoke("Fire");
 		Invoke ("Fire", time);
 	}
 

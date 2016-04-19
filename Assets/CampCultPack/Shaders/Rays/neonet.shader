@@ -120,7 +120,7 @@ float3 render( in float3 ro, in float3 rd, float time )
         float3 nor = calcNormal( pos, time);
  
         col = nor.yyy*.5+.5;
-        col.rgb *= min(1.0,pow(max(0.,1.0-(t/_Fog)),2.));
+        col.rgb *= min(1.0,pow(max(0.,1.0-(t/_Fog)),2.)); 
    // }
    // col*=pow(1.0-res.x*.05,1.);
     return col;
